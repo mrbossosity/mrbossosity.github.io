@@ -16,7 +16,6 @@
    font-style: italic;
   }
   .var txt   {
-   display: block;
    color: black;
    font-family: helvetica, sans serif;
    font-size: 15px
@@ -57,12 +56,13 @@
 
 <div> 
  <style> {
-  display: inline-block;} </style>
+  display: block;} </style>
    <button class="button next" onclick="typeWriter()">Next</button>
    <button class="button pause" onclick="pause()">Pause</button>
    <button class="button buzz" onclick="buzz()">Buzz</button>
 </div>
 <div>
+ <style> {display: block;} </style>
 <p id="question"></p> 
   <script>
    function buzz() {alert("BUZZ!");}
