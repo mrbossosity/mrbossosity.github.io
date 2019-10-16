@@ -53,13 +53,18 @@
 <div> 
  <style> {
   display: inline-block;} </style>
-   <button class="button buzz">Buzz</button>
-   <button class="button pause">Pause</button>
-   <button class="button next">Next</button>
+   <button class="button buzz" onclick="buzz()">Buzz</button>
+   <button class="button pause" onclick="pause()">Pause</button>
+   <button class="button" onclick="next()">Next</button>
 </div>
-
   <script>
-   function msg() {alert("BUZZ!");}
+   function buzz() {alert("BUZZ!");}
   </script>
+  <script>
+   function pause() {alert("PAUSE!");}
+  </script>
+  <script>
+   function next() {alert("NEXT!");}
+  </script>  
  </body>
 </html>
