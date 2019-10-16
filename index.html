@@ -15,15 +15,6 @@
    font-size: 13px;
    font-style: italic;
   }
-  .buzz {
-    float: right;
-    background-color: red;
-    border: 2px solid lightgray;
-    border-radius: 7px;
-    color: white;
-    font-family: helvetica, sans serif;
-    padding: 4px 13px;
-    } 
   .next {
     float: left;
     background-color: orange;
@@ -42,6 +33,15 @@
     font-family: helvetica, sans serif;
     padding: 4px 13px;
     }
+  .buzz {
+    float: right;
+    background-color: red;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+    color: white;
+    font-family: helvetica, sans serif;
+    padding: 4px 13px;
+    } 
  </style>
 </head>
  <body>
@@ -52,9 +52,9 @@
 <div> 
  <style> {
   display: inline-block;} </style>
-   <button class="button buzz" onclick="buzz()">Buzz</button>
-   <button class="button pause" onclick="pause()">Pause</button>
    <button class="button next" onclick="next()">Next</button>
+   <button class="button pause" onclick="pause()">Pause</button>
+   <button class="button buzz" onclick="buzz()">Buzz</button>
 </div>
   <script>
    function buzz() {alert("BUZZ!");}
