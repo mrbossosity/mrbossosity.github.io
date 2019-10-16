@@ -13,7 +13,7 @@
    color: black;
    font-family: arial, sans serif;
    font-size: 13px;
-   font-style: italic
+   font-style: italic;
   }
   .buzz {
     float: right;
@@ -21,17 +21,43 @@
     border: 2px solid lightgray;
     border-radius: 7px;
     color: white;
-    font-family: helvetica, sans serif
-  }
+    font-family: helvetica, sans serif;
+    padding: 4px 13px;
+    } 
+  .next {
+    float: left;
+    background-color: orange;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+    color: white;
+    font-family: helvetica, sans serif;
+    padding: 4px 13px;
+    }
+  .pause {
+    float: left;
+    background-color: dodgerblue;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+    color: white;
+    font-family: helvetica, sans serif;
+    padding: 4px 13px;
+    }
  </style>
 </head>
  
  <body>
+ 
  <h1>ProtoHISTORYbowl</h1> 
  <p>A National History Bowl and Bee buzzer practice resource</p>
 
-  <button class="button buzz">Buzz</button>
-  
+<div> 
+ <style> {
+  display: inline-block;} </style>
+   <button class="button buzz">Buzz</button>
+   <button class="button pause">Pause</button>
+   <button class="button next">Next</button>
+</div>
+
   <script>
    function msg() {alert("BUZZ!");}
   </script>
