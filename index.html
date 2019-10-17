@@ -67,7 +67,7 @@ resource</p>
   display: block;} </style>
    <button class="button next" onclick="typeWriter()">Next</button>
    <button class="button pause"
-    onclick="enableresume(), pause()">Pause</button>
+    onclick="enableresume(); pause()">Pause</button>
    <button class="button buzz" onclick="buzz()">Buzz</button>
    <button class="button resume" id="res" onclick="resume()"
    disabled>Resume</button>
@@ -96,10 +96,9 @@ function typeWriter() {
   i=1000000
   }
  function resume() {
- if (i=1000000){
  i=0
  }
-} </script>
+ </script>
 <div>
  <style> {display: block;} </style>
 <p id="question"></p>
