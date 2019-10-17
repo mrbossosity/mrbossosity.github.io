@@ -54,9 +54,9 @@
     border-radius: 7px;
     color: white;
     font-family: helvetica, sans serif;
-
     padding: 4px 13px;
-} </style>
+    } 
+ </style>
 </head>
 <body>
  <h1>ProtoHISTORYbowl</h1>
@@ -69,11 +69,11 @@ resource</p>
 <div>
  <style> {
   display: block;} </style>
-   <button class="button next" onclick="typeWriter()">Next</button>
+   <button class="button next" onclick="typeWriter()"; "resume()">Next</button>
    <button class="button pause"
-    onclick="enableresume(); pause()">Pause</button>
+    onclick="enableresume()"; "pause()">Pause</button>
    <button class="button buzz" onclick="buzz()">Buzz</button>
-   <button class="button resume" id="res" onclick="resume()"
+   <button class="button resume" id="Res" onclick="resume()"
    disabled>Resume</button>
 <script>
 var i = 0;
@@ -94,7 +94,7 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
 } }
  function enableresume() {
-  document.getElementById("res").disabled = false;
+  document.getElementById("Res").disabled = false;
   }
  function pause() {
   i=1000000
