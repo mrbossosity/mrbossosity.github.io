@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang=en-US> 
+<head>
+ <title>ProtoHISTORYbowl</title>
+ <style>
+  h1   {
+   color: blue; 
+   border-style: hidden hidden groove hidden; border-color: darkblue;
+   font-family: "Palatino Linotype", serif;
+   font-size: 32px;
+  }
+  .p1    {
+   color: black;
+   font-family: arial, sans serif;
+   font-size: 13px;
+   font-style: italic;
+  }
+  .var txt   {
+   color: black;
+   font-family: helvetica, sans serif;
+   font-size: 15px
+  }
+  .next {
+    float: left;
+    background-color: orange;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+    color: white;
+    font-family: helvetica, sans serif;
+    padding: 4px 13px;
+    }
+  .pause {
+    float: left;
+    background-color: dodgerblue;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+    color: white;
+    font-family: helvetica, sans serif;
+    padding: 4px 13px;
+    }
+  .resume {
+    float: left;
+    background-color: green;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+    color: white;
+    font-family: helvetica, sans serif;
+    padding: 4px 13px;
+    }
+  .buzz {
+    float: right;
+    background-color: red;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+    color: white;
+    font-family: helvetica, sans serif;
+    padding: 4px 13px;
+    } 
+ </style>
+</head>
+<body>
+ 
+ <h1>ProtoHISTORYbowl</h1> 
+ <p class="p1"> A National History Bowl and Bee buzzer practice resource</p>
+
+<div> 
+ <style> {
+  display: block;} </style>
+   <button class="button next" onclick="typeWriter()">Next</button>
+   <button class="button pause" 
+    onclick="pause()"
+    onclick="display resume()"
+    >Pause</button>
+   <button class="button buzz" onclick="buzz()">Buzz</button>
+   
+</div>
+<div id="Res">
+    <button class="button resume" onclick="resume()">Resume</button>
+   </div>
+   
+<div>
+ <style> {display: block;} </style>
+<p id="question"></p> 
+  
+<script>
+var i = 0;
+var txt = 'This president’s Secretary of Labor was Frances Perkins, the first woman to hold a Cabinet position. In a state of the Union address, this president declared that “We have accepted, so to speak, a second Bill of Rights,” referring to Americans’ rights to equal economic and employment opportunity. After the Supreme Court struck down his Agricultural Adjustment Act, this president planned to pack the Court to ensure the survival of his other New Deal programs. Name this president who gave many “fireside chats” and led America through the Great Depression and World War II.' ;
+var speed = 70;
+function typeWriter() {
+  if (i<txt.length){
+    document.getElementById("question").innerHTML += txt.charAt(i);
+    i++; 
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>  
+
+<script>
+function pause() {
+ i=1000000
+ }
+ 
+</script>
+<script>
+function display resume() {
+  var x = document.getElementById("Res");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+function resume() {
+ i=0
+ }
+</script>
+ </div>
+</body>
+</html>
