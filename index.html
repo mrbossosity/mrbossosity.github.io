@@ -2,6 +2,7 @@
 <html lang=en-US>
 <head>
  <title>ProtoHISTORYbowl</title>
+ <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script> 
  <link href:"mrbossosity.github.io/JSON/questions.json">
  <link rel="stylesheet" href="https://mrbossosity.github.io/stylesheet/style.css"> 
 </head>
@@ -16,19 +17,17 @@ resource</p>
 <div>
  <style> {
   display: block;} </style>
-   <button class="button next" onclick="typeWriter()"; "resume()">Next</button>
-   <button class="button pause"
-    onclick="enableresume()"; "pause()">Pause</button>
+   <button class="button next" onclick="typequestion()">Next</button>
+   <button class="button pause" onclick="pause()">Pause</button>
    <button class="button buzz" onclick="buzz()">Buzz</button>
-   <button class="button resume" id="Res" onclick="resume()"
-   disabled>Resume</button>
-<div>
- <style> {display: inline-block;} </style>
- <p id="question"></p>
-</div>
+   <button class="button resume" onclick="resume()">Resume</button>
  
-<script>
-var myArray = ['Two weeks after a Robert Geiger news story coined a name for this event, Hugh Bennett was made director of a new agency within the Interior Department. This event prompted the Soil Conservation Act, as it was partly caused by cattle overgrazing. Dorothea Lange’s iconic photograph Migrant Mother depicts a family during, for ten points, what event in which "Okies" attempted to move to California to avoid severe drought during the Great Depression?ANSWER: Dust Bowl', 
+<p id="typewriter" display = "span"></p>
+ 
+<script src='../../dist/core.js'></script> 
+<script type='text/javascript'> 
+   function typequestion() {
+    var myArray = ['Two weeks after a Robert Geiger news story coined a name for this event, Hugh Bennett was made director of a new agency within the Interior Department. This event prompted the Soil Conservation Act, as it was partly caused by cattle overgrazing. Dorothea Lange’s iconic photograph Migrant Mother depicts a family during, for ten points, what event in which "Okies" attempted to move to California to avoid severe drought during the Great Depression?ANSWER: Dust Bowl', 
                'Genseric captured this city after his betrothal to Eudocia was broken, and Alaric was able to capture this city after the death of Stilicho. The Battle of the Allia led to the capture of this city, which was forced to measure out ransom money using weighted scales by Brennus. Romulus Augustulus was deposed after the capture of this city in 476 AD. For ten points, name this city that was sacked several times during the fall of its Italy-based empire.ANSWER: Rome',
                'This kingdom was briey controlled by Britain after the arrival of the HMS Carysfort in the Paulet A air. Because Kalakaua had been intimidated into giving his power away, this kingdom’s legal code was known as the Bayonet Constitution. Sanford Dole was appointed president of this kingdom shortly before it was annexed by William McKinley in 1898. For ten points, name this kingdom, that was ruled by Queen Liliuokalani and became the 50th US state.ANSWER: Kingdom of Hawai’i',
                'In what became known as this city’s \mile," a group of troops including Randall Ramaglia walked through RPG re to a rally point at National Street. William Garrison commanded troops in a battle in this city that was part of the larger Operation Gothic Serpent; in that battle, troops under Mohammad Farah Aidid shot down two Black Hawk helicopters. For ten points, name this site of a 1993 battle involving Delta Force, the capital of Somalia.ANSWER: Mogadishu',
@@ -38,19 +37,12 @@ var myArray = ['Two weeks after a Robert Geiger news story coined a name for thi
                'In this work, a character recounts the tale of a man named Er who revives on his funeral pyre and shares an account of the afterlife. A character in this work tries to explain the psyche by asking Glaucon to imagine a divided line and imagines a ring that makes the wearer invisible, the Ring of Gyges. The Allegory of the Cave and the bene ts of rule under a \philosopher-king" are described in, for ten points, what Platonic dialogue about justice and forms of government like oligarchy and democracy?ANSWER: The Republic',
                'The "United Empire" faction of these people consisted of members who migrated to Canadian provinces. These people were led into combat by Patrick Ferguson, where they were defeated at Kings Mountain. A considerable population of North and South Carolina consisted of these people, whom Charles Cornwallis hoped to gain the support of during his campaign there. For ten points, give this term for American colonists who supported Great Britain during the Revolution.ANSWER: Loyalists',
                'This battle was fought concurrently with an engagement at Wavre [wahv], leading to the absence of Emmanuel Grouchy. This battle is commemorated by the Lion’s Mound, where a commander was shot o his horse. The arrival of Gebhard von Blucher’s Prussians helped turn the tide of this battle, which ended the Hundred Days and forced its loser into exile in St. Helena. For ten points, name this 1815 battle in which Wellington defeated Napoleon for the last time.ANSWER: Battle of Waterloo'
-               ]
-var rand = myArray[Math.floor(Math.random() * myArray.length)];
-var i = 0;
-var speed = 70;
-function typeWriter() {
-  if (i<rand.length){
-    document.getElementById("question").innerHTML += rand.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-   } }
-function enableresume() {
-  document.getElementById("Res").disabled = false;
-  }
-</script>
+               ];
+    var rand = myArray[Math.floor(Math.random() * myArray.length)];
+    const typewriter = new Typewriter('#typewriter');
+    typewriter.typeString(rand) 
+        .start();
+   }
+  </script>
 </body>
 </html>
