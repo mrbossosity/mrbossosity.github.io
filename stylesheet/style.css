@@ -51,3 +51,8 @@
     font-family: helvetica, sans serif;
     padding: 4px 13px;
     } 
+  .typewritertext {
+    float: left;
+    font-family: "Times New Roman", serif;
+    display: block;
+    }
