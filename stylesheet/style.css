@@ -52,7 +52,6 @@
     padding: 4px 13px;
     } 
   .typewritertext {
-    float: left;
-    font-family: "Times New Roman", serif;
+    font-family: "Palatino Linotype", serif;
     display: block;
     }
