@@ -55,3 +55,13 @@
     font-family: "Palatino Linotype", serif;
     display: block;
     }
+  .answer {
+    float: left;
+    background-color: orange;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+    color: white;
+    font-family: helvetica, sans serif;
+    padding: 4px 13px;
+    } 
+    
