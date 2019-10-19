@@ -56,7 +56,6 @@
     display: block;
     }
   .answer {
-    display: inline-block;
     background-color: orange;
     border: 2px solid lightgray;
     border-radius: 7px;
