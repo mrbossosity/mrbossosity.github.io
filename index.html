@@ -26,7 +26,7 @@
  <br><br>
  <div class = buzzanswer id = buzzanswer answer="">
      <input answer="answer" id = answerbox type="text">
-     <button class = "button answer" id = "answer" >Answer</button>
+     <button class = "button answer" id = "answer" onclick="answerform(1); enablenext(); skip(); typeWriter(); reload()">Answer</button>
  </div>
 
 <div>
@@ -84,6 +84,9 @@ function resume() {
 function buzz() {
   speed = 10000000000;
   }
+function skip() {
+  speed = 0
+  }
 function focusanswer() {
   document.getElementById("answerbox").focus();
   }
@@ -93,9 +96,9 @@ function answerform(a) {
   else
         document.getElementById("buzzanswer").style.display="block";
 }
-function skip() {
-  speed = 0
-  }
+ function reload() {
+  setTimeout(function(){location.reload(); }, 4460);
+}
 </script>
 
 </body>
