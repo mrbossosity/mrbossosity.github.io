@@ -1,11 +1,3 @@
-function enableButtons() {
-  document.getElementById("pause").disabled=false;
-  document.getElementById("resume").disabled=false;
-  document.getElementById("skip").disabled=false;
-  document.getElementById("buzz").disabled=false;
-  document.getElementById("answer").disabled=false;
-  }
-  
 function disablenext () {
   document.getElementById("next").disabled=true;
   }
