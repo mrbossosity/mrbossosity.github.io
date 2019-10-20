@@ -34,5 +34,5 @@ function answerform(a) {
         document.getElementById("buzzanswer").style.display="block";
 }
  function reload() {
-  setTimeout(function(){location.reload(); }, 4000);
+  setTimeout(function(){location.reload(); }, 4570);
 }
