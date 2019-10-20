@@ -21,10 +21,10 @@
            onclick="resume()">Resume</button>
    <button class="button skip" onclick="skip(); answerform(3)">Skip</button>
    <button class="button buzz" 
-           onclick="buzz(); answerform(2)">Buzz</button>
+           onclick="buzz(); answerform(2); focusanswer()">Buzz</button>
  <br><br>
    <form class = buzzanswer id = buzzanswer answer="">
-     <input answer="answer" type="text">
+     <input answer="answer" id = answerbox type="text">
      <button class = "button answer" onclick = "()">Answer</button>
    </form>
 </div>
@@ -77,6 +77,9 @@ function resume() {
   }
 function buzz() {
   speed = 10000000000;
+  }
+function focusanswer() {
+  document.getElementbyId("answerbox").focus();
   }
 function answerform(a) {
   if(a==1)
