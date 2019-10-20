@@ -61,7 +61,7 @@ var myArray = ['Two weeks after a Robert Geiger news story coined a name for thi
                ];
     var rand = myArray[Math.floor(Math.random() * myArray.length)];
     var i = 0;
-    var speed = 50;
+    var speed = 55;
 function typeWriter() {
   if (i < rand.length) {
     document.getElementById("question").innerHTML += rand.charAt(i);
@@ -73,7 +73,7 @@ function pause() {
   speed = 1000000000;
   }
 function resume() {
-  speed = 50;
+  speed = 55;
   }
 function buzz() {
   speed = 10000000000;
@@ -88,7 +88,7 @@ function answerform(a) {
         document.getElementById("buzzanswer").style.display="block";
 }
 function skip() {
-  speed = 1
+  speed = 0
   }
 </script>
 
