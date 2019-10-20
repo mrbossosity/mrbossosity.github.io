@@ -23,7 +23,7 @@
    <button class="button buzz" 
            onclick="buzz(); answerform(2); focusanswer()">Buzz</button>
  </div>
- <br>
+ <br><br>
  <div class = buzzanswer id = buzzanswer answer="">
      <input answer="answer" id = answerbox type="text">
      <button class = "button answer" id = "answer" >Answer</button>
@@ -50,6 +50,13 @@ secondary.addEventListener("click", clickPrimaryButton, false);
 <script>
 const primary = document.getElementById('skip');
 const secondary = document.getElementById('answer');
+document.getElementById("answer")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("answer").click();
+    }
+});
 function somePrimaryAction(e){
   e.preventDefault();
 }
