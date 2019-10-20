@@ -43,8 +43,51 @@
  <p id="question" class = "typewritertext"></p>
 </div>
  
-<script src ="javascripts/link_resume_to_next.js"></script>
+<script>
+ const primary = document.getElementById('next');
+const secondary = document.getElementById('resume');
+function somePrimaryAction(e){
+  e.preventDefault();
+}
+function clickPrimaryButton(e){
+  e.preventDefault();
+  primary.click();
+}
+primary.addEventListener("click", somePrimaryAction, false);
+secondary.addEventListener("click", clickPrimaryButton, false);
+ </script>
+<script>
+ function disablenext () {
+  document.getElementById("next").disabled=true;
+  }
+function enablenext () {
+  document.getElementById("next").disabled=false;
+  }
+function pause() {
+  speed = 1000000000;
+  }
+function resume() {
+  speed = 60;
+  }
+function buzz() {
+  speed = 10000000000;
+  }
+function skip() {
+  speed = 0
+  }
+function focusanswer() {
+  document.getElementById("answerbox").focus();
+  }
+function answerform(a) {
+  if(a==1)
+        document.getElementById("buzzanswer").style.display="none";
+  else
+        document.getElementById("buzzanswer").style.display="block";
+}
+ function reload() {
+  setTimeout(function(){location.reload(); }, 4570);
+}
+ </script>
 <script src ="javascripts/array_and_typewriter_functions.js"></script>
-<script src ="javascripts/button_functions.js"></script>
 </body>
 </html>
