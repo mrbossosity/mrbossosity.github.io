@@ -19,7 +19,7 @@
    <button class="button resume" 
            id = "resume"
            onclick="resume()">Resume</button>
-   <button class="button skip" onclick="skip(); answerform(3)">Skip</button>
+   <button class="button skip" onclick="skip()">Skip</button>
    <button class="button buzz" 
            onclick="buzz(); answerform(2); focusanswer()">Buzz</button>
  </div>
@@ -50,6 +50,7 @@ secondary.addEventListener("click", clickPrimaryButton, false);
 <script>
 const primary = document.getElementById('skip');
 const secondary = document.getElementById('answer');
+
 document.getElementById("answer")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
