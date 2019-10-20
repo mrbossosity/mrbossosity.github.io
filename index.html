@@ -19,7 +19,7 @@
    <button class="button resume" 
            id = "resume"
            onclick="resume()">Resume</button>
-   <button class="button skip" id="skip()" onclick="skip(); answerform(3)">Skip</button>
+   <button class="button skip" id="skip()" onclick="skip(); answerform(1)">Skip</button>
    <button class="button buzz" 
            onclick="buzz(); answerform(2); focusanswer()">Buzz</button>
  </div>
@@ -36,20 +36,6 @@
 <script>
 const primary = document.getElementById('next');
 const secondary = document.getElementById('resume');
-function somePrimaryAction(e){
-  e.preventDefault();
-}
-function clickPrimaryButton(e){
-  e.preventDefault();
-  primary.click();
-}
-primary.addEventListener("click", somePrimaryAction, false);
-secondary.addEventListener("click", clickPrimaryButton, false);
-</script>
-
-<script>
-const primary = document.getElementById('skip');
-const secondary = document.getElementById('next');
 function somePrimaryAction(e){
   e.preventDefault();
 }
