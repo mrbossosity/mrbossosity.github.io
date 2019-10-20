@@ -14,20 +14,20 @@
  <style> {display: inline-block;} </style>
    <button class="button next" 
            id = "next"
-           onclick="typeWriter(); answerform(1)">Next</button>
-   <button class="button pause" onclick="pause()">Pause</button>
+           onclick="typeWriter(); answerform(1); disablenext()">Next</button>
+   <button class="button pause" onclick="pause(); enablenext()">Pause</button>
    <button class="button resume" 
            id = "resume"
            onclick="resume()">Resume</button>
-   <button class="button skip" onclick="skip(); answerform(3)">Skip</button>
+   <button class="button skip" onclick="skip()">Skip</button>
    <button class="button buzz" 
            onclick="buzz(); answerform(2); focusanswer()">Buzz</button>
+ </div>
  <br><br>
-   <form class = buzzanswer id = buzzanswer answer="">
-     <input answer="answer" id = "answerbox" type="text">
-     <button class = "button answer" onclick = "()">Answer</button>
-   </form>
-</div>
+ <div class = buzzanswer id = buzzanswer answer="">
+     <input answer="answer" id = answerbox type="text">
+     <button class = "button answer" id = "answer" >Answer</button>
+ </div>
 
 <div>
  <p id="question" class = "typewritertext"></p>
