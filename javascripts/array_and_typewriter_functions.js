@@ -1,4 +1,4 @@
-var myArray = src = "mrbossosity.github.io/JSON/
+var myArray = src = "mrbossosity.github.io/JSON/questions.json"
     var rand = myArray[Math.floor(Math.random() * myArray.length)];
     var i = 0;
     var speed = 60;
