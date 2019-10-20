@@ -14,14 +14,22 @@
  <style> {display: inline-block;} </style>
    <button class="button next" 
            id = "next"
-           onclick="typeWriter(); answerform(1); disablenext()">Next</button>
-   <button class="button pause" onclick="pause(); enablenext()">Pause</button>
+           onclick="typeWriter(); answerform(1); disablenext(); enableButtons()">Next</button>
+   <button class="button pause" 
+           id = "pause"
+           onclick="pause(); enablenext()"
+           disabled = "true">Pause</button>
    <button class="button resume" 
            id = "resume"
-           onclick="resume()">Resume</button>
-   <button class="button skip" id="skip()" onclick="skip(); answerform(1) reload()">Skip</button>
+           onclick="resume()"
+           disabled = "true">Resume</button>
+   <button class="button skip" 
+           id="skip" 
+           onclick="skip(); answerform(1) reload()"
+           disabled = "true">Skip</button>
    <button class="button buzz" 
-           onclick="buzz(); answerform(2); focusanswer()">Buzz</button>
+           onclick="buzz(); answerform(2); focusanswer()"
+           disabled = "true">Buzz</button>
  </div>
  <br><br>
  <div class = buzzanswer id = buzzanswer answer="">
