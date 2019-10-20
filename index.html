@@ -46,7 +46,19 @@ function clickPrimaryButton(e){
 primary.addEventListener("click", somePrimaryAction, false);
 secondary.addEventListener("click", clickPrimaryButton, false);
 </script>
- 
+<script>
+const primary = document.getElementById('skip');
+const secondary = document.getElementById('next');
+function somePrimaryAction(e){
+  e.preventDefault();
+}
+function clickPrimaryButton(e){
+  e.preventDefault();
+  primary.click();
+}
+primary.addEventListener("click", somePrimaryAction, false);
+secondary.addEventListener("click", clickPrimaryButton, false);
+</script> 
 <script>
 const primary = document.getElementById('skip');
 const secondary = document.getElementById('answer');
