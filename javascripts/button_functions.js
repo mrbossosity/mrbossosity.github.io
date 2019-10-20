@@ -16,7 +16,7 @@ function pause() {
   speed = 1000000000;
   }
 function resume() {
-  speed = 55;
+  speed = 60;
   }
 function buzz() {
   speed = 10000000000;
