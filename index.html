@@ -12,7 +12,7 @@
  <style> {display: inline-block;} </style>
    <button class="button next" 
            id = "next"
-           onclick="typeWriter(); answerform(1);">Next</button>
+           onclick="cleartext(); typeWriter(); answerform(1);">Next</button>
    <button class="button pause" 
            id = "pause"
            onclick="pause(); enablenext()"
@@ -28,14 +28,18 @@
 </div>
  <br><br>
 <div class = buzzanswer id = buzzanswer answer="">
-     <input answer="answer" id = answerbox type="text">
+     <input answer="answer" id = "answerbox" type="text">
      <button class = "button answer" 
              id = "answer" 
-             onclick="enablenext(); typetoend();"
+             onclick="youranswer(); enablenext(); typetoend();"
              >Answer</button>
 </div>
 <div>
  <p id="question" class = "typewritertext"></p>
+</div>
+<div>
+ <p>Your Answer:</p>
+ <p id = "youranswer"></p>
 </div>
  
 <script>
@@ -45,6 +49,9 @@
 function enablenext () {
   document.getElementById("next").disabled=false;
   }
+function cleartext() {
+  document.getElementById("answerbox").value = ""
+  }                   
 function pause() {
   clearInterval(timer);
   }
@@ -53,6 +60,10 @@ function resume() {
   }
 function focusanswer() {
   document.getElementById("answerbox").focus();
+  }
+function youranswer() {
+  var answer = document.getElementById("answerbox").value;
+  document.getElementById("youranswer").innerHTML = answer
   }
 function typetoend() {
   timer = setInterval (type, 0)
