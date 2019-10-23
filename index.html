@@ -23,7 +23,7 @@
            >Resume</button>
    <button class="button buzz" 
            id="buzz"
-           onclick="pause(); showyouranswer(2); answerform(2); focusanswer()"
+           onclick="pause(); answerform(2); focusanswer()"
            >Buzz</button> 
 </div>
  <br><br>
@@ -31,12 +31,13 @@
      <input answer="answer" id = "answerbox" type="text">
      <button class = "button answer" 
              id = "answer" 
-             onclick="youranswer(); enablenext(); typetoend();"
+             onclick="showyouranswer(2); youranswer(); enablenext(); typetoend();"
              >Answer</button>
 </div>
 <div>
  <p id="question" class = "typewritertext"></p>
 </div>
+ 
 <div id = "showyouranswer">
  <p>Your Answer:</p>
  <p id = "youranswer"></p>
@@ -75,7 +76,7 @@ function answerform(a) {
         document.getElementById("buzzanswer").style.display="block";
 }
 function showyouranswer(b) {
-  if(a==1)
+  if(b==1)
         document.getElementById("showyouranswer").style.display="none";
   else
         document.getElementById("showyouranswer").style.display="block";
