@@ -1,7 +1,8 @@
 .h1   {
    color:  mediumblue;
    font-family: "Palatino Linotype", serif;
-   font-size: 32px;
+   font-size: 31px;
+   font-weight: bold;
    border: 1px solid gray;
    border-radius: 5px;
    padding: 3px 7px;
