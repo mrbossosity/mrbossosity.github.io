@@ -59,10 +59,10 @@ function enablenext () {
   document.getElementById("next").disabled=false;
   }
 function pause() {
-  speed = 1000000000;
+  clearInterval(timer);
   }
 function resume() {
-  speed = 55;
+  timer = setInterval(type, speed);
   }
 function buzz() {
   speed = 10000000000;
