@@ -39,19 +39,6 @@
 </div>
  
 <script>
- const primary = document.getElementById('next');
-const secondary = document.getElementById('resume');
-function somePrimaryAction(e){
-  e.preventDefault();
-}
-function clickPrimaryButton(e){
-  e.preventDefault();
-  primary.click();
-}
-primary.addEventListener("click", somePrimaryAction, false);
-secondary.addEventListener("click", clickPrimaryButton, false);
- </script>
-<script>
  function disablenext () {
   document.getElementById("next").disabled=true;
   }
@@ -62,7 +49,7 @@ function pause() {
   clearInterval(timer);
   }
 function resume() {
-  timer.setInterval(type, speed);
+  timer = setInterval (type, speed)
   }
 function buzz() {
   speed = 10000000000;
