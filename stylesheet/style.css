@@ -16,7 +16,7 @@
    font-family: arial, sans serif;
    font-size: 13px;
    font-style: italic;
-   margin: 0;
+   line-height: 0px;
 }
 .var txt {
    color: black;
