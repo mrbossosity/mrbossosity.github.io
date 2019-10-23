@@ -64,13 +64,7 @@
     padding: 4px 13px;
     } 
   .youranswer {
-    color: blue;
+    color: royalblue;
     font-family: "Palatino Linotype", serif;
-    font-size: 23px ;
+    font-size: 17px ;
     }
-  .answertext {
-    color: black;
-    font-family: arial, sans serif;
-    font-size: 13px;
-    font-style: italic;
-}
