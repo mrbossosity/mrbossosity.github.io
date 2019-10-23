@@ -12,7 +12,7 @@
  <style> {display: inline-block;} </style>
    <button class="button next" 
            id = "next"
-           onclick="cleartext(); typeWriter(); answerform(1);">Next</button>
+           onclick="showyouranswer(1); cleartext(); typeWriter(); answerform(1);">Next</button>
    <button class="button pause" 
            id = "pause"
            onclick="pause(); enablenext()"
@@ -23,7 +23,7 @@
            >Resume</button>
    <button class="button buzz" 
            id="buzz"
-           onclick="pause(); answerform(2); focusanswer()"
+           onclick="pause(); showyouranswer(2); answerform(2); focusanswer()"
            >Buzz</button> 
 </div>
  <br><br>
@@ -37,7 +37,7 @@
 <div>
  <p id="question" class = "typewritertext"></p>
 </div>
-<div>
+<div id = "showyouranswer">
  <p>Your Answer:</p>
  <p id = "youranswer"></p>
 </div>
@@ -73,6 +73,12 @@ function answerform(a) {
         document.getElementById("buzzanswer").style.display="none";
   else
         document.getElementById("buzzanswer").style.display="block";
+}
+function showyouranswer(b) {
+  if(a==1)
+        document.getElementById("showyouranswer").style.display="none";
+  else
+        document.getElementById("showyouranswer").style.display="block";
 }
 </script>
 <script>
