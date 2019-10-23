@@ -9,12 +9,14 @@
    font-family: "Palatino Linotype", serif;
    font-size: 31px;
    font-weight: bold;
+   margin: 0;
 }
 .p1 {
    color: black;
    font-family: arial, sans serif;
    font-size: 13px;
    font-style: italic;
+   margin: 0;
 }
 .var txt {
    color: black;
