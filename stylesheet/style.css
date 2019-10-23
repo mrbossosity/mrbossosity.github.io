@@ -1,12 +1,14 @@
+.topbox {
+   border: 1px solid gray;
+   border-radius: 5px;
+   padding: 9px 7px;
+   box-shadow: 1px 3px 8px dodgerblue;
+}   
 .h1   {
    color:  mediumblue;
    font-family: "Palatino Linotype", serif;
    font-size: 31px;
    font-weight: bold;
-   border: 1px solid gray;
-   border-radius: 5px;
-   padding: 9px 7px;
-   box-shadow: 1px 3px 8px dodgerblue;
 }
 .p1 {
    color: black;
