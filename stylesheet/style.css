@@ -2,7 +2,7 @@
    color:  mediumblue;
    font-family: "Palatino Linotype", serif;
    font-size: 32px;
-   border: 3px solid lightgray;
+   border: 1px solid gray;
    border-radius: 5px;
    padding: 3px 7px;
    box-shadow: 1px 3px 8px dodgerblue;
@@ -71,7 +71,7 @@
     color: red;
     font-family: "Palatino Linotype", serif;
     font-size: 15px;
-    border: 2px solid lightgray;
+    border: 1px solid gray;
     border-radius: 7px;
     padding: 2px 7px; 
     box-shadow: 1px 2px 5px red;
