@@ -518,11 +518,6 @@ var myArray = ['Two weeks after a Robert Geiger news story coined a name for thi
  var rand = myArray[Math.floor(Math.random() * myArray.length)];
  var i = 0;
  var speed = 55;
-window.onkeydown = function(event) {
-    if (event.keyCode == 32) {
-function typeWriter();     
-    }
-};
 function typeWriter() {
   if (i < rand.length) {
     document.getElementById("question").innerHTML += rand.charAt(i);
