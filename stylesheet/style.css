@@ -3,6 +3,7 @@
    border-style: hidden hidden groove hidden; border-color: darkgray;
    font-family: "Palatino Linotype", serif;
    font-size: 32px;
+   box-shadow: 5px 6px 8px black;
 }
 .p1 {
    color: black;
