@@ -22,10 +22,6 @@
            id = "resume"
            onclick="resume()"
            >Resume</button>
-   <button class="button skip" 
-           id="skip" 
-           onclick="skip(); answerform(1); reload()"
-           >Skip</button>
    <button class="button buzz" 
            id="buzz"
            onclick="buzz(); answerform(2); focusanswer()"
@@ -36,7 +32,7 @@
      <input answer="answer" id = answerbox type="text">
      <button class = "button answer" 
              id = "answer" 
-             onclick="enablenext(); skip(); typeWriter(); reload()"
+             onclick="enablenext(); typetoend(); typeWriter(); reload()"
              >Answer</button>
 </div>
 <div>
@@ -72,12 +68,12 @@ function resume() {
 function buzz() {
   speed = 10000000000;
   }
-function skip() {
-  speed = 0
-  }
 function focusanswer() {
   document.getElementById("answerbox").focus();
   }
+function typetoend() {
+  speed = 0;
+}
 function answerform(a) {
   if(a==1)
         document.getElementById("buzzanswer").style.display="none";
@@ -515,16 +511,31 @@ var myArray = ['Two weeks after a Robert Geiger news story coined a name for thi
                'Miguel de la Madrid was criticized for not allowing foreign aid after one of these events. The deadliest of these events in modern history struck Tangshan, China in 1976. The Marquis of Pombal cemented his power by rebuilding (+) Lisbon after one of these events in 1755 caused widespread res and a (*) tsunami. Sixty-three people died in 1989 after one of these struck near Loma Prieta on the San Andreas fault. For ten points, name these natural disasters, one of which devastated San Francisco in 1906, that are commonly followed by deadly aftershocks.                                                                                                                               ANSWER: earthquakes',
                'The founder of this empire allegedly took power by using a rooster spur-tipped arrow to slay his rival. This kingdom’s territories were divided into the \Twelve Doors." (+) Askia Mohammad I led this empire to its military height. The Songhai supplanted this empire, whose most famous ruler allegedly (*) devalued gold with his lavish gift-giving during a hajj to Mecca. Mansa Musa led, for ten points, what West African empire, home to Timbuktu?                                                                                                                               ANSWER: Mali Empire',
               ];
- var rand = myArray[Math.floor(Math.random() * myArray.length)];
- var i = 0;
- var speed = 55;
+var speed = 55;
+var target = document.getElementById("question");
+var char;
+var timer;
+var sentence;
+
+function type(){
+  if(char < sentence.length) {
+    target.innerHTML += sentence.charAt(char++);
+  } else {
+    clearInterval(timer);
+  } 
+}
+ 
+function reset() {
+  clearInterval(timer);
+  sentence = myArray[Math.floor(Math.random() * myArray.length)];
+  char = 0;
+  target.innerHTML = '';
+}
+
 function typeWriter() {
-  if (i < rand.length) {
-    document.getElementById("question").innerHTML += rand.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-} 
+  reset();  
+  timer = setInterval(type, speed);
+}
  </script>
 </body>
 </html>
