@@ -1,6 +1,7 @@
 h1   {
    color:  mediumblue;
    border: 1px gray;
+   border-radius: 5px;
    font-family: "Palatino Linotype", serif;
    font-size: 32px;
    box-shadow: 1px 3px 8px dodgerblue;
