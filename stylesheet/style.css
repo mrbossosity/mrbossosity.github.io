@@ -21,38 +21,42 @@
 .next {
     float: left;
     background-color: orange;
-    border: 2px solid lightgray;
+    border: 1px solid white;
     border-radius: 7px;
     color: white;
     font-family: helvetica, sans serif;
     padding: 4px 13px;
+    box-shadow: 0px 1px 4px darkorange;
     }
 .pause {
     float: left;
     background-color: dodgerblue;
-    border: 2px solid lightgray;
+    border: 1px solid white;
     border-radius: 7px;
     color: white;
     font-family: helvetica, sans serif;
     padding: 4px 13px;
+    box-shadow: 0px 1px 4px mediumblue;   
 }
 .resume {
     float: left;
     background-color: green;
-    border: 2px solid lightgray;
+    border: 1px solid white;
     border-radius: 7px;
     color: white;
     font-family: helvetica, sans serif;
     padding: 4px 13px;
+    box-shadow: 0px 1px 4px darkgreen;
     }
 .buzz {
     float: right;
     background-color: red;
-    border: 2px solid lightgray;
+    border: 1px solid white;
     border-radius: 7px;
     color: white;
     font-family: helvetica, sans serif;
     padding: 4px 13px;
+    box-shadow: 0px 1px 4px maroon;
     } 
 
 .typewritertext {
@@ -61,11 +65,12 @@
     }
 .answer {
     background-color: red;
-    border: 2px solid lightgray;
+    border: 1px solid white;
     border-radius: 7px;
     color: white;
     font-family: helvetica, sans serif;
     padding: 4px 13px;
+    box-shadow: 0px 1px 4px maroon;
     } 
 .youranswer {
     color: red;
