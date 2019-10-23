@@ -65,6 +65,9 @@
     } 
   .youranswer {
     color: royalblue;
-    font-family: "Palatino Linotype", serif;
+    font-family: "Verdana", sans serif;
     font-size: 17px ;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+    padding: 6px 13px; 
     }
