@@ -39,8 +39,7 @@
 </div>
  
 <div id = "showyouranswer">
- <p class = youranswer>Your Answer:</p>
- <p id = "youranswer" class = answertext></p>
+ <p class = youranswer id = "youranswer">Your Answer:</p>
 </div>
  
 <script>
@@ -64,7 +63,7 @@ function focusanswer() {
   }
 function youranswer() {
   var answer = document.getElementById("answerbox").value;
-  document.getElementById("youranswer").innerHTML = answer
+  document.getElementById("youranswer").innerHTML = "Your Answer:" + answer
   }
 function typetoend() {
   timer = setInterval (type, 0)
