@@ -49,7 +49,7 @@
      <input answer="answer" id = "answerbox" type="text">
      <button class = "button answer" 
              id = "answer" 
-             onclick="showyouranswer(2); youranswer(); enablenext(); typetoend();"
+             onclick="nvmtimeout(); showyouranswer(2); youranswer(); enablenext(); typetoend();"
              >Answer</button>
 </div>
 
@@ -87,10 +87,11 @@ function youranswer() {
   document.getElementById("youranswer").innerHTML = "Your Answer:  " + answer
   }
 //timeup! show answer
-var timeout;
+var buzztimeout;
 
 function timeup() {
-  timeout = setTimeout(outoftime, 4100);
+  clearTimeout(buzztimeout);
+  buzztimeout = setTimeout(outoftime, 4100);
 }
 function outoftime() {
   showyouranswer(2); 
@@ -98,6 +99,10 @@ function outoftime() {
   youranswer(); 
   enablenext(); 
   typetoend();
+}
+function nvmtimeout() {
+  clearTimeout(buzztimeout);
+  setTimeout(outoftime, 0);
 }
 //timeup
 function typetoend() {
