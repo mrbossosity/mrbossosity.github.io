@@ -14,7 +14,7 @@
  <style> {display: inline-block;} </style>
    <button class="button next" 
            id = "next"
-           onclick="showyouranswer(1); cleartext(); typeWriter(); answerform(1);">Next</button>
+           onclick="enablebuzz(); showyouranswer(1); cleartext(); typeWriter(); answerform(1);">Next</button>
    <button class="button pause" 
            id = "pause"
            onclick="pause(); enablenext()"
@@ -25,7 +25,7 @@
            >Resume</button>
    <button class="button buzz" 
            id="buzz"
-           onclick="pause(); answerform(2); focusanswer(); timeup();"
+           onclick="buzzed(); pause(); answerform(2); focusanswer(); timeup()"
            >Buzz</button>
           
 </div>
@@ -59,6 +59,16 @@
   }
 function enablenext () {
   document.getElementById("next").disabled=false;
+  }
+function buzzed () {
+  document.getElementById("buzz").style = "color:lightgrey; background-color: darkred;";
+}
+function disablebuzz () {
+  document.getElementById("buzz").disabled=true;  
+  }
+function enablebuzz () {
+  document.getElementById("buzz").disabled=false;
+  document.getElementById("buzz").style = "color:white; background-color: red;";
   }
 function cleartext() {
   document.getElementById("answerbox").value = ""
