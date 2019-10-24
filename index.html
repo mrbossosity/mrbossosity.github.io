@@ -26,7 +26,7 @@
            >Resume</button>
    <button class="button buzz" 
            id="buzz"
-           onclick="buzzed(); cleartext(); disablebuzz(); pause(); answerform(2); focusanswer(); timeup()"
+           onclick="buzzed(); killnext(); cleartext(); disablebuzz(); pause(); answerform(2); focusanswer(); timeup()"
            >Buzz</button>
           
 </div>
@@ -74,6 +74,11 @@ function enablenext () {
   document.getElementById("next").style = 
   "color:white; background-color: orange; border:1px solid white; box-shadow: 0px 1px 4px darkorange;"
   }
+function killnext() {
+  document.getElementById("next").disabled=true;
+  document.getElementById("next").style = 
+    "color:silver; background-color: rgb(255,157,0); border:1px solid silver; box-shadow: 0px 1px 1px gray;"
+} 
  //buzzed look and disable buzz onclick
 function buzzed () {
   document.getElementById("buzz").style = "color:gray; background-color: rgb(195,0,0); border: 1px solid lightgray; box-shadow: 0px 1px 1px gray;"
