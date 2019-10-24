@@ -15,7 +15,7 @@
  <style> {display: inline-block;} </style>
    <button class="button next" 
            id = "next"
-           onclick="enablebuzz(); showyouranswer(1); cleartext(); disablenext(); typeWriter(); answerform(1);">Next</button>
+           onclick="enablebuzz(); showyouranswer(1); disablenext(); typeWriter(); answerform(1);">Next</button>
    <button class="button pause" 
            id = "pause"
            onclick="pause(); enablenext()"
@@ -26,7 +26,7 @@
            >Resume</button>
    <button class="button buzz" 
            id="buzz"
-           onclick="buzzed(); disablebuzz(); pause(); answerform(2); focusanswer(); timeup()"
+           onclick="buzzed(); cleartext(); disablebuzz(); pause(); answerform(2); focusanswer(); timeup()"
            >Buzz</button>
           
 </div>
@@ -152,17 +152,31 @@ function showyouranswer(b) {
         document.getElementById("showyouranswer").style.display="block";
 }
 </script>
+
+        <!--link keyboard buttons to html buttons!-->
  
 <script>
-//Links enter to answer button
+//Link enter to "answer"
 document.getElementById("answerbox")
     .addEventListener("keydown", function(answerclick) {
     if (answerclick.keyCode === 13) {
         document.getElementById("answer").click();
     }
 });
+//Link "n" to "next"
+window.addEventListener("keydown", function(nextclick) {
+    if (nextclick.keyCode === 78) {
+        document.getElementById("next").click();
+    }
+});
+//link "spacebar" to "buzz"
+window.addEventListener("keydown", function(spacebarclick) {
+    if (spacebarclick.keyCode === 32) {
+        document.getElementById("buzz").click();
+    }
+});
 </script>
-
+        <!--typeWriter function chooses a random question, types in id = "question"-->
 <script>
 var myArray = ['Two weeks after a Robert Geiger news story coined a name for this event, Hugh Bennett was made director of a new agency within the Interior Department. This event prompted the Soil Conservation Act, as it was partly caused by cattle overgrazing. Dorothea Lange’s iconic photograph Migrant Mother depicts a family during, for ten points, what event in which "Okies" attempted to move to California to avoid severe drought during the Great Depression?                                                                                                                              ANSWER: Dust Bowl', 
                'Genseric captured this city after his betrothal to Eudocia was broken, and Alaric was able to capture this city after the death of Stilicho. The Battle of the Allia led to the capture of this city, which was forced to measure out ransom money using weighted scales by Brennus. Romulus Augustulus was deposed after the capture of this city in 476 AD. For ten points, name this city that was sacked several times during the fall of its Italy-based empire.                                                                                                                               ANSWER: Rome',
