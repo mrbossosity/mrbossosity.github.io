@@ -91,6 +91,18 @@ function showyouranswer(b) {
         document.getElementById("showyouranswer").style.display="block";
 }
 </script>
+ 
+<script>
+//Linking keys to functions hopefully
+document.getElementById("answerbox")
+    .addEventListener("keydown", function(answerclick) {
+    answerclick.preventDefault();
+    if (answerclick.keyCode === 13) {
+        document.getElementById("answer").click();
+    }
+});
+</script>
+
 <script>
 var myArray = ['Two weeks after a Robert Geiger news story coined a name for this event, Hugh Bennett was made director of a new agency within the Interior Department. This event prompted the Soil Conservation Act, as it was partly caused by cattle overgrazing. Dorothea Lange’s iconic photograph Migrant Mother depicts a family during, for ten points, what event in which "Okies" attempted to move to California to avoid severe drought during the Great Depression?                                                                                                                              ANSWER: Dust Bowl', 
                'Genseric captured this city after his betrothal to Eudocia was broken, and Alaric was able to capture this city after the death of Stilicho. The Battle of the Allia led to the capture of this city, which was forced to measure out ransom money using weighted scales by Brennus. Romulus Augustulus was deposed after the capture of this city in 476 AD. For ten points, name this city that was sacked several times during the fall of its Italy-based empire.                                                                                                                               ANSWER: Rome',
