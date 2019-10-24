@@ -5,8 +5,8 @@
    box-shadow: 1px 3px 8px dodgerblue;
 }   
 .questionbox {
-   border: 2px solid gray;
-   border-radius: 5px;
+   border: 4px double darkgray; 
+   box-shadow: 1px 1px 2px;
    padding: 2px 4px;
 }
 .h1   {
