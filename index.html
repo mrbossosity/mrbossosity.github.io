@@ -10,7 +10,7 @@
  <p class = h1>ProtoHISTORYbowl 
 </div>
      <br>
- 
+ <!--buttons-->
  <div>
  <style> {display: inline-block;} </style>
    <button class="button next" 
@@ -31,22 +31,22 @@
           
 </div>
     <br><br>
-<div>
+<div> <!--speed slider and allowskip checkbox-->
     Speed
     <input type = "range" id = speedvalue min = 10 max = 100 value = 55>
     Allow players to skip questions 
     <input id = "skip?" type = "checkbox">
 </div>
     <br>
-<div class = "questionbox">
+<div class = "questionbox"> <!--this is the element where the text is typed-->
  <p id="question" class = "typewritertext"></p>
 </div>
  
-<div id = "showyouranswer">
+<div id = "showyouranswer"> <!--red box that displays your response in the text box-->
  <p class = youranswer id = "youranswer">Your Answer:</p>
 </div>
 
-<div class = buzzanswer id = buzzanswer answer="">
+<div class = buzzanswer id = buzzanswer answer=""> <!--answerform pops up onclick buzz, text box and answer button-->
      <input answer="answer" id = "answerbox" type="text">
      <button class = "button answer" 
              id = "answer" 
@@ -55,7 +55,6 @@
 </div>
 
 <script>
- <script>
 //enable/disable skipping
 var allowskip = document.getElementById("skip?");
 function disablenext () {
