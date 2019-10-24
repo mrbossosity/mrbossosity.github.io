@@ -61,7 +61,7 @@ function disablenext () {
  if(allowskip.checked == false){
   document.getElementById("next").disabled=true;
   document.getElementById("next").style = 
-    "color:silver; background-color: rgb(255,157,0); border:1px solid silver;"
+    "color:silver; background-color: rgb(255,157,0); border:1px solid silver; box-shadow: 0px 1px 1px gray;"
   } 
  else {
   document.getElementById("next").disabled=false;
@@ -70,11 +70,11 @@ function disablenext () {
 function enablenext () {
   document.getElementById("next").disabled=false;
   document.getElementById("next").style = 
-  "color:white; background-color: orange; border:1px solid white;"
+  "color:white; background-color: orange; border:1px solid white; box-shadow: 0px 1px 4px darkorange;"
   }
  //buzzed look and disable buzz onclick
 function buzzed () {
-  document.getElementById("buzz").style = "color:gray; background-color: rgb(195,0,0); border: 1px solid lightgray";
+  document.getElementById("buzz").style = "color:gray; background-color: rgb(195,0,0); border: 1px solid lightgray; box-shadow: 0px 1px 1px gray;"
 }
 function disablebuzz () {
   document.getElementById("buzz").disabled=true;  
@@ -82,7 +82,7 @@ function disablebuzz () {
  //reenable buzz onclick next
 function enablebuzz () {
   document.getElementById("buzz").disabled=false;
-  document.getElementById("buzz").style = "color:white; background-color: red; border: 1px solid white";
+  document.getElementById("buzz").style = "color:white; background-color: red; border: 1px solid white; box-shadow: 0px 1px 4px maroon;";
   }
 //clear textbox onclick next
 function cleartext() {
