@@ -31,22 +31,24 @@
           
 </div>
     <br><br>
-<div> <!--speed slider and allowskip checkbox-->
+        <!--speed slider and allowskip checkbox-->
+<div> 
     Speed
     <input type = "range" id = "speedvalue" min = 10 max = 120 value = 55>
     Allow players to skip questions 
     <input id = "skip?" type = "checkbox">
 </div>
     <br>
-<div class = "questionbox"> <!--this is the element where the text is typed-->
+        <!--this is the element where the text is typed-->
+<div class = "questionbox"> 
  <p id="question" class = "typewritertext"></p>
 </div>
- 
-<div id = "showyouranswer"> <!--red box that displays your response in the text box-->
+        <!--red box that displays your response in the text box-->
+<div id = "showyouranswer"> 
  <p class = youranswer id = "youranswer">Your Answer:</p>
 </div>
-
-<div class = buzzanswer id = buzzanswer answer=""> <!--answerform pops up onclick buzz, text box and answer button-->
+        <!--answerform pops up onclick buzz, text box and answer button-->
+<div class = buzzanswer id = buzzanswer answer=""> 
      <input answer="answer" id = "answerbox" type="text">
      <button class = "button answer" 
              id = "answer" 
@@ -117,6 +119,7 @@ function outoftime() {
   enablenext(); 
   typetoend();
 }
+ //pressing the answer button overrides buzz button's timeout, displays answer onclick
 var answerbuzztimeout;
 
 function answertimeup() {
@@ -131,7 +134,7 @@ function answeroutoftime() {
   enablenext(); 
   typetoend();
 }
-//timeup
+//type rest of question quickly to reveal answer
 function typetoend() {
   timer = setInterval (type, 0)
 }
@@ -151,7 +154,7 @@ function showyouranswer(b) {
 </script>
  
 <script>
-//Linking enter to answer button
+//Links enter to answer button
 document.getElementById("answerbox")
     .addEventListener("keydown", function(answerclick) {
     if (answerclick.keyCode === 13) {
