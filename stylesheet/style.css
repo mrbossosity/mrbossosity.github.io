@@ -4,6 +4,11 @@
    padding: 9px 7px;
    box-shadow: 1px 3px 8px dodgerblue;
 }   
+.questionbox {
+   border: 2px solid lightgray;
+   border-radius: 5px;
+   padding: 2px 4px;
+}
 .h1   {
    color:  mediumblue;
    font-family: "Palatino Linotype", serif;
