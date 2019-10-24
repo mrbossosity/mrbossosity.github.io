@@ -97,7 +97,6 @@ function showyouranswer(b) {
 //Linking keys to functions hopefully
 document.getElementById("answerbox")
     .addEventListener("keydown", function(answerclick) {
-    answerclick.preventDefault();
     if (answerclick.keyCode === 13) {
         document.getElementById("answer").click();
     }
