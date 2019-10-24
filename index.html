@@ -25,7 +25,7 @@
            >Resume</button>
    <button class="button buzz" 
            id="buzz"
-           onclick="pause(); answerform(2); focusanswer()"
+           onclick="pause(); answerform(2); focusanswer(); timeup();"
            >Buzz</button>
           
 </div>
@@ -76,6 +76,20 @@ function youranswer() {
   var answer = document.getElementById("answerbox").value;
   document.getElementById("youranswer").innerHTML = "Your Answer:  " + answer
   }
+//timeup! show answer
+var timeout;
+
+function timeup() {
+  timeout = setTimeout(outoftime, 4100);
+}
+function outoftime() {
+  showyouranswer(2); 
+  answerform(1);
+  youranswer(); 
+  enablenext(); 
+  typetoend();
+}
+//timeup
 function typetoend() {
   timer = setInterval (type, 0)
 }
