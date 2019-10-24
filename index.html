@@ -55,14 +55,15 @@
 </div>
 
 <script>
- //enable/disable skipping
+ <script>
+//enable/disable skipping
 var allowskip = document.getElementById("skip?");
 function disablenext () {
  if(allowskip.checked == false){
   document.getElementById("next").disabled=true;
   document.getElementById("next").style = 
-    "color:gray; background-color: rgb(255,150,2); border:1px solid lightgray;"
-  }
+    "color:silver; background-color: rgb(255,157,0); border:1px solid lightgray;"
+  } 
  else {
   document.getElementById("next").disabled=false;
   }
