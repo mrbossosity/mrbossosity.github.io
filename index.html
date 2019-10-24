@@ -33,7 +33,7 @@
     <br><br>
 <div> <!--speed slider and allowskip checkbox-->
     Speed
-    <input type = "range" id = speedvalue min = 10 max = 100 value = 55>
+    <input type = "range" id = "speedvalue" min = 10 max = 120 value = 55>
     Allow players to skip questions 
     <input id = "skip?" type = "checkbox">
 </div>
@@ -587,7 +587,6 @@ var myArray = ['Two weeks after a Robert Geiger news story coined a name for thi
                'Miguel de la Madrid was criticized for not allowing foreign aid after one of these events. The deadliest of these events in modern history struck Tangshan, China in 1976. The Marquis of Pombal cemented his power by rebuilding (+) Lisbon after one of these events in 1755 caused widespread res and a (*) tsunami. Sixty-three people died in 1989 after one of these struck near Loma Prieta on the San Andreas fault. For ten points, name these natural disasters, one of which devastated San Francisco in 1906, that are commonly followed by deadly aftershocks.                                                                                                                               ANSWER: earthquakes',
                'The founder of this empire allegedly took power by using a rooster spur-tipped arrow to slay his rival. This kingdom’s territories were divided into the \Twelve Doors." (+) Askia Mohammad I led this empire to its military height. The Songhai supplanted this empire, whose most famous ruler allegedly (*) devalued gold with his lavish gift-giving during a hajj to Mecca. Mansa Musa led, for ten points, what West African empire, home to Timbuktu?                                                                                                                               ANSWER: Mali Empire',
               ];
-var speed = 55;
 var target = document.getElementById("question");
 var char;
 var timer;
@@ -610,6 +609,7 @@ function reset() {
 
 function typeWriter() {
   reset();  
+  var speed = document.getElementById("speedvalue").value;
   timer = setInterval(type, speed);
 }
  </script>
