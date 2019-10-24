@@ -5,17 +5,17 @@
  <link href="stylesheet/style.css" rel="stylesheet"> 
 </head>
 <body>
- 
+        <!--big header-->
 <div class = "topbox">
  <p class = h1>ProtoHISTORYbowl 
 </div>
      <br>
- <!--buttons-->
+        <!--buttons-->
  <div>
  <style> {display: inline-block;} </style>
    <button class="button next" 
            id = "next"
-           onclick="enablebuzz(); showyouranswer(1); disablenext(); typeWriter(); answerform(1);">Next</button>
+           onclick="enablebuzz(); buttonsalive(); showyouranswer(1); disablenext(); typeWriter(); answerform(1);">Next</button>
    <button class="button pause" 
            id = "pause"
            onclick="pause(); enablenext()"
@@ -26,7 +26,7 @@
            >Resume</button>
    <button class="button buzz" 
            id="buzz"
-           onclick="buzzed(); killnext(); cleartext(); disablebuzz(); pause(); answerform(2); focusanswer(); timeup()"
+           onclick="buzzed(); killbuttons(); cleartext(); disablebuzz(); pause(); answerform(2); focusanswer(); timeup()"
            >Buzz</button>
           
 </div>
@@ -74,10 +74,18 @@ function enablenext () {
   document.getElementById("next").style = 
   "color:white; background-color: orange; border:1px solid white; box-shadow: 0px 1px 4px darkorange;"
   }
-function killnext() {
+        //this disables the other buttons upon buzzing so typing n, p, r, or space doesn't trigger their linked functions
+function killbuttons() {
   document.getElementById("next").disabled=true;
   document.getElementById("next").style = 
-    "color:silver; background-color: rgb(255,157,0); border:1px solid silver; box-shadow: 0px 1px 1px gray;"
+    "color:silver; background-color: rgb(255,157,0); border:1px solid silver; box-shadow: 0px 1px 1px gray;";
+  document.getElementById("pause").disabled=true;
+  document.getElementById("resume").disabled=true;
+} 
+        //this enables pause and resume upon pressing next
+function buttonsalive() {
+  document.getElementById("pause").disabled=false;
+  document.getElementById("resume").disabled=false;
 } 
  //buzzed look and disable buzz onclick
 function buzzed () {
@@ -178,6 +186,18 @@ window.addEventListener("keydown", function(nextclick) {
 window.addEventListener("keydown", function(spacebarclick) {
     if (spacebarclick.keyCode === 32) {
         document.getElementById("buzz").click();
+    }
+});
+//link "p" to "pause"
+window.addEventListener("keydown", function(pauseclick) {
+    if (pauseclick.keyCode === 80) {
+        document.getElementById("pause").click();
+    }
+});
+//link "r" to "resume"
+window.addEventListener("keydown", function(resumeclick) {
+    if (resumeclick.keyCode === 82) {
+        document.getElementById("resume").click();
     }
 });
 </script>
