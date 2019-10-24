@@ -9,7 +9,8 @@
 <div class = "topbox">
  <p class = h1>ProtoHISTORYbowl 
 </div>
-    <br>
+     <br>
+ 
  <div>
  <style> {display: inline-block;} </style>
    <button class="button next" 
@@ -55,9 +56,9 @@
 
 <script>
  //enable/disable skipping
-var checkBox = document.getElementById("skip?");
+var allowskip = document.getElementById("skip?");
 function disablenext () {
- if(checkBox.checked == false){
+ if(allowskip.checked == false){
   document.getElementById("next").disabled=true;
   }
  else {
