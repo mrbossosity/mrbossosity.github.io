@@ -4,15 +4,13 @@
  <title>ProtoHISTORYbowl</title>
  <link href="stylesheet/style.css" rel="stylesheet"> 
 </head>
- 
 <body>
+ 
 <div class = "topbox">
  <p class = h1>ProtoHISTORYbowl 
 </div>
- 
-<br>
- 
-<div>
+    <br>
+ <div>
  <style> {display: inline-block;} </style>
    <button class="button next" 
            id = "next"
@@ -28,24 +26,32 @@
    <button class="button buzz" 
            id="buzz"
            onclick="pause(); answerform(2); focusanswer()"
-           >Buzz</button> 
+           >Buzz</button>
+          
 </div>
- <br><br>
-<div class = buzzanswer id = buzzanswer answer="">
-     <input answer="answer" id = "answerbox" type="text">
-     <button class = "button answer" 
-             id = "answer" 
-             onclick="showyouranswer(2); youranswer(); enablenext(); typetoend();"
-             >Answer</button>
-</div>
+    <br><br>
 <div>
+Speed
+    <input type = "range" id = speedvalue min = 10 max = 100 value = 55>
+    Allow players to skip questions <input type = "checkbox" checked>
+</div>
+    <br>
+<div class = "questionbox">
  <p id="question" class = "typewritertext"></p>
 </div>
  
 <div id = "showyouranswer">
  <p class = youranswer id = "youranswer">Your Answer:</p>
 </div>
- 
+
+<div class = buzzanswer id = buzzanswer answer="">
+     <input answer="answer" id = "answerbox" type="text">
+     <button class = "button answer" 
+             id = "answer" 
+             onclick="showyouranswer(2); youranswer(); enablenext(); typetoend();"
+             >Answer</button>
+</div>
+
 <script>
  function disablenext () {
   document.getElementById("next").disabled=true;
