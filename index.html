@@ -15,7 +15,7 @@
  <style> {display: inline-block;} </style>
    <button class="button next" 
            id = "next"
-           onclick="enablebuzz(); showyouranswer(1); cleartext(); typeWriter(); answerform(1);">Next</button>
+           onclick="enablebuzz(); showyouranswer(1); cleartext(); typeWriter(); answerform(1); disablenext()">Next</button>
    <button class="button pause" 
            id = "pause"
            onclick="pause(); enablenext()"
@@ -60,6 +60,8 @@ var allowskip = document.getElementById("skip?");
 function disablenext () {
  if(allowskip.checked == false){
   document.getElementById("next").disabled=true;
+  document.getElementById("next").style = 
+    "color:gray; background-color: rgb(255,150,2); border:1px solid lightgray;"
   }
  else {
   document.getElementById("next").disabled=false;
@@ -67,6 +69,8 @@ function disablenext () {
 }
 function enablenext () {
   document.getElementById("next").disabled=false;
+  document.getElementById("next").style = 
+  "color:white; background-color: orange; border:1px solid white;"
   }
  //buzzed look and disable buzz onclick
 function buzzed () {
