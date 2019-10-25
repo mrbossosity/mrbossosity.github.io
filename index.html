@@ -650,6 +650,13 @@ function typeWriter() {
   var speed = document.getElementById("speedvalue").value;
   timer = setInterval(type, speed);
 }
+function pause() {
+  clearInterval(timer)
+}
+function resume() {
+  var resumespeed = document.getElementById("speedvalue").value;
+  timer = setInterval(type, resumespeed);
+}
  </script>
 </body>
 </html>
