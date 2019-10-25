@@ -655,6 +655,9 @@ function type(){
 }
 function reset() {
   clearInterval(timer);
+  randomnumber = Math.floor((Math.random() * 424) + 0);
+  randomquestion = questions[randomnumber];
+  correspondinganswer = answers[randomnumber];
   sentence = randomquestion;
   char = 0;
   target.innerHTML = '';
