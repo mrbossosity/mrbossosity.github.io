@@ -82,12 +82,12 @@
     padding: 4px 13px;
     box-shadow: 0px 1px 4px maroon;
     } 
-.youranswer {
-    color: red;
+.theanswer {
+    color: mediumblue;
     font-family: "Palatino Linotype", serif;
     font-size: 15px;
     border: 1px solid gray;
     border-radius: 7px;
-    padding: 2px 7px; 
-    box-shadow: 1px 2px 5px red;
+    padding: 2px 5px; 
+    box-shadow: 1px 2px 5px dodgerblue;
     }
