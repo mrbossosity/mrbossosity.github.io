@@ -38,7 +38,7 @@ function type(){
 }
 function reset() {
   clearInterval(timer);
-  randomnumber = Math.floor((Math.random() * 3) + 0);
+  randomnumber = Math.floor((Math.random() * 8) + 0);
   randomquestion = questions[randomnumber];
   correspondinganswer = answers[randomnumber];
   sentence = randomquestion;
