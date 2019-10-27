@@ -9,4 +9,6 @@ var answers = [
      'The Republic',
      'Battle of Waterloo',
      'Martin Luther',
+     'Korea',
+     'Eisenhower',
 ];
