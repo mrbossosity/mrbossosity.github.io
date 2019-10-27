@@ -14,4 +14,8 @@ var answers = [
      'Snake River',
      'Ebola',
      'Osiris',
+     'Dvorak',
+     'America',
+     'Chinese Communist Party',
+     'Hull House',
 ];
