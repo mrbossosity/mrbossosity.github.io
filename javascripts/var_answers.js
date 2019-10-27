@@ -1,3 +1,4 @@
+//First ten questions 2018-19 B-Set, Chris covering 2015-16 C-Set Bowl (Rounds 1-2 already done)
 var answers = [
      'Dust Bowl',
      'Rome',
