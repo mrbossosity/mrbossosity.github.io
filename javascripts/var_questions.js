@@ -1,4 +1,4 @@
-//First ten questions 2019 B-Set, Chris covering 2016 C-Set Bowl
+//First ten questions 2018-19 B-Set, Chris covering 2015-16 C-Set Bowl
 
 var questions = [
       'Two weeks after a Robert Geiger news story coined a name for this event, Hugh Bennett was made director of a new agency within the Interior Department. This event prompted the Soil Conservation Act, as it was partly caused by cattle overgrazing. Dorothea Lange’s iconic photograph Migrant Mother depicts a family during, for ten points, what event in which "Okies" attempted to move to California to avoid severe drought during the Great Depression?',                                                                                                                             
