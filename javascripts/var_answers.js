@@ -1,5 +1,3 @@
-
-
 var answers = [
      'Dust Bowl',
      'Rome',
