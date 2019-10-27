@@ -11,4 +11,7 @@ var answers = [
      'Martin Luther',
      'Korea',
      'Eisenhower',
+     'Snake River',
+     'Ebola',
+     'Osiris',
 ];
