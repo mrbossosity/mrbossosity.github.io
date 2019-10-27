@@ -15,7 +15,7 @@ var answers = [
      'Ebola',
      'Osiris',
      'Dvorak',
-     'America',
+     'USA',
      'Chinese Communist Party',
      'Hull House',
 ];
