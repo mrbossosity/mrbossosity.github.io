@@ -8,4 +8,5 @@ var answers = [
      'Amish',
      'The Republic',
      'Battle of Waterloo',
+     'Martin Luther',
 ];
