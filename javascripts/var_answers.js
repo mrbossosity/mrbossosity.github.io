@@ -262,7 +262,7 @@ var answers = [
      'Charles V',
      'Ice age',
      'Japanese Internment',
-     'trading cards'
+     'trading cards',
      'Puerto Rico',
      'Apollo 11',
      'Mali',
