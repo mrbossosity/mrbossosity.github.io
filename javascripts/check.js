@@ -4,9 +4,11 @@ var TRAcaseinsensitive = therealanswer.toUpperCase();
 var theanswer = document.getElementById("answerbox").value;
 var TAcaseinsensitive = theanswer.toUpperCase();
 if (TAcaseinsensitive.includes(TRAcaseinsensitive)) {
-  alert("Correct!")
+  document.getElementById("incorrect").display = "none";
+  document.getElementById("correct").display = "block";
   }
  else {
-  alert("Wrong!");
+  document.getElementById("correct").style.display = "none";
+  document.getElementById("incorrect").style.display = "block";
   }
 };
