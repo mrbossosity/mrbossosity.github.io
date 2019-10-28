@@ -108,3 +108,7 @@ function correspondinganswerform(a) {
   else
         document.getElementById("correspondinganswer").style.display="block";
 }
+function correctness() {
+        document.getElementById("correct").style.display="none";
+        document.getElementById("incorrect").style.display="none";
+}
