@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>ProtoHISTORYbowl</title>
+ <link href="stylesheet/style.css" rel="stylesheet"> 
+</head>
+<body>
+        <!--big header-->
+<div class = "topbox">
+ <p class = h1>ProtoHISTORYbowl 
+</div>
+     <br>
+        <!--buttons-->
+ <div>
+ <style> {display: inline-block;} </style>
+   <button class="button next" 
+           id = "next"
+           onclick="buttonsalive(); showyouranswer(1); disablenext(); typeWriter(); answerform(1); correspondinganswerform(1); correctness();">Next</button>
+   <button class="button pause" 
+           id = "pause"
+           onclick="pause(); enablenext()"
+           >Pause</button>
+   <button class="button resume" 
+           id = "resume"
+           onclick="resume()"
+           >Resume</button>
+   <button class="button buzz" 
+           id="buzz"
+           onclick="buzzed(); killbuttons(); cleartext(); disablebuzz(); pause(); answerform(2); focusanswer(); typeanswer(); timeup()"
+           >Buzz</button>          
+</div>
+    <br><br>
+        <!--speed slider and allowskip checkbox-->
+<div> 
+    Speed
+    <input type = "range" id = "speedvalue" min = 10 max = 120 value = 55>
+    Allow players to skip questions 
+    <input id = "skip?" type = "checkbox">
+</div>
+    <br>
+         <!--corresponding answer element-->
+<div class = theanswer id = correspondinganswer style = display:none;>
+ <p id = typeanswer></p>
+</div>
+    <br>
+        <!--this is the element where the text is typed-->
+<div class = "questionbox"> 
+ <p id="question" class = "typewritertext"></p>
+</div>
+        <!--red box that displays your response in the text box-->
+<div id = "showyouranswer"> 
+  <br>
+  <button class = correct id = "correct" disabled = true style = "display: none">Correct</button>
+  <button class = incorrect id = "incorrect" disabled = true style = "display:none">Wrong</button>
+  <p id = "youranswer" style = "font-weight: bold"> </p>
+</div>
+        <!--answerform pops up onclick buzz, text box and answer button-->
+<div class = buzzanswer id = buzzanswer answer=""> 
+     <input answer="answer" id = "answerbox" type="text">
+     <button class = "button answer" 
+             id = "answer" 
+             onclick="answertimeup(); check();"
+             >Answer</button>
+</div>
+        <!--html button functions onclick-->
+<script src = "https://mrbossosity.github.io/javascripts/button_functions.js"></script>
+        <!--link keyboard buttons to html buttons!-->
+<script src = "https://mrbossosity.github.io/javascripts/keydown_events.js"></script>
+        <!--typeWriter function chooses a random question, types in id = "question"-->
+<script src = "https://mrbossosity.github.io/javascripts/var_questions.js"></script>
+<script src = "https://mrbossosity.github.io/javascripts/var_answers.js"></script>
+<script src = "https://mrbossosity.github.io/javascripts/typewriter-c-set-bowl.js"></script>
+        <!--check if answer is right, alarm (correct!)-->
+<script src = "https://mrbossosity.github.io/javascripts/check.js"></script>
+</body>
+</html>
