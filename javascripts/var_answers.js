@@ -9,6 +9,7 @@ var answers = [
      'Amish',
      'The Republic',
      'Battle of Waterloo',
+     //C-Set Bowl 2015-16, Round 1
      'Martin Luther',
      'Korea',
      'Eisenhower',
@@ -36,6 +37,7 @@ var answers = [
      'Rupert Murdoch',
      'Justinian',
      'Portugal',
+     //C-Set Bowl 2015-16, Round 2
      'Wilson',
      'Tale of Two Cities',
      'Bunker Hill',
