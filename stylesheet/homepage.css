@@ -3,7 +3,7 @@ body {
   }
  .box {
   width: 62%;
-  height: 65%;
+  height: 75%;
   max-height: 600px;
   overflow: auto;
   margin: auto;
