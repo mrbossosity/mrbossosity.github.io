@@ -1,4 +1,4 @@
-//First ten questions 2018-19 B-Set, Chris covering 2015-16 C-Set Bowl (Rounds 1-2 already done)
+//First ten questions 2018-19 B-Set, Chris covering 2015-16 C-Set Bowl (Rounds 1-4 already done)
 var answers = [
      'Dust Bowl',
      'Rome',
@@ -103,7 +103,7 @@ var answers = [
      'Mozart',
      'Super Bowl ring',
      'Salem Witch Trials',
-     'Borgia'
+     'Borgia',
      'Palestine',
      'Manhattan',
      'Dalai Lama',
