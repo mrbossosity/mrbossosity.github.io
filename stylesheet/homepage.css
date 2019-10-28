@@ -2,9 +2,9 @@ body {
   background-image: url("https://mrbossosity.github.io/images/A3846D3E-3DA3-4DD1-9F24-1C81E9870F65.jpeg");
   }
  .box {
-  width: 65%;
-  height: 55%;
-  max-height: 475px;
+  width: 62%;
+  height: 65%;
+  max-height: 600px;
   overflow: auto;
   margin: auto;
   position: absolute;
@@ -48,4 +48,24 @@ body {
   border-radius: 7px;
   text-decoration: none;
   padding: 0px 4px;
+  }
+ .room-name {
+  width: 79%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+ .go-to-room {
+  background-color: dodgerblue;
+  border: 1px solid white;
+  border-radius: 7px;
+  color: white;
+  font-family: helvetica, sans serif;
+  font-size: 20px;
+  padding: 4px 3px;
+  width: 20%;
+  box-shadow: 0px 1px 4px mediumblue;
   }
