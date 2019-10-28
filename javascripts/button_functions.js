@@ -67,6 +67,7 @@ function outoftime() {
   youranswer(); 
   enablenext(); 
   typetoend();
+  correspondinganswer(2);
 }
  //onclick answer overrides buzz button's timeout, show answer onclick
 var answerbuzztimeout;
@@ -82,6 +83,7 @@ function answeroutoftime() {
   youranswer(); 
   enablenext(); 
   typetoend();
+  correspondinganswer(2);
 }
 //type rest of question quickly to reveal answer
 function typetoend() {
