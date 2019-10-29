@@ -1,4 +1,4 @@
-var randomnumber = Math.floor((Math.random() * 285) + 118);
+var randomnumber = Math.floor((Math.random() * 285) + 117);
 var randomquestion = questions[randomnumber];
 var correspondinganswer = answers[randomnumber];
         //typewriter stuff
@@ -16,7 +16,7 @@ function type(){
 }
 function reset() {
   clearInterval(timer);
-  randomnumber = Math.floor((Math.random() * 285) + 118);
+  randomnumber = Math.floor((Math.random() * 285) + 117);
   randomquestion = questions[randomnumber];
   correspondinganswer = answers[randomnumber];
   sentence = randomquestion;
