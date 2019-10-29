@@ -5,14 +5,13 @@
  <link href="https://mrbossosity.github.io/stylesheet/style.css" rel="stylesheet"> 
 </head>
 <body>
-        <!--big header-->
-<div class = "topbox">
+
+<div class = "topbox"> <!--big header-->
  <p class = h1>ProtoHISTORYbowl 
 </div>
      <br>
-        <!--buttons-->
- <div>
- <style> {display: inline-block;} </style>
+        
+<div class = buttons> <!--buttons-->
    <button class="button next" 
            id = "next"
            onclick="buttonsalive(); showyouranswer(1); disablenext(); typeWriter(); answerform(1); correspondinganswerform(1); correctness();">Next</button>
@@ -27,41 +26,43 @@
    <button class="button buzz" 
            id="buzz"
            onclick="buzzed(); killbuttons(); cleartext(); disablebuzz(); pause(); answerform(2); focusanswer(); typeanswer(); timeup()"
-           >Buzz</button>          
-</div>
-    <br><br>
-        <!--speed slider and allowskip checkbox-->
-<div> 
-    Speed
-    <input type = "range" id = "speedvalue" min = 10 max = 120 value = 55>
-    Allow players to skip questions 
-    <input id = "skip?" type = "checkbox">
-</div>
-    <br>
-         <!--corresponding answer element-->
-<div class = theanswer id = correspondinganswer style = display:none;>
- <p id = typeanswer></p>
-</div>
-    <br>
-        <!--this is the element where the text is typed-->
-<div class = "questionbox"> 
-  <p id="question" class = "typewritertext"></p>
- </div>
-        <!--red box that displays your response in the text box-->
-<div id = "showyouranswer"> 
-  <br>
+           >Buzz</button>    
+    <div style = "font-family: palatino linotype; font-size: 13px;"> <!--speed slider and allowskip checkbox-->
+      Speed
+       <input type = "range" id = "speedvalue" min = 10 max = 120 value = 55>
+      Allow players to skip questions
+       <input id = "skip?" type = "checkbox">
+    </div>
+</div> <!--end buttons-->
+
+<div class = flexible-container> <!--this is the element where the text is typed-->                
+  <div class = "questionbox"> 
+      <div class = theanswer id = correspondinganswer style = display:none;> <!--corresponding answer element-->
+        <p id = typeanswer></p>
+      </div>
+    <p id="question" class = "typewritertext"></p>
+  </div>
+  
+  <div class = "points"> <!--point total-->
+    <p class = pointstext>Points: 0</p>
+  </div> <!--end point total-->
+</div> <!--end typing answer-->
+
+        
+<div class = answerform id = buzzanswer answer=""> <!--answerform-->
+   <input answer="answer" id = "answerbox" type="text">
+   <button class = "button answer" 
+           id = "answer" 
+           onclick="answertimeup(); check(); points();"
+           >Answer</button>             
+</div> <!--endanswerform-->
+
+<div class = correctness id = "showyouranswer"> <!--answer right or wrong-->
   <button class = correct id = "correct" disabled = true style = "display: none">Correct</button>
   <button class = incorrect id = "incorrect" disabled = true style = "display:none">Wrong</button>
   <p id = "youranswer" style = "font-weight: bold"> </p>
 </div>
-        <!--answerform pops up onclick buzz, text box and answer button-->
-<div class = buzzanswer id = buzzanswer answer=""> 
-     <input answer="answer" id = "answerbox" type="text">
-     <button class = "button answer" 
-             id = "answer" 
-             onclick="answertimeup(); check();"
-             >Answer</button>
-</div>
+ 
         <!--html button functions onclick-->
 <script src = "https://mrbossosity.github.io/javascripts/button_functions.js"></script>
         <!--link keyboard buttons to html buttons!-->
