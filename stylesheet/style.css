@@ -8,6 +8,15 @@
    border: 4px double darkgray; 
    box-shadow: 1px 1px 2px;
    padding: 2px 4px;
+   width: 75%;
+}
+.scorebox {
+   border: 2px groove lightgray;
+   border-radius: 7px;
+   position: absolute;
+   top:187px; right: 10px;
+   width: 20%;
+   height: 10%;
 }
 .h1   {
    color:  mediumblue;
