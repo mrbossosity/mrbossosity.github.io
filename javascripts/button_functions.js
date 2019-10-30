@@ -27,6 +27,7 @@ function buttonsalive() {
   document.getElementById("resume").disabled=false;
   document.getElementById("buzz").disabled=false;
   document.getElementById("buzz").style = "color:white; background-color: red; border: 1px solid white; box-shadow: 0px 1px 4px maroon;";
+  document.getElementByid("answer").disabled = false;
 } 
  //buzzed look and disable buzz onclick
 function buzzed () {
@@ -88,6 +89,10 @@ function answeroutoftime() {
 //type rest of question quickly to reveal answer
 function typetoend() {
   timer = setInterval (type, 0)
+}
+//disable answer
+function disableanswer() {
+ document.getElementById("answer").disabled = true;
 }
 //show or hide forms 
 function answerform(a) {
