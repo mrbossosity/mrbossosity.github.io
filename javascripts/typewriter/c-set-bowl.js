@@ -1,4 +1,4 @@
-var randomnumber = Math.floor((Math.random() * 108) + 9);
+var randomnumber = Math.floor((Math.random() * 189) + 9);
 var randomquestion = questions[randomnumber];
 var correspondinganswer = answers[randomnumber];
         //typewriter stuff
