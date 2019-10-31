@@ -16,7 +16,7 @@ function type(){
 }
 function reset() {
   clearInterval(timer);
-  randomnumber = Math.floor((Math.random() * 108) + 9);
+  randomnumber = Math.floor((Math.random() * 189) + 9);
   randomquestion = questions[randomnumber];
   correspondinganswer = answers[randomnumber];
   sentence = randomquestion;
