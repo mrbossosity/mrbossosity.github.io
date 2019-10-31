@@ -1,6 +1,4 @@
-//First ten questions 2018-19 B-Set, Chris covering 2015-16 C-Set Bowl (Rounds 1-4 already done)
-var answers = [
-     'Dust Bowl',
+var answers = ['Dust Bowl',
      'Rome',
      'Hawaii',
      'Mogadishu',
@@ -9,8 +7,7 @@ var answers = [
      'Amish',
      'The Republic',
      'Battle of Waterloo',
-     //C-Set Bowl 2015-16, Round 1
-     'Martin Luther',
+/*C-Set Bowl 2015-16, Round 1*/'Martin Luther',
      'Korea',
      'Eisenhower',
      'Snake River',
@@ -37,8 +34,7 @@ var answers = [
      'Rupert Murdoch',
      'Justinian',
      'Portugal',
-//C-Set Bowl 2015-16, Round 2
-     'Wilson',
+/*C-Set Bowl 2015-16, Round 2*/'Wilson',
      'Tale of Two Cities',
      'Bunker Hill',
      'Tubman',
@@ -65,8 +61,7 @@ var answers = [
      'Assassination of JFK',
      'Venice',
      'Mali Empire',
-//C-Set Bowl 2015-16 Round 3
-     'Congress of Vienna',
+/*C-Set Bowl 2015-16 Round 3*/'Congress of Vienna',
      'Mayflower Compact',
      'Abe',
      'Pershing',
@@ -93,8 +88,7 @@ var answers = [
      'Manson',
      'Elizabeth I',
      'Native Americans',
-//C-Set Bowl 2015-16 Round 4
-     'Archimedes',
+/*C-Set Bowl 2015-16 Round 4*/'Archimedes',
      'Bacon Rebellion',
      'Midway',
      'Edison',
@@ -121,8 +115,7 @@ var answers = [
      'Fidel Castro',
      'Sacco and Vanzetti',
      'Munich Massacre',
-//C-Set Bowl 2015-16 Round 5
-     'ISIS',
+/*C-Set Bowl 2015-16 Round 5*/'ISIS',
      'Matthew Perry',
      'Rome',
      'Texas',
@@ -149,8 +142,7 @@ var answers = [
      'Indonesia',
      'Sumner',
      'Martin van Buren',
-//C-Set Bowl 2015-16 Round 6
-     'San Jacinto',
+/*C-Set Bowl 2015-16 Round 6*/'San Jacinto',
      'Saladin',
      'Franco-Prussian War',
      'DC',
@@ -177,8 +169,7 @@ var answers = [
      'First Inaugural Address of FDR',
      'Samurai',
      'Akhenaten',
-//C-Set Bowl 2015-16 Round 7
-     'Taj Mahal',
+/*C-Set Bowl 2015-16 Round 7*/'Taj Mahal',
      'Jack the Ripper',
      'More',
      'Colorado River',
@@ -205,8 +196,7 @@ var answers = [
      'Hammurabi',
      'affirmative action',
      'San Francisco',
-//C-set bee 2018 rd 1 
-     'Israel',
+/*C-set bee 2018 rd 1*/'Israel',
      'Valley Forge',
      'India',
      'Singing',
@@ -237,8 +227,7 @@ var answers = [
      'Squares',
      'Kim',
      'Byzantine Empire',
-//C-Set Bee 2018 rd 2
-     'LA',
+/*C-Set Bee 2018 rd 2*/'LA',
      'Oliver Hazard Perry',
      'Three Gorges',
      'Magna Carta',
@@ -269,8 +258,7 @@ var answers = [
      'Katrina',
      'Dust Bowl',
      'Poland',
-//C-Set 2018 Bee Round 3
-     'Iroquois',
+/*C-Set 2018 Bee Round 3*/'Iroquois',
      'Suleiman the Magnificent',
      'unemployment',
      'Dubai',
@@ -301,8 +289,7 @@ var answers = [
      'Mexico',
      'Textiles',
      'Antietam',
-//C-Set Bee 2018 Final Round
-     'Hawaii',
+/*C-Set Bee 2018 Final Round*/'Hawaii',
      'Christian Science',
      'Ticonderoga',
      'Copland',
