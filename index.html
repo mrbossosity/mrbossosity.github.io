@@ -1,38 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>ProtoHISTORYBowl</title>
- <link href ="stylesheet/homepage.css" rel ="stylesheet">
+  <title>ProtoHISTORYBOWL: Login</title>
+  <link href = "https://mrbossosity.github.io/stylesheet/login.css" rel = "stylesheet">
 </head>
-
 <body>
-
-<div class = box>
-<p class = info style = "font-size: 32px; margin: 10px">Welcome to<span class = header>ProtoHISTORYbowl</span></p>
-    <hr>
-<p class = info><span class = bold>ProtoHISTORYbowl</span> is a realtime, single-player National History Bowl and Bee resource. A single-player session can include one person with <span class = bold>instantaneous buzzing</span>. It can be used in single-player mode online or offline and includes over<span class = bold> 200 questions</span>.</p>
-    <br>
-<p class = info>Enter the <span class = bold> name of a room </span> to go to or simply hit the go button to <span class = bold> create a new empty room. </span> You can't invite friends to join you by sharing the URL.</p>
-    <br>
-<p class = info>If you're feeling particularly brave right now, you can venture into a private room such as
-
-<a href = "https://mrbossosity.github.io/rooms/b-set-bowl.html" target = "_self" class = room>B-Set Bowl</a> 
-  <button class = zero-active>0 active</button>,
-<a href = "https://mrbossosity.github.io/rooms/c-set-bowl.html" target = "_self" class = room>C-Set Bowl</a> 
-  <button class = zero-active>0 active</button>, or
-<a href = "https://mrbossosity.github.io/rooms/c-set-bee.html" target = "_self" class = room>C-Set Bee</a> 
-  <button class = zero-active>0 active</button>.
-</p>
-    <hr>
-<p>
-  <span>
-  <input type = text class = "room-name" id = "room-name"></span>
-  <button onclick = "location.href ='https://mrbossosity.github.io/rooms/all.html'" 
-     class = "go-to-room" id = go-to-room>Go to Room</a>
-
+<div class = container>
+  <div class = form>
+    <div class = phb>ProtoHISTORYbowl</div> <hr>
+       <span id = burn class = burn>HERETIC! BURN AT THE STAKE!</span>
+     <div id = main style = "display: flex;">
+      <div class = usernamepassword>
+          <span class = info>Username</span><br>
+          <input class = usernameinput type = "text" id = "username"> <br><br>
+          <span class = info>Password</span> <br>
+          <input class = passwordinput type = "text" id = "password">
+          <button onclick = password() id = "submit">Submit</button>
+          <button onclick="location.href='https://mrbossosity.github.io/home.html'" id = "gotohome" style = "display: none">button</button>         
+      </div>    <div><img src = "https://mrbossosity.github.io/images/BD4E4FFC-8657-4B18-B267-15A5135FF72F.jpeg" class = image></div>
+     </div> <button id = back onclick = back() style = "display: none; position:relative; bottom: 15px; left: 7px;">Buy an indulgence?</button>
+  </div>
 </div>
- <!--this script links enter button to 'go-to-room'-->
- <script src = "https://mrbossosity.github.io/javascripts/go-to-room.js"></script>
- 
+
+<script src = "https://mrbossosity.github.io/javascripts/login.js"></script>
+
 </body>
 </html>
