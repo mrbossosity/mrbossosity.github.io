@@ -1,0 +1,68 @@
+.container {
+      height: 100%;
+      width: 100%;
+      background-image: url(https://mrbossosity.github.io/images/A3846D3E-3DA3-4DD1-9F24-1C81E9870F65.jpeg);
+      }
+    .form {
+      border: 2px solid lightgray;
+      border-radius: 7px;
+      background-color: white;
+      height: auto;
+      max-height: 300px;
+      width: auto;
+      max-width: 500px;
+      overflow: auto;
+      margin: auto;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      box-shadow: 4px 4px 2px gray;
+     }
+    .phb {
+      font-family: Palatino Linotype, serif;
+      font-size: 50px;
+      font-weight: bold;
+      line-height: 50px;
+      height: 50px;
+      color: mediumblue;
+      background-color: rgba(255,255,255,0.5);
+      text-align: center;
+      margin-left: 10px; margin-right: 10px; margin-top: 15px; margin-bottom: 15px;
+      border: 1px 1px lightgray;
+      border-radius: 7px;
+      box-shadow: 2px 2px 8px dodgerblue;
+      }
+     .burn {
+      font-family: papyrus;
+      color: rgb(255, 20, 60);
+      font-size: 175%;
+      display: none;
+      text-align: center;
+      line-height: 150px
+      }
+    .usernamepassword {
+      margin: none;
+      width: 50%;
+      }
+    .info{
+      font-family: helvetica, sans serif;
+      font-size: 16px;
+      color: dodgerblue;
+     }
+    .usernameinput {
+      width: 90%;
+      height: 10%;
+      margin-bottom: 10px; margin-top: 5px;
+      font-size: 14px;
+      }
+    .passwordinput{
+      width: 90%;
+      height: 10%;
+      margin-bottom: 10px; margin-top: 5px;
+      font-size: 14px;
+      }
+    .image {
+      width: 160px;
+      height: 160px;
+      position: relative;
+      left: 29%; top: 0px;
+      }
