@@ -445,4 +445,9 @@ var questions = ['Two weeks after a Robert Geiger news story coined a name for t
       'These people allied with the Carthaginians against a Phocaean force at the Battle of Alalia. A league of these people consisted of twelve cities, including Clusium. These people, who called themselves the Rasenna, were attacked by invading Gauls at the Battle of Melpum and lost considerable control over the Po Valley. For the point, name this ethnic group located around the Tyrrhenian Sea that, after it lost its city of Veii, assimilated into the Roman Republic.',
       'The first mayor of this city, William Lyon Mackenzie, led a stillborn 1837 uprising that was put down at the Battle of Montgomery’s Tavern. During the War of 1812, Zebulon Pike died attacking this city in the Battle of York, so called because of this city’s former name. A railroad conglomerate built a communications tower in this city that is named after the Canadian National company. For the point, name this city on the shores of Lake Ontario, the economic capital of Canada.',
       'This man accomplished an action that Noel Davis and Stanton Wooster died trying to do. This man’s autobiography, titled We, did not refer to the Ryan aircraft on the cover, but actually to his financial backers. This man won a prize from Raymond Orteig and used his fame to promote airmail. This pilot was celebrated in a 1927 ticker tape parade in New York City after he landed at La Bourget airfield in Paris. For the point, name this aviator who crossed the Atlantic Ocean alone in the Spirit of St. Louis.',
+//C-Set Bee 2017
+      '',
+      '',
+                 
+      
 ];
