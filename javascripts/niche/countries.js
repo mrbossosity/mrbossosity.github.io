@@ -52,6 +52,7 @@ var questions = ['A socialist opposition leader in this country named JM Kariuki
                  'A foreign minister of this country led the “Moscow faction” against the “Prison faction.” Ana Pauker helped about 100,000 Jews from this country emigrate to Israel. Petru Groza deposed this country’s monarch (+) Michael I and was replaced by Gheorghe Gheorghiu-Dej. The final communist leader of this country was (*) executed on Christmas during a 1989 revolution. For ten points, name this Eastern European country where Nicolae Ceausescu led from Bucharest.',
                  'A German territory in what is now this country was governed by Ambrosius Ehinger, who was employed by the Welser banking family. The British Legions under Miguel de la Torre lost to Jose Antonio Paez, who led this nation’s forces at the Battle of Carabobo. Simon Bolivar’s Decree of War to the Death primarily pertained to this country. For ten points, name this South American country that gained independence after the Battle of Lake Maracaibo.',
                  'At an embassy owned by one of these countries in the other country, an indoor soccer game was interrupted by commandos setting off a bomb under the floor, beginning Operation Chavin de Huantar. That raid ended a hostage crisis that began on the 63rd birthday of the emperor of one of these two countries; the hostages were taken by members of the Tupac Amaru terrorist group, which was based in the other country. A corrupt politician who was the first man of Asian descent to become President of a non-Asian country is a citizen of these two countries. For ten points, name this pair of countries that fought an extradition battle over Alberto Fujimori.',
+                 'A precolonial state based in this modern country was founded by Usman dan Fodio. Another precolonial state in this country was ruled by kings called obas and was famed for its bronze work. This country’s (+) Sokoto caliphate was founded by its Fulani people, and before colonization, this country’s (*) Yoruba and Ibo people largely lived in decentralized confederations. For ten points, name this country where the port of Lagos was a center of the slave trade.',
 ];
 
 var answers = ['Kenya',
@@ -108,4 +109,5 @@ var answers = ['Kenya',
                  'Romania',
                  'Venezuela',
                  'Japan and Peru',
+                 'Nigeria',
 ];
