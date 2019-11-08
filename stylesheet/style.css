@@ -5,6 +5,14 @@
    box-shadow: 1px 1px 5px rgba(0,175,255,0.4);
    margin-bottom: 0px;
 }   
+.specific-room {
+     margin-left: 5px; 
+     font-family: arial, sans serif;
+     font-style: italic;
+     text-shadow: 0.5px 1px chocolate;
+     font-size: 97%;
+     color: rgb(221, 181, 0);
+}
 .buttons {
    display: flex;
    border: 1px solid gray;
