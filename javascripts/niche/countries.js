@@ -32,13 +32,7 @@ var questions = ['A socialist opposition leader in this country named JM Kariuki
                  'A battle in this country was preceded by a cavalry skirmish at Shubra Khit. One campaign in this country was accompanied by scientists called the 150 “savants”. During a battle in this country, a (+) ship exploded after open cans of paint were ignited. A campaign in this country was ended by the sinking of the (*) L’Orient in Aboukir Bay. For ten points, name this country where Horatio Nelson defeated Napoleon’s fleet at the Battle of the Nile.',
                  'A heavy-water facility that was occupied by this country was attacked in Operation Gunnerside. The statement “I aim at the stars but sometimes I hit [the enemy’s capital],” was used to mock a scientist conducting tests on (+) “vengeance weapons” for this country. Scientists aiding in this country’s development of (*) V-2 rockets immigrated to the United States in Operation Paperclip. For ten points, name this country whose nuclear weapons program Uranverein was headed by Werner Heisenberg in World War II.',
                  'One leader of this country said he admired Hitler because “he pulled his country together,” and a first lady of this country promised to “clap hands when I see another monk barbecue.” In this country, (+) Binh Xuyen mafia were responsible for killing a leader whose brother, Nhu, ran the secret police. The Strategic (*) Hamlet Program tried to relocate this country’s rural population. For ten points, name this country that was led by Ngo Dinh Diem and fought the Communists from its northern neighbor with American assistance.',
-                 '',
-                 '',
-                 '',
-                 '',
-                 '',
-                 '',
-                ];
+];
 
 var answers = ['Kenya',
                  'Romania',
@@ -73,11 +67,5 @@ var answers = ['Kenya',
                  'Maldives',
                  'Egypt',
                  'Germany',
-                 'South Vietnam',
-                 '',
-                 '',
-                 '',
-                 '',
-                 '',
-                 '',
+                 'South Vietnam',                 
 ];
