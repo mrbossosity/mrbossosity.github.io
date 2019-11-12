@@ -1,4 +1,4 @@
-var randomnumber = Math.floor((Math.random() * 20) + 0);
+var randomnumber = Math.floor(Math.random() * array.length);
 var randomquestion = array[randomnumber].question;
 var correspondinganswer = array[randomnumber].ANSWER;
         //typewriter stuff
@@ -16,7 +16,7 @@ function type(){
 }
 function reset() {
   clearInterval(timer);
-  randomnumber = Math.floor((Math.random() * 20) + 0);
+  randomnumber = Math.floor(Math.random() * array.length);
   randomquestion = array[randomnumber].question;
   correspondinganswer = array[randomnumber].ANSWER;
   sentence = randomquestion;
