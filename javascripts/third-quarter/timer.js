@@ -24,5 +24,5 @@ function reset() {
 
 function startTimer() {
     reset();
-    timer = setInterval(countdown, 1000)
+    timer = setInterval(countdown, 1000);
 }
