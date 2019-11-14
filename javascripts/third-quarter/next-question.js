@@ -1,4 +1,3 @@
-var randomnumber = Math.floor(Math.random()* array.length);
 function startquestion() {
   document.getElementById("date-timer").style.display = "inline";
   document.getElementById("date").innerHTML = array[randomnumber].date;
