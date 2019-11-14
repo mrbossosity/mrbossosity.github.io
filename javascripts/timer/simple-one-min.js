@@ -1,4 +1,3 @@
-<script>
 var timer
 var x = 60
 var y = 1
@@ -9,4 +8,3 @@ function countdown() {
 function startTimer() {
     timer = setInterval(countdown, 1000)
 }
-</script>
