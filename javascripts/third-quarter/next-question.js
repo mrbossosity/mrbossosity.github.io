@@ -52,6 +52,21 @@ document.getElementById("box3").addEventListener("keydown", function (e) {
   }
 });
 
+function question5(){
+  var answer = document.getElementById("box4").value;
+    document.getElementById("answer4").innerHTML = "ANSWER: " + answer;
+  document.getElementById("box4").style.display = "none";
+  document.getElementById("question5").style.display = "inline";
+  document.getElementById("5").innerHTML = "(5) " + array[randomnumber].five;
+  document.getElementById("box5").focus();
+};
+
+document.getElementById("box4").addEventListener("keydown", function (e) {
+  if (13 == e.keyCode) {
+     question5();
+  }
+});
+
 function question6(){
   var answer = document.getElementById("box5").value;
     document.getElementById("answer5").innerHTML = "ANSWER: " + answer;
