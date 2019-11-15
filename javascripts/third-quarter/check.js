@@ -32,13 +32,15 @@ var answer1 = $("#box1").val(),
   }
   else {
     $("#incorrect1").show();
+    $("#ra1").html(array[randomnumber].ANSWER1);
   }
    if (answerCI2 == TRACI2) {
     $("#correct2").show();
     add10();
   }
   else {
-    $("#incorrect2").show()
+    $("#incorrect2").show();
+    $("#ra2").html(array[randomnumber].ANSWER2);
   }
   if (answerCI3 == TRACI3) {
     $("#correct3").show();
@@ -46,6 +48,7 @@ var answer1 = $("#box1").val(),
   }
   else {
     $("#incorrect3").show();
+    $("#ra3").html(array[randomnumber].ANSWER3);
   }
   if (answerCI4 == TRACI4) {
     $("#correct4").show();
@@ -53,6 +56,7 @@ var answer1 = $("#box1").val(),
   }
   else {
     $("#incorrect4").show();
+    $("#ra4").html(array[randomnumber].ANSWER4);
   }
   if (answerCI5 == TRACI5) {
     $("#correct5").show();
@@ -60,6 +64,7 @@ var answer1 = $("#box1").val(),
   }
   else {
     $("#incorrect5").show();
+    $("#ra5").html(array[randomnumber].ANSWER5);
   }
   if (answerCI6 == TRACI6) {
     $("#correct6").show();
@@ -67,6 +72,7 @@ var answer1 = $("#box1").val(),
   }
   else {
     $("#incorrect6").show();
+    $("#ra6").html(array[randomnumber].ANSWER6);
   }
   if (answerCI7 == TRACI7) {
     $("#correct7").show();
@@ -74,6 +80,7 @@ var answer1 = $("#box1").val(),
   }
   else {
     $("#incorrect7").show();
+    $("#ra7").html(array[randomnumber].ANSWER7);
   }
   if (answerCI8 == TRACI8) {
     $("#correct8").show();
@@ -81,6 +88,7 @@ var answer1 = $("#box1").val(),
   }
   else {
     $("#incorrect8").show();
+    $("#ra8").html(array[randomnumber].ANSWER8);
   }
 }
 //end check
