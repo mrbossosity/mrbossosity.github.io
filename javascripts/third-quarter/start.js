@@ -2,6 +2,7 @@ function startquestion() {
   randomnumber = Math.floor(Math.random()* array.length);
   $("#date-timer").show();
   $("#date").html(array[randomnumber].date);
+  $("#topic").html(array[randomnumber].topic);
   $("#1").html("(1) " + array[randomnumber].one);
   $("#question1").show();
   $("#box1").show();
