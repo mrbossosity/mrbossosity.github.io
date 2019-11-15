@@ -1,6 +1,6 @@
 var timer
 var target = document.getElementById("timer")
-var x = 60
+var x 
 var y = 1
 var randomnumber
 function countdown() {
@@ -25,5 +25,6 @@ function reset() {
 
 function startTimer() {
     reset();
-    timer = setInterval(countdown, 1000);
+    timer = setInterval(countdown, 1000); 
+    setTimeout(function() {clearInterval(timer)}, ((x + 1) * 1000));
 }
