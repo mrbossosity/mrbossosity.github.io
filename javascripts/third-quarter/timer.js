@@ -17,6 +17,7 @@ function reset() {
   target.innerHTML = "1:00";
   $(".nodisplay").hide();
   $(".ANSWER").html("ANSWER:");
+  $(".right-answer").html("");
   $(".box").val("");
   startquestion();
   x = 60
