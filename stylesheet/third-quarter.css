@@ -77,12 +77,12 @@
    box-shadow: 1px 1px 5px rgba(0,175,255,0.2);  
 }
 .topic {
-   font-size: 26px;
+   font-size: 27px;
 }
 .date {
    margin-left: 5px; 
    font-family: arial, sans serif;
-   font-size: 97%;
+   font-size: 95%;
    color: dodgerblue;
 }    
 .timer {
