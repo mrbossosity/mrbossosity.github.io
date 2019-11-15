@@ -121,6 +121,10 @@
     padding: 3px 6px;
     box-shadow: 1px 1px 3px rgb(255, 200, 190);
     }
+.right-answer {
+   color: red;
+   font-weight: bold;
+}
 .nodisplay {
   display: none;
 }
