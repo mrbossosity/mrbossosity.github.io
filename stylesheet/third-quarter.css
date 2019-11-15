@@ -1,4 +1,4 @@
-.topbox {
+ .topbox {
    border: 1px solid gray;
    border-radius: 5px;
    padding: 9px 7px;
@@ -73,19 +73,22 @@
 .questionbox {
    border: 4px double darkgray; 
    box-shadow: 1px 1px 2px;
-   padding: 10px 4px;
+   padding: 10px 10px;
    box-shadow: 1px 1px 5px rgba(0,175,255,0.2);  
+}
+.topic {
+   font-size: 26px;
 }
 .date {
    margin-left: 5px; 
-   font-family: arial, sans serif;
+   font-family: arial, sans serif;
    font-size: 97%;
    color: dodgerblue;
 }    
 .timer {
-   font-size: 15px;
+   font-size: 22px;
    color: red;
-   margin-bottom: 0; margin-top: 0px; margin-left: 54x;
+   margin-bottom: 0; margin-top: 0px; margin-left: 5px;
    padding: 1px 4px;
    border: 1px solid crimson;
    border-radius: 7px;
