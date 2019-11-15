@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>ProtoHISTORYbowl Third Quarter</title>
+ <link href = "https://mrbossosity.github.io/stylesheet/third-quarter.css" rel = "stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+        
+<div class = "topbox"> <!--big header-->
+ <a class = h1 href = "https://mrbossosity.github.io/home.html">ProtoHISTORYbowl</a>
+ <span class = specific-room> Third Quarter</span>
+  <div class = "points"> <!--point total-->
+    <p id = pointstext class = pointstext>Points: 0</p>
+  </div> <!--end point total-->
+</div>
+        
+<div class = buttons> <!--buttons-->
+   <button class="button next" 
+           id = "next"
+           onclick="startquestion(); startTimer(); buttonsalive(); disablenext();"
+           >Next</button>
+   <button class="button pause" 
+           id = "pause"
+           onclick="pause(); enablenext()"
+           >Pause</button>
+   <button class="button resume" 
+           id = "resume"
+           onclick="resume()"
+           >Resume</button>
+</div> <!--end buttons-->
+
+<div class = flexible-container>        
+  <div class = "questionbox">
+    <div class = nodisplay id = "date-timer">
+      <span id="date" class = "date"></span>
+      <span class = timer id="timer">1:00</span>
+    </div>
+    <div id = question1 class = nodisplay>
+      <p id="1" class = "typewritertext"></p>
+      <span id = answer1 class = ANSWER>ANSWER:</span>
+        <button class = "correct nodisplay" id = "correct1" disabled = true>Correct</button>
+        <button class = "incorrect nodisplay" id = "incorrect1" disabled = true>Wrong</button>
+      <input type = text id = "box1" class = box> 
+    </div>
+    <div id = question2 class = nodisplay>
+      <p id="2" class = "typewritertext"></p>
+      <span id = answer2 class = ANSWER>ANSWER:</span>
+        <button class = "correct nodisplay" id = "correct2" disabled = true>Correct</button>
+        <button class = "incorrect nodisplay" id = "incorrect2" disabled = true>Wrong</button>
+      <input type = text id = "box2" class = box> 
+    </div>
+    <div id = question3 class = nodisplay>
+      <p id="3" class = "typewritertext"></p>
+      <span id = answer3 class =ANSWER>ANSWER:</span>
+        <button class = "correct nodisplay" id = "correct3" disabled = true>Correct</button>
+        <button class = "incorrect nodisplay" id = "incorrect3" disabled = true>Wrong</button>
+      <input type = text id = "box3" class = box> 
+    </div>
+    <div id = question4 class = nodisplay>
+      <p id="4" class = "typewritertext"></p>
+      <span id = answer4 class = ANSWER>ANSWER:</span>
+      <button class = "correct nodisplay" id = "correct4" disabled = true>Correct</button>
+        <button class = "incorrect nodisplay" id = "incorrect4" disabled = true>Wrong</button>
+      <input type = text id = "box4" class = box> 
+    </div>
+    <div id = question5 class = nodisplay>
+      <p id="5" class = "typewritertext"></p>
+      <span id = answer5 class = ANSWER>ANSWER:</span>
+        <button class = "correct nodisplay" id = "correct5" disabled = true>Correct</button>
+        <button class = "incorrect nodisplay" id = "incorrect5" disabled = true>Wrong</button>
+      <input type = text id = "box5" class = box>
+    </div>
+    <div id = question6 class = nodisplay>
+      <p id="6" class = "typewritertext"></p>
+      <span id = answer6 class = ANSWER>ANSWER:</span>
+        <button class = "correct nodisplay" id = "correct6" disabled = true>Correct</button>
+        <button class = "incorrect nodisplay" id = "incorrect6" disabled = true>Wrong</button>
+      <input type = text id = "box6" class = box>
+    </div>
+    <div id = question7 class = nodisplay>
+      <p id="7" class = "typewritertext"></p>
+      <span id = answer7 class = ANSWER>ANSWER:</span>
+        <button class = "correct nodisplay" id = "correct7" disabled = true>Correct</button>
+        <button class = "incorrect nodisplay" id = "incorrect7" disabled = true>Wrong</button>
+      <input type = text id = "box7" class = box>
+    </div>
+    <div id = question8 class = nodisplay>
+      <p id="8" class = "typewritertext"></p>
+      <span id = answer8 class = ANSWER>ANSWER:</span>
+        <button class = "correct nodisplay" id = "correct8" disabled = true>Correct</button>
+        <button class = "incorrect nodisplay" id = "incorrect8" disabled = true>Wrong</button>
+      <input type = text id = "box8" class = box>
+    </div>
+  </div>
+</div> 
+
+<script src = "https://mrbossosity.github.io/javascripts/third-quarter/questions.js"></script>
+<script src = "https://mrbossosity.github.io/javascripts/third-quarter/timer.js"></script>
+<script src = "https://mrbossosity.github.io/javascripts/third-quarter/check.js"></script>
+<script src = "https://mrbossosity.github.io/javascripts/third-quarter/start.js"></script>
+
+</body>
+</html>
+      
