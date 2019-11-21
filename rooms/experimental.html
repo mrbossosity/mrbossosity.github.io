@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProtoHISTORYbowl Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+  <style>
+      html {
+          min-height: 100%;
+          position: relative;
+      }
+      body {
+      }
+      .everything {
+          height: 100%;
+      }
+      .nav {
+          position: fixed;
+          left: 92.5vw; top: 0;
+          border: 1px solid lightgray;
+          border-radius: 0 0 5px 5px;
+          padding: 0 0.85vw;
+          background-color: dodgerblue;
+          box-shadow: 0 2px 5px gray;
+          color: white;
+          font-size: 1.3vw;
+       
+      }
+      .header {
+          background-image: linear-gradient(to bottom, rgb(0,160,255), dodgerblue, rgb(0,50,175));
+          border-bottom: 2px solid gray;
+          border-radius: 0 0 2px 2px;
+          box-shadow: 0 6px 25px rgb(100,100,100);
+          height: 8.37vw;
+          position: fixed;
+          left: 0px; right: 0px; top: 0px;  
+      }
+      .header-text {
+          font-family: "Palatino Linotype", serif;
+          font-size: 2.8vw;
+          line-height: 0;
+          color: white;
+       }
+      .x {
+          font-size: 1.4vw;
+          position: absolute;
+          left: 90vw;
+          font-family: courier;
+          border: 1px solid lightgray;
+          border-radius: 4px;
+          padding: 0px 2px;
+      }
+      .boxinbox {
+          float: left;
+          width: 25vw;
+          height: 2.5vw;
+          background-image: linear-gradient(to bottom, dodgerblue, dodgerblue, dodgerblue, rgb(0,80,255), darkgray)
+      }
+      .dropdownbtn {
+          font-family: "Times New Roman", serif;
+          font-size: 2vw;
+          color: white;
+          width: 100%;
+          height: 100%;
+          border: 0.2vw solid lightgray;
+          position: relative;
+          pointer: cursor;
+      }
+      .dropdownbtn2 {
+          font-family: "Times New Roman", serif;
+          font-size: 2vw;
+          color: white;
+          width: 100%;
+          height: 100%;
+          border: 0.2vw solid lightgray;
+          position: relative;
+          pointer: cursor;
+      }
+      .dropdownbtn3 {
+          font-family: "Times New Roman", serif;
+          font-size: 2vw;
+          color: white;
+          width: 100%;
+          height: 100%;
+          border: 0.2vw solid lightgray;
+          position: relative;
+          pointer: cursor;
+      }
+      .dropdownbtn4 {
+          font-family: "Times New Roman", serif;
+          font-size: 2vw;
+          color: white;
+          width: 100%;
+          height: 100%;
+          border: 0.2vw solid lightgray;
+          position: relative;
+          pointer: cursor;
+      }
+      .dropdownmenu {
+          background-color: dodgerblue;
+          border-bottom: 0.2vw solid lightgray;
+          border-top: 0.2vw solid gray;
+          border-radius: 0 0 7px 7px;
+          box-shadow: 0 6px 25px rgb(100,100,100);
+          width: 24.94vw;
+          height: 6vw;
+          position: absolute;
+          z-index: 1
+      }
+      .dropdownmenu2 {
+          background-color: dodgerblue;
+          border-bottom: 0.2vw solid lightgray;
+          border-top: 0.2vw solid gray;
+          border-radius: 0 0 7px 7px;
+          box-shadow: 0 6px 25px rgb(100,100,100);
+          width: 24.94vw;
+          height: 6vw;
+          position: absolute;
+          z-index: 1;
+      }
+      .dropdownmenu3 {
+          background-color: dodgerblue;
+          border-bottom: 0.2vw solid lightgray;
+          border-top: 0.2vw solid gray;
+          border-radius: 0 0 7px 7px;
+          box-shadow: 0 6px 25px rgb(100,100,100);
+          width: 24.94vw;
+          height: 120%;
+          position: absolute;
+          z-index: 1;
+      }
+      .dropdownmenu4 {
+          background-color: dodgerblue;
+          border-bottom: 0.2vw solid lightgray;
+          border-top: 0.2vw solid gray;
+          border-radius: 0 0 7px 7px;
+          box-shadow: 0 6px 25px rgb(100,100,100);
+          width: 24.94vw;
+          height: 120%;
+          position: absolute;
+          z-index: 1;
+      }
+      .page {
+          height: 100vw;          
+          z-index: -1;
+      }
+      .insetpage { 
+          width: 100vw;
+          height: 100vw;
+          border: none;
+      }
+      .bold {
+          font-weight: bold
+      }
+      .left-border {
+          border-left: 3px solid gray;
+      }
+      .fauxlink {
+          color: white;
+          text-decoration: underline;
+          border:none;
+          font-size: 1.5vw;
+      }
+  </style>
+</head>
+
+<body>
+<div class = everything>
+    <div>
+        <button class = nav>Nav</button>
+    </div>
+    <div id = header class = header> 
+        <div><p class = header-text>Welcome to <span class = bold style = "font-size: 3.6vw"> ProtoHISTORYbowl</span></p>
+            <div style = "position: absolute; left: 96.3vw; top: 0.8vw;"><button id = x class = x>X</button></div>
+        </div>
+        <div class = boxinbox>
+            <button class = dropdownbtn id = btn1>Game</button>
+            <div class = dropdownmenu>
+                <button class = fauxlink id = gamehome>Game Home</button><br>
+                <button class = fauxlink id = thirdquarter>Third Quarter</button>                                
+            </div>
+        </div>
+        <div class = boxinbox>
+            <button class = dropdownbtn2 id = btn2>Resources</button>
+            <div class = dropdownmenu2>
+                <button class = fauxlink id = naqt>NAQT "You Gotta Know"</button>
+                <button class = fauxlink id = euroleaders>Important European Leaders</button>                                
+            </div>
+        </div>
+        <div class = boxinbox>
+            <button class = dropdownbtn3 id = btn3>Info</button>
+            <div class = dropdownmenu3>
+                <button class = fauxlink id = repo>Project Repository</button>
+            </div>
+        </div>
+        <div class = boxinbox>
+            <button class = dropdownbtn4 id = btn4>Misc</button>
+            <div class = dropdownmenu4></div>
+        </div>
+    </div>
+    <div class = page>
+        <iframe src="https://mrbossosity.github.io/home.html" class = insetpage id = insetpage></iframe>
+    </div>
+</div>
+
+<script>
+$(".dropdownmenu").hide();
+$("#btn1").click(function() {    
+    $(".dropdownmenu").toggle();
+    $(".dropdownmenu2").hide();
+    $(".dropdownmenu3").hide();
+    $(".dropdownmenu4").hide();
+});
+
+$(".dropdownmenu2").hide();
+$("#btn2").click(function() {    
+    $(".dropdownmenu2").toggle();
+    $(".dropdownmenu").hide();
+    $(".dropdownmenu3").hide();
+    $(".dropdownmenu4").hide();
+});
+
+$(".dropdownmenu3").hide();
+$("#btn3").click(function() {    
+    $(".dropdownmenu3").toggle();
+    $(".dropdownmenu").hide();
+    $(".dropdownmenu2").hide();
+    $(".dropdownmenu4").hide();
+});
+
+$(".dropdownmenu4").hide();
+$("#btn4").click(function() {    
+    $(".dropdownmenu4").toggle();
+    $(".dropdownmenu").hide();
+    $(".dropdownmenu2").hide();
+    $(".dropdownmenu3").hide();
+});
+</script>
+
+<script>
+$("#gamehome").click(function () { 
+    $("#insetpage").attr("src", "https://mrbossosity.github.io/home");
+});
+
+$("#thirdquarter").click(function () { 
+    $("#insetpage").attr("src", "https://mrbossosity.github.io/rooms/third-quarter.html")
+});
+
+$("#naqt").click(function () { 
+    $("#insetpage").attr("src", "https://www.naqt.com/you-gotta-know/")
+});
+
+$("#repo").click(function () { 
+    $("#insetpage").attr("src", "https://github.com/mrbossosity/mrbossosity.github.io")
+});
+
+$("#x").click(function() {
+    $("#header").hide();
+});
+
+$(".nav").click(function() {
+    $("#header").show();
+});
+</script>
+
+</body>
+</html>
