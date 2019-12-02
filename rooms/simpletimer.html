@@ -83,6 +83,12 @@ function reset() {
     $("#demo").html("00:" + seconds);
   }
 }
+
+$("#text").on("keydown", function(answerclick) {
+  if (answerclick.keyCode === 13) {
+    $("#set").click();
+  }
+});
 </script>
 </body>
 </html>
