@@ -105,15 +105,14 @@ $("#start").on('click', detectcollision);
 var counter;
 
 function count(){
-  $("#pts").html("1");
-  pts = 1;
+  setTimeout(function(){}, 800)
   counter = setInterval(function() {
     pts += 1;
     $("#pts").html(pts)
   }, 850)
 };
 
-$("#start").on('click', function(){setTimeout(count, 900)})
+$("#start").on('click', count)
 </script>
 
 <script>
@@ -124,7 +123,7 @@ $(document).on("keydown", function (e) {
   if((e.keyCode == 38) && move) {
     $("#move").animate({top:'-=75px'}, 160, 'linear')
   }
-  if(e.keyCode == 32) {
+  if((e.keyCode == 32) && !move) {
     $("#start").click()
   }
 });
