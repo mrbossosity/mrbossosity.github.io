@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    .move {
+      border: 1px solid black;
+      position: absolute;
+      right: 90%; top: 40%;
+      height: 40px; width: 40px;
+      background-color: rgb(0,255,100);      
+    }
+    .box {
+      border: 1px solid black;
+      position: absolute;
+      right: 0%; top: 26%;
+      height: 38%; width: 2.2%;
+      background-color: red;
+      display: none;
+    }
+    .start {
+      background-color: rgb(0,220,180);
+      border: 1px solid gray; border-radius: 5px;
+      color: white;
+      font-size: 2em;
+    }
+    .pts {
+      color: red;
+      font-size: 4em;
+      font-family: arial;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div id = everything class = everything>
+  <button id = start class = start>Start</button>
+  <div class = move id = move></div>
+  <div class = box id = box></div>
+  <p id = pts class = pts>0</p>
+</div>
+
+<script>
+var timer;
+  
+function game(){
+    var a = [0,10,15,20,25,35,40,45,50,55,62];
+    var b = Math.floor(Math.random() * a.length);
+    var c = a[b];
+    $("#box").show();
+    $("#box").animate({right: '+=100%'}, 827, 'linear');
+    $("#box").animate({right: '-=100%'}, 5);
+    $("#box").animate({top: c+'%'}, 0);  
+    timer = requestAnimationFrame(game);
+};
+
+$("#start").on('click', function(){
+  requestAnimationFrame(game)}
+);
+</script>
+
+
+<script>
+var overlap;
+var collision;
+var pts = 0;
+var move;
+
+function reset(){  
+  clearInterval(collision);
+  clearInterval(counter);
+  cancelAnimationFrame(timer);
+  $("#box").finish();
+  $("#box").hide()
+  $("#start").prop('disabled', false);
+  $("#move").css('top', '40%');
+  $("#pts").html("0");
+  pts = 0;
+}
+
+function detect(){
+    var rect1 = $("#move")[0].getBoundingClientRect();
+    var rect2 = $("#box")[0].getBoundingClientRect();
+    var overlap = !(rect1.right < rect2.left || 
+                rect1.left > rect2.right || 
+                rect1.bottom < rect2.top || 
+                rect1.top > rect2.bottom);
+    if (overlap){
+      reset();
+      move = false;
+    };
+}
+
+function detectcollision(){
+  $("#start").prop('disabled', true);
+  $("#move").show();
+  clearInterval(collision);
+  collision = setInterval(detect, 10);
+  move = true;
+}
+
+$("#start").on('click', detectcollision);
+
+var counter;
+
+function count(){
+  $("#pts").html("1");
+  pts = 1;
+  counter = setInterval(function() {
+    pts += 1;
+    $("#pts").html(pts)
+  }, 850)
+};
+
+$("#start").on('click', function(){setTimeout(count, 900)})
+</script>
+
+<script>
+$(document).on("keydown", function (e) { 
+  if((e.keyCode == 40) && move) {
+    $("#move").animate({top:'+=75px'}, 160, 'linear')
+  };
+  if((e.keyCode == 38) && move) {
+    $("#move").animate({top:'-=75px'}, 160, 'linear')
+  }
+  if(e.keyCode == 32) {
+    $("#start").click()
+  }
+});
+</script>
+
+</body>
+</html>
