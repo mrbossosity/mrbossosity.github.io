@@ -3,24 +3,21 @@
 <head>
 <link rel="stylesheet" type="text/css" href="https://mrbossosity.github.io/Symbola/stylesheet.css">
 <style>
+<style>
 @page {
-    @top-left {
-        content: element(headerleft);
-    }
-
-    @top-right {
-        content: element(headerright);
-    }
+  @top-center {
+    content: element(pageHeader);
+  }
 }
-
-header1 { position: running(headerleft); }
-header2 { position: running(headerright); }
+#pageHeader{
+  position: running(pageHeader);
+}
 
 body {
   width: 8.5in; height: 11in;
-  margin-left: 1in;margin-right: 1in;margin-top: 0.5in;    
+  margin-left: 1in;margin-right: 1in;margin-top: 0.5in;
 }
-    
+
 .type {
   font-family: Symbola; font-weight: 11pt; text-align: justify;
 }
@@ -45,8 +42,10 @@ p {
 <body>
 
 <div class = type>
-  <header1 id = header1>SKBB D-Set Bowl 2019-2020 </header1>
-  <header2 id = header2 style = "float:right">Bee Round 1</header2><hr>
+  <div id = pageHeader>
+    <span id = header1>SKBB D-Set Bowl 2019-2020 </span>
+    <span id = header2 style = "float:right">Bee Round 1</span><hr>
+  </div>
 <p class = rd>Bee Round 1</p><p style = "font-weight:900; font-size: 13pt">Regulation Questions</p>
 
 <p>(1)  While running to report on an event in this city, Melih Uzunyol died of a heart attack. A criminal now serving four consecutive life sentences could not tolerate the “sanctioning of abortion on demand” at a major sporting event held in this city. Richard Jewell was not responsible for a terror attack in this city, as made clear by Eric Rudolph’s confession. Pipe bombs detonated in a backpack injured 111 spectators in, for the point, what city that hosted the 1996 Summer Olympics?</p>  
