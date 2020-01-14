@@ -2,22 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="https://mrbossosity.github.io/Symbola/stylesheet.css">
-<style>
-<style>
-@page {
-  @top-center {
-    content: element(pageHeader);
-  }
-}
-#pageHeader{
-  position: running(pageHeader);
-}
-
-body {
-  width: 8.5in; height: 11in;
-  margin-left: 1in;margin-right: 1in;margin-top: 0.5in;
-}
-
+<style media = "print">
 .type {
   font-family: Symbola; font-weight: 11pt; text-align: justify;
 }
@@ -31,22 +16,33 @@ body {
 
 p {
    margin-bottom: 10px;
+   font-size: 11pt;
 }
 
 .rd {
   font-size: 25pt;
   text-align: center;
 }
+
+p.hr {
+  position: running(header)
+}
+@media print {
+  .pagebreak { page-break-before: always; } 
+  @page {
+    @top-left {
+      content: element(header);
+    }
+  }
+}
 </style>
 </head>
 <body>
 
 <div class = type>
-  <div id = "pageHeader">
-    <span id = header1>SKBB D-Set Bowl 2019-2020 </span>
-    <span id = header2 style = "float:right">Bee Round 1</span><hr>
-  </div>
-<p class = rd>Bee Round 1</p><p style = "font-weight:900; font-size: 13pt">Regulation Questions</p>
+<p class = 'hr'>SKBB D-Set Bowl 2019-2020</p>
+<p class = rd>Bee Round 1</p>
+<p style = "font-weight:900; font-size: 13pt">Regulation Questions</p>
 
 <p>(1)  While running to report on an event in this city, Melih Uzunyol died of a heart attack. A criminal now serving four consecutive life sentences could not tolerate the “sanctioning of abortion on demand” at a major sporting event held in this city. Richard Jewell was not responsible for a terror attack in this city, as made clear by Eric Rudolph’s confession. Pipe bombs detonated in a backpack injured 111 spectators in, for the point, what city that hosted the 1996 Summer Olympics?</p>  
 ANSWER: <span class = bold>Atlanta</span> (accept Atlanta Summer Olympics) [SK] 
