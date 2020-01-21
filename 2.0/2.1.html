@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+<body class = plain>
+  <div class = container>
+    <div class = top> 
+      <span class = 'phb'>ProtoHISTORYbowl</span>
+      <span class = doing>doing one thing better than everyone else</span>
+    </div>
+    
+    <div class = main>
+      <div class = buttons>
+         <button class = next id = next >Next</button>
+         <button class = pause id = pause disabled>Pause</button>
+         <button class = resume id = resume disabled>Resume</button>
+           <div class = date>
+             <input type = text class = answerbox id = answerbox>
+             <p id = jqdate></p>
+           </div>
+         <button class = buzz id = buzz disabled>Buzz</button>
+      </div>
+      <div class = welcome>
+        <span id = cusername></span>
+          <x class = pts id = points> 0
+          </x>
+        <hr>
+        <span> Enable skipping <input type="checkbox" id="skip"></span>
+        <br>
+        Dark Mode? <button id = darkmode class = dm>Yes</button>
+        <hr>
+        <input type = text class = usernamebox id = username>
+      </div>  
+      <div class = questionbox>
+        <qa class = question id = question></qa>
+        <div class = bottom>
+          <br><br><br>
+          <span>
+            <span class = buzz>Buzz</span>
+            <span id = answerinput></span>
+          </span>
+        </div>
+      </div>
+    </div> <!--end main--> 
+    
+  </div> <!--end container-->
+</body>
+</html>
