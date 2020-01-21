@@ -87,6 +87,11 @@ $("#darkmode").click(function() {
   }
 });
 
+$("#resetpoints").click(function() {
+  pts = 0;
+  $("#points").html(pts);
+})
+
 function disablebuttons() {
   $("#next").prop("disabled", true);
   $("#pause").prop("disabled", true);
