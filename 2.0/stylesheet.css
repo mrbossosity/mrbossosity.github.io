@@ -1,0 +1,184 @@
+.plain {
+  background-color: white;
+}
+
+.invert {
+  background-color: black;
+  filter: invert(100%)
+}
+
+div.container {
+  margin-top: 3vw; 
+  font-family: 'Nanum Gothic';
+}
+
+div.top {
+  padding-bottom: 2.7vw;
+  border-bottom: 0.23vw solid darkgray;
+}
+
+span.phb {
+  font-size: 2.35vw;
+  letter-spacing: 0.18vw;
+  color: rgb(38,35,38);
+  background-color: rgb(251,251,251);
+  border: 0.1em solid dodgerblue; 
+  border-radius: 20em;
+  box-shadow: 0.085em 0.16em 0.2em gray;
+  padding: 1.37vw 1.67vw;
+}
+
+span.doing {
+  font-style: italic;
+  font-size: 1.36vw;
+  margin-left: 1.0vw; 
+  position: absolute;
+  top: 5.36vw;
+}
+
+button {
+  font-family: 'Helvetica'
+}
+button.next {
+  position: absolute;
+  left: 0.9vw; top: 9.5vw;
+  font-size: 1.7vw;
+  border: 1px solid darkgray;
+  border-radius: 0.5em;
+  box-shadow: 0.085em 0.08em 0.2em rgb(165,100,0);
+  padding: 0.1em 0.6em;
+  background-color: orange;
+  color: white;
+}
+
+button.pause {
+  position: absolute;
+  left: 7.4vw; top: 9.5vw;
+  font-size: 1.7vw;
+  border: 1px solid darkgray;
+  border-radius: 0.5em;
+  box-shadow: 0.085em 0.08em 0.2em rgb(0,25,200);
+  padding: 0.1em 0.6em;
+  background-color: dodgerblue;
+  color: white;
+}
+button.resume {
+  position: absolute;
+  left: 7.4vw; top: 9.5vw;
+  font-size: 1.7vw;
+  border: 1px solid darkgray;
+  border-radius: 0.5em;
+  box-shadow: 0.085em 0.08em 0.2em rgb(0,40,0);
+  padding: 0.1em 0.6em;
+  background-color: green;
+  color: white;
+  display: none;
+}
+
+div.date {
+  position: absolute;
+  left: 15.35vw; top: 9.755vw;
+  width: 51.6vw; height: 2vw;
+  border: 0.12em solid darkgray;
+  padding: 0.2vw 0.45vw;
+  border-radius: 0.5em;
+}
+
+#jqdate {
+  font-size: 1.45vw;
+  position: absolute;
+  top: -1.16vw;
+}
+
+.answerbox {
+  position: relative;
+  right: 0.55vw; bottom: 0.33vw;
+  width: 51.6vw; height: 2vw;
+  font-size: 1.3vw;
+  border: 0.12em solid darkgray;
+  padding: 0.2vw 0.45vw;
+  border-radius: 0.5em;
+  background-color: white;
+  display: none;
+}
+
+button.buzz {
+  position: absolute;
+  right: 25vw; top: 9.5vw;
+  font-size: 1.7vw;
+  border: 1px solid darkgray;
+  border-radius: 0.5em;
+  box-shadow: 0.085em 0.08em 0.2em maroon;
+  padding: 0.1em 0.6em;
+  background-color: red;
+  color: white;
+}
+
+div.welcome {
+  position: absolute;
+  right: 1vw; top: 9.5vw;
+  width: 21vw; height: 25.5vw;
+  border: 2px solid darkgray;
+  border-radius: 0.6em 0.6em 1.2em 1.2em;
+  padding: 0.5vw 1vw;
+  font-size: 1.3vw;
+  line-height: 3.3vw;
+}
+
+x.pts {
+  width: auto;
+  font-size: 1.3vw;
+  text-align: center;
+  border: 1px solid darkgray;
+  border-radius: 0.5em;
+  padding: 0.1em 0.5em;
+  background-color: dodgerblue;
+  color: white;
+  margin-left: 0.27vw; 
+}
+
+#skip {
+  width: 1.4vw; height: 1.4vw;
+}
+
+.dm {
+  font-size: 1.3vw;
+  border: 1px solid darkgray;
+  border-radius: 0.5em;
+  box-shadow: 0.085em 0.08em 0.2em;
+  color: green;
+  background-color: rgb(230,255,230)
+}
+
+.usernamebox {
+  width: 19.7vw; height: 1.5vw;
+  font-size: 1.1vw;
+}
+
+div.questionbox {
+  position: absolute;
+  left: 1vw; top: 13.36vw;
+  width: 70.1vw; height: auto;
+  border: 0.32vw solid darkgray;
+  border-radius: 1.5vw 1.5vw 1.2em 1.2em;
+  padding: 1vw 1.2vw;
+  font-size: 1.4vw;
+}
+
+div.bottom {
+  display: none;
+  width: 70.1vw; height: 6.7vw;
+  font-size: 1.4vw;
+}
+
+span.buzz {
+  font-size: 1.3vw;
+  border: 1px solid darkgray;
+  border-radius: 0.5em;
+  box-shadow: 0.065em 0.06em 0.2em blue;
+  padding: 0.1em 0.6em;
+  background-color: dodgerblue;
+  color: white;
+  margin-right: 0.6vw;
+  display: none;
+}
