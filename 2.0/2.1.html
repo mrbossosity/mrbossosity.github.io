@@ -3,9 +3,7 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
-  <link href="https://mrbossosity.github.io/2.0/stylesheet.css" rel="stylesheet">
 </head>
-  
 <body class = plain>
   <div class = container>
     <div class = top> 
@@ -38,6 +36,9 @@
         <input type = text class = usernamebox id = username>
       </div>  
       <div class = questionbox>
+        <div id = intro>
+          <b>Welcome to ProtoHISTORYbowl!</b><br><br> <i> Version 2.0.1 is up and running with a better checking system, new GUI, random and custom usernames, and other little tweaks and fixes!</i><br><br>PHB 2.0 exists to help with studying for 2020 Nats, so all the questions will come from 2016-2019 Nats Bowl and Bee (2010-2015 sets are quite unlike the more recent sets). We might consider adding USHB questions as well, since trigger words tend to overlap.<br><br>I've already input rounds 1-6 from 2018 Nats Bee and will be regularly adding questions. Enjoy PHB 2.0!<br><br><i>–Mrbossosity</i>
+        </div>
         <qa class = question id = question></qa>
         <div class = bottom>
           <br><br><br>
@@ -49,9 +50,12 @@
       </div>
     </div> <!--end main--> 
     
-  </div> <!--end container--> 
-<script src="https://mrbossosity.github.io/javascripts/nats/2018.NatsBee.1.js"></script>
-<script src="https://mrbossosity.github.io/javascripts/randname.js"></script>
+  </div> <!--end container-->
+<script src = "https://mrbossosity.github.io/javascripts/nats/2018.NatsBee.1.js"></script>
+<script src = "https://mrbossosity.github.io/javascripts/randname.js"></script>
+  
+<!--massive function pile lol-->
+  
 <script>
 var radj = Math.floor(Math.random() * 25);
 var rnoun = Math.floor(Math.random() * 25);
@@ -64,6 +68,7 @@ var char;
 var sentence;
 var sentencesplit;
 var answer;
+var answersplit;
 var date;
 var target = document.getElementById("question");
 var speed = 140;
@@ -82,7 +87,7 @@ function type() {
 function changespeed() {
   if (sentencesplit[char-1].includes(".") || sentencesplit[char-1].includes(",")) {
     clearInterval(timer);
-    speed = 495;
+    speed = 455;
     timer = setInterval(type, speed)
   }
   else {
@@ -99,6 +104,8 @@ function reset() {
     sentence = array[random].question;
     sentencesplit = sentence.split(" ");
     answer = array[random].ANSWER;
+    answerca = answer.toUpperCase();
+    answersplit = answerca.split(" ");
     date = array[random].date;
     char = 0;
     timer = setInterval(type, speed);
@@ -114,6 +121,7 @@ function resetanswernext() {
 }
 
 $("#next").click(function(){
+  $("#intro").html("");
   $("#buzz").prop('disabled', false);
   reset();
   resetanswernext();
@@ -219,19 +227,28 @@ $("#answerbox").keydown(function(e) {
 })
 
 var pts = 0;
+var useranswer;
+var uasplit;
 
 function assess() {
-  var useranswer = $("#answerbox").val();
-  var uauc = useranswer.toUpperCase();
-  var auc = answer.toUpperCase();
-  if (uauc.includes(auc)) {
+  if (answersplit.every(checking)) {
     pts = (pts += 10);
     $("#points").html(pts);
   }
-  else {
-    pts = (pts -= 5);
-    $("#points").html(pts)
+  if (answersplit.some(checking) && !answersplit.every(checking)) {
+    alert("Prompt!")
   }
+  if (!answersplit.some(checking)) {
+    pts = (pts -= 5);
+    $("#points").html(pts);
+  }
+}
+
+function checking(element) {
+  var useranswer = $("#answerbox").val();
+  var uacaseinsensitive = useranswer.toUpperCase();
+  var uasplit = uacaseinsensitive.toString();
+  return uasplit.includes(element)
 }
 
 function clear_answer_box() {
@@ -282,7 +299,7 @@ $("#username").on("keydown", function (e){
       $("#pause").css("display", "inline");
     }
   }
-})
+})  
 </script>
 </body>
 </html>
