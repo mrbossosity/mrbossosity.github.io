@@ -7,19 +7,34 @@ var random;
 var timer; var timer2; var timer3;
 var char;
 var sentence;
+var sentencesplit;
 var answer;
 var date;
 var target = document.getElementById("question");
-var speed = 50;
+var speed = 140;
 var usernameresume = 0;
 
 function type() {
-  if(char < sentence.length) {
-    target.innerHTML += sentence.charAt(char++);
-  } 
+  if (char < sentencesplit.length) {
+    target.innerHTML += sentencesplit[char++] + " ";
+    changespeed();
+  }
   else {
     clearInterval(timer);
   } 
+}
+
+function changespeed() {
+  if (sentencesplit[char-1].includes(".") || sentencesplit[char-1].includes(",")) {
+    clearInterval(timer);
+    speed = 495;
+    timer = setInterval(type, speed)
+  }
+  else {
+    clearInterval(timer);
+    speed = 140;
+    timer = setInterval(type, speed)
+  }
 }
 
 function reset() {
