@@ -1,7 +1,8 @@
 var radj = Math.floor(Math.random() * 25);
 var rnoun = Math.floor(Math.random() * 25);
-$("#cusername").html(randadj[radj] + " " + randnoun[rnoun])
 
+$("#cusername").html(randadj[radj] + " " + randnoun[rnoun])
+//typewriter here
 var random;
 var timer; var timer2; var timer3;
 var char;
@@ -11,7 +12,6 @@ var date;
 var target = document.getElementById("question");
 var speed = 50;
 var usernameresume = 0;
-
 
 function type() {
   if(char < sentence.length) {
@@ -34,14 +34,13 @@ function reset() {
     usernameresume = 0;
 }
 
+var check = document.getElementById("skip")
 
 function resetanswernext() {
   $("#answerbox").val('');
   $("span.buzz").hide();
   $("#answerinput").html('')
 }
-
-var check = document.getElementById("skip")
 
 $("#next").click(function(){
   $("#buzz").prop('disabled', false);
@@ -107,7 +106,6 @@ $("#buzz").click(function() {
   usernameresume = 1;
 })
 
-
 window.addEventListener("keydown", function(e) {
   if (e.keyCode === 78) {    
     document.getElementById("next").click();
@@ -145,6 +143,7 @@ $("#answerbox").keydown(function(e) {
 })
 
 var pts = 0;
+
 function assess() {
   var useranswer = $("#answerbox").val();
   var uauc = useranswer.toUpperCase();
@@ -168,7 +167,6 @@ function reveal() {
   $("#jqdate").html(date + " ANSWER: " + answer);
   target.innerHTML = sentence;
 };
-
 
 $("#answerbox").on('keydown', function() {
   timer2 = setInterval(function() {
