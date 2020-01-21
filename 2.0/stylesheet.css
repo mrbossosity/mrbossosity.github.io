@@ -39,6 +39,7 @@ span.doing {
 button {
   font-family: 'Helvetica'
 }
+
 button.next {
   position: absolute;
   left: 0.9vw; top: 9.5vw;
@@ -117,7 +118,7 @@ button.buzz {
 div.welcome {
   position: absolute;
   right: 1vw; top: 9.5vw;
-  width: 21vw; height: 16.6vw;
+  width: 21vw; height: 19.6vw;
   border: 2px solid darkgray;
   border-radius: 0.6em 0.6em 1.2em 1.2em;
   padding: 0.5vw 1vw;
@@ -142,12 +143,25 @@ x.pts {
 }
 
 .dm {
-  font-size: 1.3vw;
+  font-family: "Nanum Gothic";
+  font-size: 1.1vw;
   border: 1px solid darkgray;
   border-radius: 0.5em;
   box-shadow: 0.085em 0.08em 0.2em;
-  color: green;
-  background-color: rgb(230,255,230)
+  color: white;
+  background-color: DarkTurquoise;
+  padding: 0.1vw 1.06vw;
+}
+
+#resetpoints {
+  font-family: "Nanum Gothic";
+  font-size: 1.1vw;
+  border: 1px solid darkgray;
+  border-radius: 0.5em;
+  box-shadow: 0.085em 0.08em 0.2em;
+  color: white;
+  background-color: LightCoral;
+  padding: 0.1vw 0.6vw;
 }
 
 .usernamebox {
