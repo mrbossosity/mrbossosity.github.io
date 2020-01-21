@@ -9,6 +9,7 @@ var char;
 var sentence;
 var sentencesplit;
 var answer;
+var answersplit;
 var date;
 var target = document.getElementById("question");
 var speed = 140;
@@ -27,7 +28,7 @@ function type() {
 function changespeed() {
   if (sentencesplit[char-1].includes(".") || sentencesplit[char-1].includes(",")) {
     clearInterval(timer);
-    speed = 495;
+    speed = 455;
     timer = setInterval(type, speed)
   }
   else {
@@ -44,6 +45,8 @@ function reset() {
     sentence = array[random].question;
     sentencesplit = sentence.split(" ");
     answer = array[random].ANSWER;
+    answerca = answer.toUpperCase();
+    answersplit = answerca.split(" ");
     date = array[random].date;
     char = 0;
     timer = setInterval(type, speed);
@@ -59,6 +62,7 @@ function resetanswernext() {
 }
 
 $("#next").click(function(){
+  $("#intro").html("");
   $("#buzz").prop('disabled', false);
   reset();
   resetanswernext();
@@ -164,19 +168,37 @@ $("#answerbox").keydown(function(e) {
 })
 
 var pts = 0;
+var useranswer;
+var uasplit;
 
 function assess() {
-  var useranswer = $("#answerbox").val();
-  var uauc = useranswer.toUpperCase();
-  var auc = answer.toUpperCase();
-  if (uauc.includes(auc)) {
+  if (answersplit.every(checking)) {
     pts = (pts += 10);
     $("#points").html(pts);
   }
   else {
     pts = (pts -= 5);
-    $("#points").html(pts)
+    $("#points").html(pts);
   }
+}
+
+function checking(element) {
+  var useranswer = $("#answerbox").val();
+  var uacaseinsensitive = useranswer.toUpperCase();
+  var uasplit = uacaseinsensitive.toString();
+  return uasplit.includes(element)
+}
+
+function prompt() {
+  $("#answerbox").css("display", "inline");
+  $("#jqdate").css("display", "none");
+  $("#prompt").show();
+  $("#answerbox").focus();
+  usernameresume = 1;
+  timer2 = setInterval(function() {
+    var value = $("#answerbox").val();
+    $("#promptinput").html(value)
+  }, 10)
 }
 
 function clear_answer_box() {
