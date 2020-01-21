@@ -42,6 +42,7 @@ function reset() {
     var random = Math.floor(Math.random() * array.length);
     target.innerHTML = '';
     sentence = array[random].question;
+    sentencesplit = sentence.split(" ");
     answer = array[random].ANSWER;
     date = array[random].date;
     char = 0;
