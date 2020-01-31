@@ -1,0 +1,116 @@
+body {
+  height: 125vh;
+  margin-top: 7vw;
+  margin-left: 0; margin-right: 0;
+}
+
+header {
+  z-index: 5;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 7vw;
+  width: 100vw;
+  border: 1px solid darkgray;
+  background-image: linear-gradient(white, white,white,white,white,white,white,white,rgb(245,245,245),rgb(240,230,235));
+  display: flex;
+  align-items: center;
+  box-shadow: 0vw 0.3vw 1.7vw rgb(100,130,160);
+  
+}
+
+#ihbb {
+  height: 4.9vw;
+  margin-left: 0.7vw;
+  margin-bottom: 0.25vw;
+}
+
+nav {
+  width: 80vw;
+  position: fixed;
+  left: 10vw;
+  display: flex;
+  align-items: center;
+}
+
+.toplink {
+  width: 18vw;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(225,146,130);
+  font-family: "Nanum Gothic"
+}
+
+#nhbb {
+  position: fixed;
+  top: 1.28vw;
+  right: 1.3vw;
+  height: 4.8vw;
+}
+
+main {
+  font-family: "Nanum Gothic";
+}
+
+div.top {
+  height: 16vw;
+  background-image: linear-gradient(rgb(255,165,150),rgb(255,220,220),rgb(255,225,225),pink);
+  padding-top: 9vw;
+  border-bottom: 0.2vw solid rgb(250,250,250);
+}
+
+div.welcome {
+  width: 100vw;
+  text-align: center;
+  color: rgb(50,40,40)
+}
+
+h {
+  font-size: 5vw;
+}
+
+.season {
+  color: gray;
+  font-size: 1.5vw;
+}
+
+pictures img {
+  width: 49.98vw;
+  margin: none;
+}
+
+#pic2 {
+  height: 37.55vw;
+  position: absolute;
+  border-left: 0.1vw solid white;
+}
+
+#content {
+  padding-top: 0;
+  padding-left: 2.8vw; padding-right: 2.8vw;
+  font-size: 1.3vw;
+  margin-top: -0.95vw;
+  background-image: radial-gradient(rgb(250,250,250),white,white,rgb(250,240,240),pink);
+}
+
+#quote {
+  font-size: 2vw;
+  text-align: center;
+  padding-top: 1.6vw;
+}
+
+.hblink {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.itallic {
+  font-style: italic;
+  font-size: 1.60vw;
+}
+
+.nonitallic {
+  font-style: normal;
+}
