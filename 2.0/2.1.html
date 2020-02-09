@@ -52,7 +52,7 @@
     </div> <!--end main--> 
     
   </div> <!--end container-->
-<script src = "https://mrbossosity.github.io/javascripts/nats/2018.NatsBee.1.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/questions.js"></script>
 <script src = "https://mrbossosity.github.io/javascripts/randname.js"></script>
   
 <!--massive function pile lol-->
@@ -63,13 +63,19 @@ var rnoun = Math.floor(Math.random() * 25);
 
 $("#cusername").html(randadj[radj] + " " + randnoun[rnoun])
 //typewriter here
+const array = string
+  .match(/\([^(]+\S/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/ (?=ANSWER)/);
+    return { question, ANSWER };
+  });
+
 var random;
 var timer; var timer2; var timer3;
 var char;
 var sentence;
 var sentencesplit;
 var answer;
-var answersplit;
 var date;
 var target = document.getElementById("question");
 var speed = 140;
@@ -88,7 +94,7 @@ function type() {
 function changespeed() {
   if (sentencesplit[char-1].includes(".") || sentencesplit[char-1].includes(",")) {
     clearInterval(timer);
-    speed = 455;
+    speed = 495;
     timer = setInterval(type, speed)
   }
   else {
@@ -105,8 +111,8 @@ function reset() {
     sentence = array[random].question;
     sentencesplit = sentence.split(" ");
     answer = array[random].ANSWER;
-    answerca = answer.toUpperCase();
-    answersplit = answerca.split(" ");
+    answer = answer.replace(" (", "");
+    answer = answer.replace("ANSWER: ", "");
     date = array[random].date;
     char = 0;
     timer = setInterval(type, speed);
@@ -122,11 +128,10 @@ function resetanswernext() {
 }
 
 $("#next").click(function(){
-  $("#intro").html("");
   $("#buzz").prop('disabled', false);
   reset();
   resetanswernext();
-  $("#jqdate").html(date);
+  $("#jqdate").html("");
   $(".bottom").css("display", "none")
   if (check.checked == true) {
     $("#next").prop("disabled", false);
@@ -228,28 +233,19 @@ $("#answerbox").keydown(function(e) {
 })
 
 var pts = 0;
-var useranswer;
-var uasplit;
 
 function assess() {
-  if (answersplit.every(checking)) {
+  var useranswer = $("#answerbox").val();
+  var uauc = useranswer.toUpperCase();
+  var auc = answer.toUpperCase();
+  if (uauc.includes(auc)) {
     pts = (pts += 10);
     $("#points").html(pts);
   }
-  if (answersplit.some(checking) && !answersplit.every(checking)) {
-    alert("Prompt! – but I'm still working on the prompt function, so here's 10 points")
-  }
-  if (!answersplit.some(checking)) {
+  else {
     pts = (pts -= 5);
-    $("#points").html(pts);
+    $("#points").html(pts)
   }
-}
-
-function checking(element) {
-  var useranswer = $("#answerbox").val();
-  var uacaseinsensitive = useranswer.toUpperCase();
-  var uasplit = uacaseinsensitive.toString();
-  return uasplit.includes(element)
 }
 
 function clear_answer_box() {
@@ -258,7 +254,7 @@ function clear_answer_box() {
 }
 
 function reveal() {
-  $("#jqdate").html(date + " ANSWER: " + answer);
+  $("#jqdate").html("ANSWER: " + answer);
   target.innerHTML = sentence;
 };
 
@@ -300,7 +296,7 @@ $("#username").on("keydown", function (e){
       $("#pause").css("display", "inline");
     }
   }
-})  
+})
 </script>
 </body>
 </html>
