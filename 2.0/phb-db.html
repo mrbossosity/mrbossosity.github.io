@@ -139,7 +139,15 @@ poland {
   </div>
   
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src = "https://mrbossosity.github.io/2.0/ihbb/a-bee.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-bee.js"></script> 
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2019.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bee-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bee-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bee-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bee-2019.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bee-2016.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bee-2017.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bee-2018.js"></script>
@@ -156,6 +164,61 @@ const abee = abee20162019
   const [question, ANSWER] = substr.split(/(?=ANSWER)/);
   return { question, ANSWER };
 });
+  
+const b2016 = bbee2016
+  .split(/(?=\(\d+\))/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER)/);
+    return { question, ANSWER };
+  });
+
+const b2017 = bbee2017
+  .split(/(?=\(\d+\))/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER)/);
+    return { question, ANSWER };
+  });
+
+const b2018 = bbee2018
+  .split(/(?=\(\d+\))/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER)/);
+    return { question, ANSWER };
+  });
+
+const b2019 = bbee2019
+  .split(/(?=\(\d+\))/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER)/);
+    return { question, ANSWER };
+  });
+
+const c2016 = cbee2016
+  .split(/(?=\(\d+\))/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER)/);
+    return { question, ANSWER };
+  });
+const c2017 =cbee2017
+  .split(/(?=\(\d+\))/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER)/);
+    return { question, ANSWER };
+  });
+
+const c2018 = cbee2018
+  .split(/(?=\(\d+\))/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER)/);
+    return { question, ANSWER };
+  });
+
+const c2019 = cbee2019
+  .split(/(?=\(\d+\))/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER)/);
+    return { question, ANSWER };
+  });
 
 const nb2016 = natsbee2016
   .split(/(?=\(\d+\))/g)
