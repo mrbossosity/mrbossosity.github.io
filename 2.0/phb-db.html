@@ -139,7 +139,7 @@ poland {
   </div>
   
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src = "https://mrbossosity.github.io/2.0/ihbb/a-bee.js"></script> 
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-set/a-bee.js"></script> 
 <script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2016.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2017.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2018.js"></script>
@@ -157,7 +157,12 @@ poland {
 <script src = "https://mrbossosity.github.io/2.0/ihbb/ushb/ushb-2018.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/ushb/ushb-2019.js"></script>
 
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-set/a-bowl-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-set/a-bowl-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-set/a-bowl-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-set/a-bowl-2019.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bowl-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bowl-2017.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bowl-2018.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bowl-2019.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bowl-2016.js"></script>
@@ -283,7 +288,80 @@ const u2019 = ushb2019
     const [question, ANSWER] = substr.split(/(?=ANSWER)/);
     return { question, ANSWER };
   });
+  
 
+var frabowl2016 = abowl2016 
+  .replace(/page\s\d+/gi, "")
+  .replace(/bowl round\s\d+/gi, "")
+  .replace(/NHBB [ABC]\-set\sbowl\s(2015|2016|2017|2018)\-(2016|2017|2018|2019)/gi, "")   
+  .replace(/(first|second|third|fourth)\squarter/gi, "")
+  .replace(/extra\squestion/gi, "")   
+  .replace(/only\sread\sif\syou\sneed\sa\sbackup\sor\stiebreaker!/gi, "")
+  .replace(/regulation\squestions/gi, "")
+  .replace(/\(\+\)/gi, "+")
+  .replace(/\(\*\)/gi, "*");
+
+const abowl2016fr = frabowl2016
+  .split(/(?=\(\d+\))|(?=BONUS:)/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER:)/);
+    return { question, ANSWER };
+  });
+  
+var frabowl2017 = abowl2017
+  .replace(/page\s\d+/gi, "")
+  .replace(/bowl round\s\d+/gi, "")
+  .replace(/NHBB [ABC]\-set\sbowl\s(2015|2016|2017|2018)\-(2016|2017|2018|2019)/gi, "")   
+  .replace(/(first|second|third|fourth)\squarter/gi, "")
+  .replace(/extra\squestion/gi, "")   
+  .replace(/only\sread\sif\syou\sneed\sa\sbackup\sor\stiebreaker!/gi, "")
+  .replace(/regulation\squestions/gi, "")
+  .replace(/\(\+\)/gi, "+")
+  .replace(/\(\*\)/gi, "*");
+
+const abowl2017fr = frabowl2017
+  .split(/(?=\(\d+\))|(?=BONUS:)/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER:)/);
+    return { question, ANSWER };
+  });
+  
+var frabowl2018 = abowl2018
+  .replace(/page\s\d+/gi, "")
+  .replace(/bowl round\s\d+/gi, "")
+  .replace(/NHBB [ABC]\-set\sbowl\s(2015|2016|2017|2018)\-(2016|2017|2018|2019)/gi, "")   
+  .replace(/(first|second|third|fourth)\squarter/gi, "")
+  .replace(/extra\squestion/gi, "")   
+  .replace(/only\sread\sif\syou\sneed\sa\sbackup\sor\stiebreaker!/gi, "")
+  .replace(/regulation\squestions/gi, "")
+  .replace(/\(\+\)/gi, "+")
+  .replace(/\(\*\)/gi, "*");
+
+const abowl2018fr = frabowl2018
+  .split(/(?=\(\d+\))|(?=BONUS:)/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER:)/);
+    return { question, ANSWER };
+  });
+  
+var frabowl2019 = abowl2019
+  .replace(/page\s\d+/gi, "")
+  .replace(/bowl round\s\d+/gi, "")
+  .replace(/NHBB [ABC]\-set\sbowl\s(2015|2016|2017|2018)\-(2016|2017|2018|2019)/gi, "")   
+  .replace(/(first|second|third|fourth)\squarter/gi, "")
+  .replace(/extra\squestion/gi, "")   
+  .replace(/only\sread\sif\syou\sneed\sa\sbackup\sor\stiebreaker!/gi, "")
+  .replace(/regulation\squestions/gi, "")
+  .replace(/\(\+\)/gi, "+")
+  .replace(/\(\*\)/gi, "*");
+
+const abowl2019fr = frabowl2019
+  .split(/(?=\(\d+\))|(?=BONUS:)/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER:)/);
+    return { question, ANSWER };
+  });
+  
 var frbbowl2016 = bbowl2016
   .replace(/page\s\d+/gi, "")
   .replace(/bowl round\s\d+/gi, "")
@@ -302,6 +380,24 @@ const bbowl2016fr = frbbowl2016
     return { question, ANSWER };
   });
 
+var frbbowl2017 = bbowl2017
+  .replace(/page\s\d+/gi, "")
+  .replace(/bowl round\s\d+/gi, "")
+  .replace(/NHBB [ABC]\-set\sbowl\s(2015|2016|2017|2018)\-(2016|2017|2018|2019)/gi, "")   
+  .replace(/(first|second|third|fourth)\squarter/gi, "")
+  .replace(/extra\squestion/gi, "")   
+  .replace(/only\sread\sif\syou\sneed\sa\sbackup\sor\stiebreaker!/gi, "")
+  .replace(/regulation\squestions/gi, "")
+  .replace(/\(\+\)/gi, "+")
+  .replace(/\(\*\)/gi, "*");
+
+const bbowl2017fr = frbbowl2017
+  .split(/(?=\(\d+\))|(?=BONUS:)/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER:)/);
+    return { question, ANSWER };
+  });
+  
 var frbbowl2018 = bbowl2018
   .replace(/page\s\d+/gi, "")
   .replace(/bowl round\s\d+/gi, "")
@@ -367,7 +463,7 @@ const cb2019 = cbowl2019
   });
   
 
-const array = abee.concat(b2016, b2017, b2018, b2019, c2016, c2017, c2018, c2019, nb2016, nb2017, nb2018, nb2019, u2016, u2017, u2018, u2019, bbowl2016fr, bbowl2018fr, bbowl2019fr, cb2016, cb2017, cb2018, cb2019);
+const array = abee.concat(b2016, b2017, b2018, b2019, c2016, c2017, c2018, c2019, nb2016, nb2017, nb2018, nb2019, u2016, u2017, u2018, u2019, abowl2016fr, abowl2017fr, abowl2018fr, abowl2019fr, bbowl2016fr, bbowl2017fr bbowl2018fr, bbowl2019fr, cb2016, cb2017, cb2018, cb2019);
 
 $(document).ready(function() {
   for (var j = 0; j < array.length; j++) {
