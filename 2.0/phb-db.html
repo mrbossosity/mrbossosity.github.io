@@ -1,11 +1,11 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
-  <style>
+<style>
   body {
   font-family: 'Nanum Gothic';
   height: 125vh;
-  margin-top: 9.9vw;
+  margin-top: 10.65vw;
 }
 
 header {
@@ -43,9 +43,29 @@ span.doing {
   top: 5.4vw; left: 28.1vw
 }
 
+.loader {
+  width: 10vw; 
+  height: 10vw;
+  border: 1.4vw solid lightgray;
+  border-top: 1.4vw solid dodgerblue;
+  border-bottom: 1.4vw solid darkorange;
+  border-left: 1.4vw solid rgb(240,240,240);
+  border-radius: 50%;
+  position: absolute;
+  top: 24vw;
+  left: 45vw;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    
 .main {
+  display: none;
   padding: 1vw 1.5vw;
-  margin-top: 9vw;
+  margin-top: 10vw;
 }
 
 #userquery {
@@ -117,15 +137,16 @@ poland {
 .srq {
   font-size: 1.5vw;
   font-style: italic;
-    margin-left: 0.2vw
+  margin-left: 0.2vw
 }
   </style>
 </head>
 <body>
   <header> 
     <a href = "https://mrbossosity.github.io/2.0/2.1.html" class = 'phb'>ProtoHISTORYbowl</a>
-    <span class = "doing">searching 2016-2019 NHBB A-Set B-Set, C-Set, and USHB better than everyone else</span>
+    <span class = "doing">searching 2016-2019 NHBB Nats, A-Set B-Set, C-Set, and USHB better than everyone else</span>
   </header>
+  <div class = "loader"></div> 
   <div class = "main">
     <input type = "text" id = "userquery">
     <button id = "search" class = "search">Search!</button>
@@ -173,6 +194,24 @@ poland {
 <script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bowl-2017.js"></script>
 
 <script>
+var timer;
+
+$(document).ready(function() {
+  startLoader();
+  timer = setTimeout(stopLoader, 2100);
+})
+
+function startLoader() {
+  $(".main").css("display", "none");
+  $(".loader").css("display", "inline");
+}
+
+function stopLoader() {
+  $(".loader").css("display", "none");
+  $(".main").css("display", "inline");
+  $("#results").css("display", "block");
+}
+  
 const abee = abee20162019
 .split(/(?=\(\d+\))/g)
 .map((substr) => {
@@ -516,6 +555,9 @@ var qnumber;
 var anumber;
 
 function init() {
+  $("#results").css("display", "none");
+  $(".loader").css("display", "inline");
+  timer = setTimeout(stopLoader, 650);
   $("#intro").css("display", "none");
   query = $("#userquery").val();
   query = query.toUpperCase();
@@ -536,7 +578,7 @@ function processanswerquery() {
 $("#search").on("click", function() {
   init();
   questionquery();
-  answerquery()
+  answerquery();
 })
                 
 function questionquery() {
