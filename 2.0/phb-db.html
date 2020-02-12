@@ -411,7 +411,6 @@ function questionquery() {
     if (array[i].question.toUpperCase().includes(query)) {
       var question = array[i].question;
       var answer = array[i].ANSWER;
-      var answer = answer.replace(" (", "");
       document.getElementById("qresults").innerHTML += ("<p class = 'qresult'>" + question + "<br><br>" + answer + " (" + i + ")</p>");
       qnumber += 1;  
     };
@@ -425,7 +424,6 @@ function answerquery() {
     if (array[k].ANSWER.toUpperCase().includes(query)) {
       var aquestion = array[k].question;
       var aanswer = array[k].ANSWER;
-      var aanswer = aanswer.replace(" (", "");
       document.getElementById("aresults").innerHTML += ("<p class = 'aresult'>" + aquestion + "<br><br>" + aanswer + " (" + k + ")</p>");
       anumber += 1;  
     };
