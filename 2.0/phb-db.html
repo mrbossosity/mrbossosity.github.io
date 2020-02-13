@@ -193,6 +193,7 @@ poland {
 <script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bowl-2019.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bowl-2016.js"></script>
 <script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bowl-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bowl-2018.js"></script>
 
 <script>
 var timer;
@@ -525,6 +526,7 @@ const natsbowl2016fr = frnatsbowl2016
 var frnatsbowl2017 = natsbowl2017
   .replace(/page\s\d+/gi, "")
   .replace(/bowl round\s\d+/gi, "")
+  .replace(/bowl\splayoff\spacket\s\d+/gi, "")
   .replace(/NHBB\snationals\sbowl\s(2015|2016|2017|2018)\-(2016|2017|2018|2019)/gi, "")   
   .replace(/(first|second|third|fourth)\squarter/gi, "")
   .replace(/extra\squestion/gi, "")   
@@ -533,15 +535,33 @@ var frnatsbowl2017 = natsbowl2017
   .replace(/\(\+\)/gi, "+")
   .replace(/\(\*\)/gi, "*")
 
-const natsbowl2017fr = frnatsbowl2017
+const natsbowl2017fr = frnatsbowl2018
   .split(/(?=\(\d+\))|(?=BONUS:)/g)
   .map((substr) => {
     const [question, ANSWER] = substr.split(/(?=ANSWER:)/);
     return { question, ANSWER };
   });  
 
+var frnatsbowl2018 = natsbowl2018
+  .replace(/page\s\d+/gi, "")
+  .replace(/bowl\sround\s\d+/gi, "")
+  .replace(/bowl\splayoff\spacket\s\d+/gi, "")
+  .replace(/NHBB\snationals\sbowl\s(2015|2016|2017|2018)\-(2016|2017|2018|2019)/gi, "")   
+  .replace(/(first|second|third|fourth)\squarter/gi, "")
+  .replace(/extra\squestion/gi, "")   
+  .replace(/only\sread\sif\syou\sneed\sa\sbackup\sor\stiebreaker!/gi, "")
+  .replace(/regulation\squestions/gi, "")
+  .replace(/\(\+\)/gi, "+")
+  .replace(/\(\*\)/gi, "*")
 
-const array = abee.concat(b2016, b2017, b2018, b2019, c2016, c2017, c2018, c2019, nb2016, nb2017, nb2018, nb2019, u2016, u2017, u2018, u2019, abowl2016fr, abowl2017fr, abowl2018fr, abowl2019fr, bbowl2016fr, bbowl2017fr, bbowl2018fr, bbowl2019fr, cb2016, cb2017, cb2018, cb2019, natsbowl2016fr, natsbowl2017fr);
+const natsbowl2018fr = frnatsbowl2018
+  .split(/(?=\(\d+\))|(?=BONUS:)/g)
+  .map((substr) => {
+    const [question, ANSWER] = substr.split(/(?=ANSWER:)/);
+    return { question, ANSWER };
+  });  
+
+const array = abee.concat(b2016, b2017, b2018, b2019, c2016, c2017, c2018, c2019, nb2016, nb2017, nb2018, nb2019, u2016, u2017, u2018, u2019, abowl2016fr, abowl2017fr, abowl2018fr, abowl2019fr, bbowl2016fr, bbowl2017fr, bbowl2018fr, bbowl2019fr, cb2016, cb2017, cb2018, cb2019, natsbowl2016fr, natsbowl2017fr, natsbowl2018fr);
 
 $(document).ready(function() {
   for (var j = 0; j < array.length; j++) {
