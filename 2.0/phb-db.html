@@ -535,7 +535,7 @@ var frnatsbowl2017 = natsbowl2017
   .replace(/\(\+\)/gi, "+")
   .replace(/\(\*\)/gi, "*")
 
-const natsbowl2017fr = frnatsbowl2018
+const natsbowl2017fr = frnatsbowl2017
   .split(/(?=\(\d+\))|(?=BONUS:)/g)
   .map((substr) => {
     const [question, ANSWER] = substr.split(/(?=ANSWER:)/);
