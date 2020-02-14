@@ -201,7 +201,7 @@ var timer;
 
 $(document).ready(function() {
   startLoader();
-  timer = setTimeout(stopLoader, 2100);
+  timer = setTimeout(stopLoader, 1300);
 })
 
 function startLoader() {
@@ -628,7 +628,7 @@ function questionquery() {
     if (array[i].question.toUpperCase().includes(query)) {
       var question = array[i].question;
       var answer = array[i].ANSWER;
-      document.getElementById("qresults").innerHTML += ("<p class = 'qresult'>" + question + "<br><br>" + answer + " (" + i + ")</p>");
+      document.getElementById("qresults").innerHTML += ("<p class = 'qresult'>" + question + "<br><br>" + answer + "</p>");
       qnumber += 1;  
     };
   };
@@ -641,7 +641,7 @@ function answerquery() {
     if (array[k].ANSWER.toUpperCase().includes(query)) {
       var aquestion = array[k].question;
       var aanswer = array[k].ANSWER;
-      document.getElementById("aresults").innerHTML += ("<p class = 'aresult'>" + aquestion + "<br><br>" + aanswer + " (" + k + ")</p>");
+      document.getElementById("aresults").innerHTML += ("<p class = 'aresult'>" + aquestion + "<br><br>" + aanswer + "</p>");
       anumber += 1;  
     };
   };
