@@ -6,7 +6,7 @@ body {
   font-family: 'Nanum Gothic';
   height: 125vh;
   margin-top: 10.65vw;
-  background-image: linear-gradient(to right, rgba(200,210,225,0.1), rgba(200,210,225,0.1), rgba(200,210,225,0.2), rgba(175,180,180, 0.24));
+  background-image: linear-gradient(to right, rgba(200,210,225,0.1), rgba(200,210,225,0.1), rgba(200,210,225,0.2), rgba(170,175,175, 0.21));
 }
 
 header {
@@ -63,6 +63,11 @@ span.doing {
   100% { transform: rotate(360deg); }
 }
     
+#top {
+  height: 0;  
+  margin-bottom: 0;
+}
+  
 .main {
   display: none;
   padding: 1vw 1.5vw;
@@ -89,15 +94,16 @@ span.doing {
   padding: 0.3vw;
   margin-left: 1.3vw;
 }
-
+  
 #results {
   padding: 0.6vw 0.6vw;
 }
-
+  
 #intro {
   font-style: italic;
   font-size: 2.2vw;
   letter-spacing: 0.13vw;
+  text-align: center;
 }
 
 poland {
@@ -128,6 +134,10 @@ poland {
   background-color: white;
 }
 
+#split {
+  height: 6.39vw;
+}
+
 .aresult {
   border: 0.18vw solid darkgray;
   border-radius: 0.5vw;
@@ -143,21 +153,37 @@ poland {
   font-style: italic;
   margin-left: 0.2vw
 }
+  
+.scroll {
+  text-decoration: none;
+  font-size: 1.2vw;
+  letter-spacing: 0.1vw;
+  color: rgb(38,35,38);
+  background-color: rgb(251,251,251);
+  border: 0.15vw solid gray; 
+  border-radius: 0.83vw;
+  box-shadow: 0.085em 0.16em 0.2em darkgray;
+  padding: 0.43vw 0.70vw;
+  float: right;
+}
   </style>
 </head>
 <body>
   <header> 
-    <a href = "https://mrbossosity.github.io/2.0/2.1.html" class = 'phb'>ProtoHISTORYbowl</a>
+    <a href = "https://mrbossosity.github.io/2.0/2.1.html" class = 'phb'>protoHISTORYbowl</a>
     <span class = "doing">searching 2016-2019 NHBB Nats, A-Set B-Set, C-Set, and USHB better than everyone else</span>
   </header>
+  <top id = "top"></top>
   <div class = "loader"></div> 
   <div class = "main">
     <input type = "text" id = "userquery">
     <button id = "search" class = "search">Search!</button>
     <div id = "results">
       <div id = "hr"><hr></div>
+      <space id = "space"></space>
       <div id = "qresults"></div>
         <hr>
+      <div id = "split"></div>
       <div id = "aresults"></div>
       <div id = "intro"><p>search for a keyword or phrase, e.g. <poland>Poland</poland></p></div>
     </div>
@@ -204,7 +230,7 @@ var timer;
 
 $(document).ready(function() {
   startLoader();
-  timer = setTimeout(stopLoader, 1300);
+  timer = setTimeout(stopLoader, 1340);
 })
 
 function startLoader() {
@@ -610,7 +636,7 @@ function init() {
 
 function processquestionquery() {
   $("#userquery").blur();
-  $("#qresults").html("<p id = 'srq' class = 'sr'>Search Results – Tossup</p><hr>");
+  $("#qresults").html("<p id = 'srq' class = 'sr'>Search Results – Tossup</p>");
   qnumber = 0;
 }
 
@@ -635,7 +661,7 @@ function questionquery() {
       qnumber += 1;  
     };
   };
-  document.getElementById("srq").innerHTML += ("<br><span class = 'srq'>" + qnumber + " " + "questions found </span>")
+  document.getElementById("srq").innerHTML += ("<br><span class = 'srq'>" + qnumber + " " + "questions found </span><a href = '#split' class = 'scroll'>scroll to Answers</a>")
 }
 
 function answerquery() {
@@ -648,7 +674,7 @@ function answerquery() {
       anumber += 1;  
     };
   };
-  document.getElementById("arq").innerHTML += ("<br><span class = 'srq'>" + anumber + " " + "answers found </span>")
+  document.getElementById("arq").innerHTML += ("<br><span class = 'srq'>" + anumber + " " + "answers found</span><a href = '#top' class = 'scroll'>scroll to Tossups</a>")
 }
 
 $("#userquery").keydown(function(e) {
