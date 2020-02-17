@@ -83,6 +83,8 @@ div.date {
   border: 0.12em solid darkgray;
   padding: 0.2vw 0.45vw;
   border-radius: 0.5em;
+  white-space: nowrap;
+  overflow: scroll;
 }
 
 #jqdate {
