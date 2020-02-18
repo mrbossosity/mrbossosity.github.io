@@ -311,6 +311,7 @@ var frnatsbowl2017 = natsbowl2017
   .replace(/page\s\d+/gi, "")
   .replace(/bowl round\s\d+/gi, "")
   .replace(/bowl\splayoff\spacket\s\d+/gi, "")
+  .replace(/bowl\sbackup\spacket\s\d+/gi, "")
   .replace(/NHBB\snationals\sbowl\s(2015|2016|2017|2018)\-(2016|2017|2018|2019)/gi, "")   
   .replace(/(first|second|third|fourth)\squarter/gi, "")
   .replace(/extra\squestion/gi, "")   
