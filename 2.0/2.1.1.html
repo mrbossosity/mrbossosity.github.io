@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <link href="https://mrbossosity.github.io/2.0/stylesheet.css" rel="stylesheet">
+</head>
+<body class = plain>
+  <div class = container>
+    <header> 
+      <a href = "https://mrbossosity.github.io/2.0/2.1.html" class = 'phb'>protoHISTORYbowl</a>
+      <span class = "doing">doing one thing better than everyone else</span>
+    </header>
+    <div class = "loader"></div>
+    <div class = main>
+      <div class = buttons>
+         <button class = next id = next >Next</button>
+         <button class = pause id = pause disabled>Pause</button>
+         <button class = resume id = resume disabled>Resume</button>
+           <div class = date>
+             <input type = text class = answerbox id = answerbox>
+             <p id = jqdate></p>
+           </div>
+         <button class = buzz id = buzz disabled>Buzz</button>
+      </div>
+      <div class = welcome>
+        <span id = cusername></span>
+          <x class = pts id = points> 0</x>
+        <hr>
+        <span> Enable skipping <input type="checkbox" id="skip" checked></span>
+        <br>
+        Dark Mode? <button id = darkmode class = dm>Yes</button>
+        <br>
+        Reset points <button id = resetpoints>Reset</button>
+        <hr>
+        <div class = "pHbDB">
+          <input type = "text" id = "userquery">
+          <button id = "search" class = "go">Go!</button>
+        </div>
+        <hr>
+        <div class = "playAllQuestions">
+          <button id = "all" class = "all">Play All Questions</button>
+        </div>
+      </div>  
+      <div class = questionbox>
+        <div id = intro>
+          <b>Welcome to ProtoHISTORYbowl!</b><br><br><i>Version 2.1 is up and running with all the A-Set, B-Set, C-Set, Nationals, and USHB question sets from 2016-2019!</i><br><br>If you haven't already, check out <a href = "https://mrbossosity.github.io/2.0/phb-db.html">pHb-DB</a>, where you can search and manipulate the entire 2016-2019 NHBB question database!<br><br>I've implemented a stripped-down version of the pHb-DB engine in the field at right. You can search the database for a specific word or phrase and see both its frequency and context in tossups by playing through the search results.<br><br>Suggested searches: prompts <i>(e.g "this state", "this composer", "this surname")</i>, trigger words <i>("Baron de la Warr", "Renkioi", "Akosombo Dam")</i>, smart searches <i>("battle of c" –  all battles starting with 'c')</i><br><br>If you want to to play with the all the questions in the database, click "Play All Questions". Enjoy!<br><br><i>–Mrbossosity</i>
+        </div>
+        <qa class = question id = question></qa>
+        <div class = bottom>
+          <br><br><br>
+          <span>
+            <span class = buzz>Buzz</span>
+            <span id = answerinput></span>
+          </span>
+        </div>
+      </div>
+    </div> <!--end main--> 
+  </div> <!--end container-->
+
+<script src = "https://mrbossosity.github.io/javascripts/randname.js"></script>
+  
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-set/a-bee.js"></script> 
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bee-2019.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bee-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bee-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bee-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bee-2019.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bee-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bee-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bee-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bee-2019.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/ushb/ushb-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/ushb/ushb-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/ushb/ushb-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/ushb/ushb-2019.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-set/a-bowl-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-set/a-bowl-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-set/a-bowl-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/a-set/a-bowl-2019.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bowl-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bowl-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bowl-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/b-set/b-bowl-2019.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bowl-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bowl-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bowl-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/c-set/c-bowl-2019.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bowl-2016.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bowl-2017.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bowl-2018.js"></script>
+<script src = "https://mrbossosity.github.io/2.0/ihbb/nats/nats-bowl-2019.js"></script>
+  
+<script src = "https://mrbossosity.github.io/2.0/ihbb/question-array.js"></script>
+
+<script>
+
+//massive function pile lol
+
+$(document).ready(function() {
+  for (var j = 0; j < array.length; j++) {
+    if (typeof array[j].ANSWER === 'undefined') {
+      array.splice(j, 1)
+    }
+  }
+})
+
+//loader portion
+var loader;
+
+$(document).ready(function() {
+  Loader();
+})
+
+function Loader() {
+  startLoader();
+  loader = setTimeout(stopLoader, 750);
+}
+
+function startLoader() {
+  $(".main").css("display", "none");
+  $(".loader").css("display", "inline");
+}
+
+function stopLoader() {
+  $(".loader").css("display", "none");
+  $(".main").css("display", "inline");
+  $("#results").css("display", "block");
+}
+  
+//pHb 2.0.1 portion
+var radj = Math.floor(Math.random() * 25);
+var rnoun = Math.floor(Math.random() * 25);
+$("#cusername").html(randadj[radj] + " " + randnoun[rnoun])
+
+var random;
+var timer; var timer2; var timer3;
+var char;
+var sentence;
+var sentencesplit;
+var answer;
+var date;
+var target = document.getElementById("question");
+var speed = 140;
+var usernameresume = 0;
+
+function type() {
+  if (char < sentencesplit.length) {
+    target.innerHTML += sentencesplit[char++] + " ";
+    changespeed();
+  }
+  else {
+    clearInterval(timer);
+  } 
+}
+
+function changespeed() {
+  if (sentencesplit[char-1].includes(".") || sentencesplit[char-1].includes(",")) {
+    clearInterval(timer);
+    speed = 495;
+    timer = setInterval(type, speed)
+  }
+  else {
+    clearInterval(timer);
+    speed = 140;
+    timer = setInterval(type, speed)
+  }
+}
+
+function reset() {
+    clearInterval(timer);
+    var random = Math.floor(Math.random() * customResults.length);
+    target.innerHTML = '';
+    sentence = customResults[random].question;
+    sentencesplit = sentence.split(" ");
+    answer = customResults[random].ANSWER;
+    answer = answer.replace("ANSWER: ", "");
+    date = customResults[random].date;
+    char = 0;
+    timer = setInterval(type, speed);
+    usernameresume = 0;
+}
+
+var check = document.getElementById("skip")
+
+function resetanswernext() {
+  $("#answerbox").val('');
+  $("span.buzz").hide();
+  $("#answerinput").html('')
+}
+
+$("#next").click(function(){
+  $("#intro").html("");
+  $("#buzz").prop('disabled', false);
+  reset();
+  resetanswernext();
+  $("#jqdate").html("");
+  $(".bottom").css("display", "none")
+  if (check.checked == true) {
+    $("#next").prop("disabled", false);
+  }
+  else {
+    $("#next").prop("disabled", true)
+  }
+});
+
+$("#pause").click(function(){
+  clearInterval(timer);
+  $("#resume").prop("disabled", false);
+  $("#pause").prop("disabled", true);
+  $("#buzz").prop("disabled", true);
+  $("#resume").css("display", "inline");
+  $("#pause").css("display", "none");
+  $(".date").css({"left": "16.85vw", "width" : "50.2vw"});
+});
+
+$("#resume").click(function(){
+  timer = setInterval(type, speed);
+  $("#pause").prop("disabled", false);
+  $("#resume").prop("disabled", true);
+  $("#buzz").prop("disabled", false);
+  $("#resume").css("display", "none");
+  $("#pause").css("display", "inline")
+  $(".date").css({"left": "15.35vw", "width" : "51.6vw"});
+});
+
+$("#darkmode").click(function() {
+  $("body").toggleClass("invert");
+  $("button").toggleClass("invert");
+  if ($("#darkmode").html() == "Yes") {
+    $("#darkmode").html('No')
+  }
+  else {
+    $("#darkmode").html('Yes')
+  }
+});
+
+$("#resetpoints").click(function() {
+  pts = 0;
+  $("#points").html(pts);
+})
+
+function disablebuttons() {
+  $("#next").prop("disabled", true);
+  $("#pause").prop("disabled", true);
+  $("#resume").prop("disabled", true);
+  $("#buzz").prop("disabled", true);
+}
+
+$("#buzz").click(function() {
+  clearInterval(timer);
+  disablebuttons();
+  $("#answerbox").css("display", "inline");
+  $(".bottom").css("display", "inline")
+  $("#jqdate").css("display", "none");
+  $(".buzz").show();
+  $("#answerbox").focus();
+  target.innerHTML += " ∆ ";
+  usernameresume = 1;
+})
+
+window.addEventListener("keydown", function(e) {
+  if (e.keyCode === 78) {    
+    document.getElementById("next").click();
+  }
+});
+
+window.addEventListener("keydown", function(e) { 
+  if (e.keyCode === 80) {
+    document.getElementById("pause").click();
+  }
+});
+
+window.addEventListener("keydown", function(e) {
+  if (e.keyCode === 32) {
+    document.getElementById("buzz").click();
+  }
+});
+
+window.addEventListener("keydown", function(e) {
+  if (e.keyCode === 82) {
+    document.getElementById("resume").click();
+  }
+});
+
+$("#answerbox").keydown(function(e) {
+  if (e.keyCode === 13) {
+    assess();
+    clearInterval(timer2);
+    clear_answer_box();
+    reveal();
+    $("#jqdate").css("display", "inline");
+    $("#next").prop("disabled", false);
+    $("#pause").prop("disabled", false);
+  };
+})
+
+var pts = 0;
+
+function assess() {
+  var useranswer = $("#answerbox").val();
+  var uauc = useranswer.toUpperCase();
+  var auc = answer.toUpperCase();
+  if (uauc.includes(auc)) {
+    pts = (pts += 10);
+    $("#points").html(pts);
+  }
+  else {
+    pts = (pts -= 5);
+    $("#points").html(pts)
+  }
+}
+
+function clear_answer_box() {
+  $("#answerbox").blur();
+  $("#answerbox").css('display', 'none')
+}
+
+function reveal() {
+  $("#jqdate").html("ANSWER: " + answer);
+  target.innerHTML = sentence;
+};
+
+$("#answerbox").on('keydown', function() {
+  timer2 = setInterval(function() {
+    var value = $("#answerbox").val();
+    $("#answerinput").html(value)
+  }, 10)
+})
+
+
+
+//pHb-DB
+var query;
+var queried;
+var qArray;
+var aArray;
+var blankArray;
+var customResults;
+
+$("#search").on("click", function() {
+  resetArraysQuery();
+  questionquery();
+  answerquery();
+  customResults = blankArray.concat(qArray, aArray);
+  Loader();
+  clear_answer_box();
+  $("#userquery").blur();
+  $("#pause").prop("disabled", true);
+  $("#resume").prop("disabled", false);
+  $("#buzz").prop("disabled", false);
+  $("#next").prop("disabled", false);
+  clearInterval(timer);
+  $(".bottom").css("display", "none");
+  $("#jqdate").html("");
+  target.innerHTML = '';
+  if (customResults.length >= 1) {
+    document.getElementById("intro").innerHTML = "<i>Loaded" + " " + resultNumber + " " + "tossups containing" + "</i><b>" + " " + query + "</b><i> – press 'n' to start!</i>"
+  }
+  else {
+    document.getElementById("intro").innerHTML = "<i>No tossups found containing" + "</i><b>" + " " + query + "</b>"
+  }
+})
+
+function resetArraysQuery() {
+  blankArray = [];
+  qArray = [];
+  aArray = [];
+  query = $("#userquery").val();
+  queried = query.toUpperCase(); 
+}
+
+var qNumber;
+var aNumber;
+var resultNumber;
+
+function questionquery() {
+  qNumber = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].question.toUpperCase().includes(queried)) {
+      qArray.push(array[i]);
+      qNumber++;
+    };
+  };
+}
+
+function answerquery() {
+  aNumber = 0;
+  for (var k = 0; k < array.length; k++) {
+    if (array[k].ANSWER.toUpperCase().includes(queried)) {
+      aArray.push(array[k]);
+      aNumber++;
+    };
+  };
+  resultNumber = (aNumber + qNumber);
+}
+
+$("#userquery").on('focus', function() {
+  $("#userquery").val("");
+  disablebuttons();
+})
+
+$("#userquery").keydown(function(e) {
+  if (e.keyCode === 13) {
+    $("#search").click();
+  };
+})
+
+$("#all").click(function() {
+  blankArray = [];
+  customResults = blankArray.concat(array); 
+  Loader();
+  clear_answer_box();
+  $("#userquery").blur();
+  $("#pause").prop("disabled", true);
+  $("#resume").prop("disabled", false);
+  $("#buzz").prop("disabled", false);
+  $("#next").prop("disabled", false);
+  clearInterval(timer);
+  $(".bottom").css("display", "none");
+  $("#jqdate").html("");
+  target.innerHTML = '';
+  document.getElementById("intro").innerHTML = "<i>Loaded all questions – press 'n' to start!</i>"
+})
+</script>
+</body>
+</html>
