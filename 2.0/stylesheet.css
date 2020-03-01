@@ -119,6 +119,7 @@ div.date {
   border-radius: 0.5em;
   background-color: white;
   display: none;
+  -webkit-appearance: none;
 }
 
 button.buzz {
