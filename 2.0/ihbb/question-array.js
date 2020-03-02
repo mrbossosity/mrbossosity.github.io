@@ -404,4 +404,4 @@ const cSet = c2016.concat(c2017, c2018, c2019, cb2016, cb2017, cb2018, cb2019);
 const nSet = nb2016.concat(nb2017, nb2018, nb2019, natsbowl2016fr, natsbowl2017fr, natsbowl2018fr, natsbowl2019fr);
 const ushb = u2016.concat(u2017, u2018, u2019);
 
-const array = aSet.concat(bSet, cSet, nSet, ushb)
+var array = aSet.concat(bSet, cSet, nSet, ushb)
