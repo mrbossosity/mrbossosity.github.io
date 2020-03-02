@@ -37,6 +37,19 @@
           <input type = "text" id = "userquery">
           <button id = "search" class = "go">Go!</button>
         </div>
+        <div class = "querySelectors">
+          <input type = "checkbox" id = "aSet" checked>
+          <label for "aSet">A-Set</label>
+          <input type = "checkbox" id = "bSet" checked>
+          <label for "bSet">B-Set</label>
+          <input type = "checkbox" id = "cSet" checked>
+          <label for "cSet">C-Set</label>
+          <br>
+          <input type = "checkbox" id = "nats" checked>
+          <label for "nats">Nats</label>
+          <input type = "checkbox" id = "ushb" checked>
+          <label for "ushb">USHB</label>
+        </div>
         <hr>
         <div class = "playAllQuestions">
           <button id = "all" class = "all">Play All Questions</button>
@@ -366,7 +379,34 @@ $("#search").on("click", function() {
   }
 })
 
+var QaSet = document.getElementById("aSet");
+var QbSet = document.getElementById("bSet");
+var QcSet = document.getElementById("cSet");
+var Qnats = document.getElementById("nats");
+var Qushb = document.getElementById("ushb");
+
 function resetArraysQuery() {
+  array = [];
+  if (QaSet.checked == true) {
+    array = array.concat(aSet)
+  };
+  if (QbSet.checked == true) {
+    array = array.concat(bSet)
+  };
+  if (QcSet.checked == true) {
+    array = array.concat(cSet)
+  };
+  if (Qnats.checked == true) {
+    array = array.concat(nSet)
+  };
+  if (Qushb.checked == true) {
+    array = array.concat(ushb)
+  };
+  for (var j = 0; j < array.length; j++) {
+    if (typeof array[j].ANSWER === 'undefined') {
+      array.splice(j, 1)
+    }
+  };
   blankArray = [];
   qArray = [];
   aArray = [];
