@@ -436,7 +436,12 @@ function answerquery() {
       aNumber++;
     };
   };
-  resultNumber = (aNumber + qNumber);
+  if (query !== "") {
+    resultNumber = (aNumber + qNumber);
+  }
+  else {
+    resultNumber = aNumber
+  };
 }
 
 $("#userquery").on('focus', function() {
@@ -452,6 +457,7 @@ $("#userquery").keydown(function(e) {
 
 $("#all").click(function() {
   blankArray = [];
+  array = aSet.concat(bSet, cSet, nSet, ushb);
   customResults = blankArray.concat(array); 
   Loader();
   clear_answer_box();
@@ -464,7 +470,7 @@ $("#all").click(function() {
   $(".bottom").css("display", "none");
   $("#jqdate").html("");
   target.innerHTML = '';
-  document.getElementById("intro").innerHTML = "<i>Loaded all questions – press 'n' to start!</i>"
+  document.getElementById("intro").innerHTML = "<i>Loaded " + customResults.length + " questions – press 'n' to start!</i>";
 })
 </script>
 </body>
