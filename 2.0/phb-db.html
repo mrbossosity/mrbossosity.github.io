@@ -310,6 +310,10 @@ function answerquery() {
   document.getElementById("arq").innerHTML += ("<br><span class = 'srq'>" + anumber + " " + "answers found</span><a href = '#top' class = 'scroll'>scroll to Tossups</a>")
 }
 
+$("#userquery").on('focus', function() {
+  $("#userquery").val("")  
+})
+  
 $("#userquery").keydown(function(e) {
   if (e.keyCode === 13) {
     $("#search").click();
