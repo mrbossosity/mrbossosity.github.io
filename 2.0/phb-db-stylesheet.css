@@ -114,7 +114,7 @@ poland {
   margin-bottom: 1.7vw; margin-top: 1.7vw;
   line-height: 2.86vw;
   font-size: 3.3vw;
-  border-left: 0.3vw solid gray;
+  border-left: 0.3vw solid gray; border-top: none; border-bottom: none; border-right: none;
   border-radius: 0.1vw;
   padding-left: 1.2vw;
   padding-top: 0.7vw; padding-bottom: 0.3vw;
