@@ -1,0 +1,373 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: 'Nanum Gothic';
+  padding-top: 14vh;
+  height: 101vh;
+  background-color: rgb(248.5,248.5,247);
+  filter: hue-rotate(355deg)
+}
+
+header {
+  padding: 2vh;
+  text-align: center;
+  border-bottom: 1px solid darkgray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 0.1vw 0.6vw rgb(140, 223, 223); 
+  background-image: linear-gradient(to bottom,white,white,white,rgb(235,240,245));
+}
+
+fresh {
+  font-family: 'Tangerine';
+  font-size: 9vh;
+}
+
+div {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+button {
+  border: 2px solid rgb(230,230,230);
+  border-radius: 5px;
+  color: darkcyan;
+  background-color: rgb(254,253,255);
+  box-shadow: 0.5px 1.5px 2px rgb(10, 182, 189);
+  font-family: 'Nanum Gothic';
+  font-size: 1.5vw;
+  padding: 4px 4px;
+}
+
+button.alt {
+  color: darkcyan;
+  border: 2px solid rgb(220,220,220);
+  box-shadow: 0.5px 1.5px 2px darkturquoise;
+}
+
+#next {
+  display: none;
+}
+
+input[type=text] {
+  font-family: 'Nanum Gothic';
+}
+
+.canvasHolder {
+  display: none;
+  margin-bottom: -2vh;
+}
+
+#myCanvas {
+  width: 66vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.6vh;
+  display: block;
+}
+
+.noShow {
+  display: none
+}
+
+.loader {
+  display: none;
+  width: 10vh; 
+  height: 10vh;
+  border: 1.5vh solid lightgray;
+  border-top: 1.5vh solid rgb(213, 246, 243);
+  border-bottom: 1.5vh solid rgb(218, 242, 241);
+  border-left: 1.5vh solid rgb(240,240,240);
+  border-radius: 50%;
+  position: absolute;
+  top: 37vh;
+  left: 45vw;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<header>
+  <fresh class = "head">fresh</fresh>
+</header>
+  
+<body style = "margin: 0;">
+<div id = "container">
+  <div class = "canvasHolder">
+    <canvas id = "myCanvas" width = "400" height = "120"></canvas>
+    <img class = "noShow" src = "https://mrbossosity.github.io/images/3398447D-6ECC-4DC3-9D27-DAB3CF7B73A6.png">
+    <img class = "noShow" src = "https://mrbossosity.github.io/images/3F7DDDC5-4A85-42FD-8A96-09257448F20F.png">
+  </div>
+  <div>
+    <p>Melody Length (number of notes) <input type = "text" id = "melodyLength" value = "4"></p>
+    <p>Number of Chords 
+      <input type = "text" id = "chordsLength" value = "2">
+      <input type = "checkbox" name = "dim7" id = "dim7" checked>
+      <label for = "dim7">No leading tone diminished triad</label>
+    </p>
+    <p><button id = "generate">Fresh Musical Idea!</button><button class = 'alt' id = "next">Same Key, New Idea!</button></p>
+  </div>
+  <div>
+    <p id = "key"></p>
+    <p id = "melody"></p>
+  </div>
+  <div>
+    <p id = "chord"></p>
+    <p id = "nextChord"></p>
+  </div> 
+</div>
+  
+<div class = "loader"></div> 
+<script>
+const c = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+const db = ['Db', 'Eb', 'F', 'Gb', 'Ab', 'Bb', 'C'];
+const d = ['D', 'E', 'F#', 'G', 'A', 'B', 'C#'];
+const eb = ['Eb', 'F', 'G', 'Ab', 'Bb', 'C', 'D'];
+const e = ['E', 'F#', 'G#', 'A', 'B', 'C#', 'D#'];
+const f = ['F', 'G', 'A', 'Bb', 'C', 'D', 'E'];
+const gb = ['Gb', 'Ab', 'Bb', 'Cb', 'Db', 'Eb', 'F'];
+const g = ['G', 'A', 'B', 'C', 'D', 'E', 'F#'];
+const ab = ['Ab', 'Bb', 'C', 'Db', 'Eb', 'F', 'G'];
+const a = ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#'];
+const bb = ['Bb', 'C', 'D', 'Eb', 'F', 'G', 'A'];
+const b = ['B', 'C#', 'D#', 'E', 'F#', 'G#', 'A#'];
+const allnotes = c.concat(db, d, eb, e, f, gb, g, a, ab, bb, b);
+const seven = [0,7,14,21,28,35,42,49,56,63,70,77];
+const types = ['m', 'maj7', 'min7', 'dim', 'aug', '9', '7', '6', 'm7b5', 'sus2', 'sus4', 'add9', 'm(add9)', 'maj7#11 (Lydian)'];
+
+var newKey;
+
+function keySig() {
+  var tonic = seven[Math.floor(Math.random() * seven.length)];
+  newKey = allnotes.slice(tonic, (tonic + 7));
+  console.log(newKey[0] + newKey[1] + newKey[6])
+}
+
+function newMelody() {
+  validateLength();
+  $("#key").html("<hr><b>Key:</b> " + newKey[0] + "maj/" + newKey[5] + "min");
+  $("#melody").html("<b>Melody:</b> ");
+  var length = $("#melodyLength").val();
+  for (var i = 0; i < length; i++) {
+    var melodyNote = newKey[Math.floor(Math.random() * newKey.length)];
+    $("#melody").append(melodyNote + (" "));
+  };
+  drawCanvas();
+  $("#melody").append("<p><button onclick = 'newMelody()'>Fresh Diatonic Melody!</button>" + "<button class = 'alt' onclick = 'newRandMelody()'>Fresh Random Melody!</button></p>");
+  loader();
+}
+
+function newRandMelody() {
+  validateLength();
+  $("#key").html("<hr><b>Key:</b> N/A");
+  $("#melody").html("<b>Melody:</b> ")
+  var length = $("#melodyLength").val();
+  for (var i = 0; i < length; i++) {
+    var melodyNote = allnotes[Math.floor(Math.random() * allnotes.length)];
+    $("#melody").append(melodyNote + (" "));
+  };
+  drawCanvas();
+  $("#melody").append("<p><button onclick = 'newMelody()'>Fresh Diatonic Melody!</button>" + "<button class = 'alt' onclick = 'newRandMelody()'>Fresh Random Melody!</button></p>");
+  loader();
+}
+
+function validateLength() {
+  var query = $("#melodyLength").val();
+  if (query > 8 || query < 0) {
+    alert("Please input a melody length between 0 and 8. Not only will the generated chart be easier to read, but Fresh is meant to help provide only a spark of inspiration!")
+    $("#melodyLength").val("")
+    $("#melodyLength").focus()
+    newMelody.stopPropagation();
+  }
+}
+
+function newChords() {
+  $("#chord").html("<b>Chords:</b> ")
+  var cLength = $("#chordsLength").val();
+  for (var k = 0; k < cLength; k++) {
+    if ($("#dim7").is(':checked')) {
+      var chords = newKey[Math.floor(Math.random() * (newKey.length-1))];
+    };
+    if (!$("#dim7").is(':checked')) {
+      var chords = newKey[Math.floor(Math.random() * newKey.length)];
+    };
+    if (chords == newKey[1] || chords == newKey[2] || chords == newKey[5]) {
+      chords += "m"
+    };
+    if (chords == newKey[6]) {
+      chords += "dim"
+    };
+    $("#chord").append(chords + " ")
+  };
+  $("#chord").append("<p><button onclick = 'newChords()'>Fresh Diatonic Chords!</button>" + "<button class = 'alt' onclick = 'newRandChords()'>Fresh Random Chords!</button></p>")
+}
+
+function newRandChords() {
+  $("#chord").html("<b>Chords:</b> ")
+  var cLength = $("#chordsLength").val();
+  for (var k = 0; k < cLength; k++) {
+    var chords = allnotes[Math.floor(Math.random() * allnotes.length)];
+    chords += types[Math.floor(Math.random() * types.length)];
+    $("#chord").append(chords + " ");
+  };
+  $("#chord").append("<p><button onclick = 'newChords()'>Fresh Diatonic Chords!</button>" + "<button class = 'alt' onclick = 'newRandChords()'>Fresh Random Chords!</button></p>")
+}
+
+function loader() {
+  $("#container").css('display', 'none');
+  $(".loader").css('display', 'block');
+  var timer = setTimeout(stopLoader, 650)
+}
+
+function stopLoader() {
+  $(".loader").css("display", "none");
+  $("#container").css("display", "block");
+}
+
+function generate() {
+  keySig();
+  newMelody();
+  newChords();
+}
+
+$("#generate").on('click', function() {
+  generate();
+  $("#next").css('display', 'inline');
+})
+
+$("#next").on('click', function() {
+  newMelody();
+  newChords();
+})
+
+$("#melodyLength").on('focus', function() {
+  $("#melodyLength").val('')
+})
+
+$("#melodyLength").keydown(function(e) {
+  if (e.keyCode === 13) {
+    $("#chordsLength").focus();
+  };
+})
+
+$("#chordsLength").on('focus', function() {
+  $("#chordsLength").val('')
+})
+
+$("#chordsLength").keydown(function(e) {
+  if (e.keyCode === 13) {
+    $("#generate").click();
+    $("#chordsLength").blur();
+  };
+})
+
+//canvas
+
+var canvas 
+var ctx
+
+$(document).ready(function() {
+  canvas = document.getElementById('myCanvas')
+  ctx = canvas.getContext('2d');
+})
+
+function drawCanvas() {
+  //clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //display
+  $(".canvasHolder").css('display', 'block')
+  //draw staff lines
+  ctx.fillRect(0,0,400,2); //F
+  ctx.fillRect(0,20,400,2); //D
+  ctx.fillRect(0,40,400,2); //B
+  ctx.fillRect(0,60,400,2); //G
+  ctx.fillRect(0,80,400,2); //E
+  drawNotes();
+}
+
+function drawNotes() {
+  var str = $("#melody").html();
+  var split = str.split(" ");
+  var notes = split.splice(1);
+  console.log(notes)
+  var n = (400 / (notes.length-1));
+  var x = (n / 2) + 8.5;
+  for (var i = 0; i < notes.length-1; i++) {
+    if (notes[i] == "C") {
+      var y = 31;
+    };
+    if (notes[i] == "C#") {
+      var y = 31;
+    };
+    if (notes[i] == "Db") {
+      var y = 91;
+    };
+    if (notes[i] == "D") {
+      var y = 91;
+    };
+    if (notes[i] == "D#") {
+      var y = 91;
+    };
+    if (notes[i] == "Eb") {
+      var y = 81;
+    };
+    if (notes[i] == "E") {
+      var y = 81;
+    };
+    if (notes[i] == "F") {
+      var y = 71;
+    };
+    if (notes[i] == "F#") {
+      var y = 71;
+    };
+    if (notes[i] == "Gb") {
+      var y = 61;
+    };
+    if (notes[i] == "G") {
+      var y = 61;
+    };
+    if (notes[i] == "G#") {
+      var y = 61;
+    };
+    if (notes[i] == "Ab") {
+      var y = 51;
+    };
+    if (notes[i] == "A") {
+      var y = 51;
+    };
+    if (notes[i] == "A#") {
+      var y = 51;
+    };
+    if (notes[i] == "Bb") {
+      var y = 41;
+    };
+    if (notes[i] == "B") {
+      var y = 41;
+    };
+    if (notes[i].includes("b")) {
+      var flat = new Image();
+      flat.src = "https://mrbossosity.github.io/images/3F7DDDC5-4A85-42FD-8A96-09257448F20F.png";
+      ctx.drawImage(flat,x-26,y-25,15,35)
+    };
+    if (notes[i].includes("#")) {
+      var sharp = new Image();
+      sharp.src = "https://mrbossosity.github.io/images/3398447D-6ECC-4DC3-9D27-DAB3CF7B73A6.png";
+      ctx.drawImage(sharp,x-28,y-20,15,35)
+    };
+    ctx.beginPath();
+    ctx.arc(x,y,10,0,2*Math.PI);
+    ctx.fill();
+    x += n;
+  }
+}
+</script>
+</body>
+</html>
