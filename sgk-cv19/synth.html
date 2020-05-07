@@ -1,0 +1,149 @@
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://mrbossosity.github.io/sgk-cv19/synth/stylesheet.css">
+</head>
+<body style="margin:0">
+<form id = 'all'>
+<div class = "container">
+  <div id = 'keyboard'></div>
+  <div class = 'waveContainer'>
+    <div class = 'wave osc'>OSC 1</div>
+    <div class = 'wave wave1' id = 'sine1'>Sine</div>
+    <div class = 'wave wave1 waveLit' id = 'square1'>Square</div>
+    <div class = 'wave wave1' id = 'saw1'>Saw</div>
+    <div class = 'wave wave1' id = 'tri1'>Triangle</div>
+  </div>
+  <div class = 'waveContainerTwo'>
+    <div class = 'wave osc'>OSC 2</div>
+    <div class = 'wave wave2 waveLit' id = 'sine2'>Sine</div>
+    <div class = 'wave wave2' id = 'square2'>Square</div>
+    <div class = 'wave wave2' id = 'saw2'>Saw</div>
+    <div class = 'wave wave2' id = 'tri2'>Triangle</div>
+  </div>
+  <div class = 'waveContainerThree'>
+    <div class = 'wave osc'>OSC 3</div>
+    <div class = 'wave wave3 waveLit' id = 'sine3'>Sine</div>
+    <div class = 'wave wave3' id = 'square3'>Square</div>
+    <div class = 'wave wave3' id = 'saw3'>Saw</div>
+    <div class = 'wave wave3' id = 'tri3'>Triangle</div>
+  </div>
+  <div class = 'filler'></div>
+  
+  <div id = 'params' class = 'params'>
+    <div class = 'cv'><span class = 'sgk'>SGK </span><span>CV-19</span></div>
+    <div class = 'topParamFiller'>
+      <div class = 'reverb'>
+        <div class = 'reverbLit'></div>
+        <div class = 'effectText'><p>RVB</p></div>
+      </div>
+      <div class = 'panic'>
+        <div class = 'panicLit'></div>
+        <div class = 'effectText'><p>PANIC</p></div>
+      </div>
+    </div>
+    <div class = 'lowerParams'>
+      <div class = 'ampContainer paramContainer'>
+        <p class = 'paramText' id = 'amps'>AMP</p>
+        <input id = 'osc1amp' class = 'det' type = 'range' min = '0' max = '1' step = '0.01' value = '1'>
+        <input id = 'osc2amp' class = 'det' type = 'range' min = '0' max = '1' step = '0.01' value = '0'>
+        <input id = 'osc3amp' class = 'det' type = 'range' min = '0' max = '1' step = '0.01' value = '0'>
+      </div>
+      <div class = 'octContainer paramContainer'>
+        <p class = 'paramText' id = 'octs'>OCT</p>
+        <input id = 'osc1oct' class = 'det' type = 'range' min = '-3' max = '3' value = '0'>
+        <input id = 'osc2oct' class = 'det' type = 'range' min = '-3' max = '3' value = '0'>
+        <input id = 'osc3oct' class = 'det' type = 'range' min = '-3' max = '3' value = '0'>
+      </div>
+      <div class = 'semiContainer paramContainer noShow'>
+        <p class = 'paramText' id = 'semis'>SEMI</p>
+        <input id = 'osc1semi' class = 'det' type = 'range' min = '-12' max = '12' value = '0'>
+        <input id = 'osc2semi' class = 'det' type = 'range' min = '-12' max = '12' value = '0'>
+        <input id = 'osc3semi' class = 'det' type = 'range' min = '-12' max = '12' value = '0'>
+      </div>
+      <div class = 'detContainer paramContainer'>
+        <p class = 'paramText' id = 'dets'>DET</p>
+        <input id = 'osc1det' class = 'det' type = 'range' min = '-50' max = '50' value = '0'>
+        <input id = 'osc2det' class = 'det' type = 'range' min = '-50' max = '50' value = '0'>
+        <input id = 'osc3det' class = 'det' type = 'range' min = '-50' max = '50' value = '0'>
+      </div>
+      <div class = 'bottomContainer'>
+        <div class = 'adsrContainer paramContainer'>
+          <p class = 'adsrText' id = 'dets'>ADSR GLOBAL</p>
+          <input id = 'attackG' class = 'adsr' type = 'range' min = '0' max = '1' step = '0.01' value = '0'>
+          <input id = 'decayG' class = 'adsr' type = 'range' min = '0' max = '2' step = '0.02' value = '1'>
+          <input id = 'sustainG' class = 'adsr' type = 'range' min = '0' max = '0.3' step = '0.0033' value = '0.3'>
+          <input id = 'releaseG' class = 'adsr' type = 'range' min = '0' max = '1' step = '0.01' value = '0.05'>
+        </div>
+        <div class = 'adsrContainer paramContainer noShow'>
+          <p class = 'adsrText' id = 'dets'>ADS OSC 1</p>
+          <input id = 'attack1' class = 'adsr' type = 'range' min = '0' max = '1' step = '0.01' value = '0'>
+          <input id = 'decay1' class = 'adsr' type = 'range' min = '0' max = '2' step = '0.02' value = '1'>
+          <input id = 'sustain1' class = 'adsr' type = 'range' min = '0' max = '1' step = '0.01' value = '1'>
+        </div>
+        <div class = 'adsrContainer paramContainer noShow'>
+          <p class = 'adsrText' id = 'dets'>ADS OSC 2</p>
+          <input id = 'attack2' class = 'adsr' type = 'range' min = '0' max = '1' step = '0.01' value = '0'>
+          <input id = 'decay2' class = 'adsr' type = 'range' min = '0' max = '2' step = '0.02' value = '1'>
+          <input id = 'sustain2' class = 'adsr' type = 'range' min = '0' max = '1' step = '0.01' value = '1'>
+        </div>
+        <div class = 'adsrContainer paramContainer noShow'>
+          <p class = 'adsrText' id = 'dets'>ADS OSC 3</p>
+          <input id = 'attack3' class = 'adsr' type = 'range' min = '0' max = '1' step = '0.01' value = '0'>
+          <input id = 'decay3' class = 'adsr' type = 'range' min = '0' max = '2' step = '0.02' value = '1'>
+          <input id = 'sustain3' class = 'adsr' type = 'range' min = '0' max = '1' step = '0.01' value = '1'>
+        </div>
+        <div class = 'paramContainer filterContainer' id = 'filterMain'>
+          <p class = 'filterText' id = 'showFilter'>FILTER</p>
+          <div class = 'filterContThird'>
+            <p><span class = 'paramText'>Filter Type:</span>
+              <select class = "filtTypeSelect" id = 'filtTypeSelect'>
+                <option value = 'lowpass'>Lowpass</option>
+                <option value = 'highpass'>Highpass</option>
+                <option value = 'bandpass'>Bandpass</option>
+                <option value = 'lowshelf'>Lowshelf</option>
+                <option value = 'highshelf'>Highshelf</option>
+                <option value = 'peaking'>Peak</option>
+                <option value = 'notch'>Notch</option>
+                <option value = 'allpass'>Allpass</option>
+              </select>
+            </p>
+          </div>
+          <div class = 'filterContThird'>
+            <p><span class = 'paramText'>Cutoff (Hz):</span>
+              <input type = 'text' id = 'freqValue' value = '20000'>
+            </p>
+          </div>
+          <div class = 'filterContThird'>
+            <p><span class = 'paramText' id = 'qGain'>Q:</span>
+              <input type = 'text' id = 'resValue' value = '1'>
+            </p>
+          </div>
+        </div>
+        
+        <div class = 'paramContainer filterEnvContainer' id = 'filterEnv'>
+          <p class = 'filterText' id = 'showEnv'>FILTER ENV</p>
+          <input id = 'filtAttack' class = 'filtadsr' type = 'range' min = '0' max = '1' step = '0.01' value = '0'>
+          <input id = 'filtDecay' class = 'filtadsr'  type = 'range' min = '0' max = '2' step = '0.02' value = '1'>
+          <input id = 'filtSus' class = 'filtadsr' type = 'range' min = '0' max = '1' step = '0.01' value = '1'>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id = 'presetCont'>
+  <select class = 'filtTypeSelect' id = 'preset'>
+    <option value = 'default'>Default</option>
+    <option value = 'funkBass'>Funk Bass</option>
+    <option value = 'keys'>Keys</option>
+  </select>
+</div>
+</form>
+<script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+<script src = 'https://mrbossosity.github.io/sgk-cv19/qwerty.js'></script>
+<script src = 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+<script src = 'https://cdnjs.cloudflare.com/ajax/libs/sisyphus.js/1.1.3/sisyphus.min.js'></script>
+<script src = 'https://mrbossosity.github.io/sgk-cv19/synth/scripts.js'></script>
+</body>
+</html>
