@@ -1,0 +1,352 @@
+body {
+  font-family: 'Audiowide';
+  background-color: rgb(40,40,40);
+  height: 125vh;
+  width: 125vw;
+  overflow: hidden;
+  position: fixed;
+}
+
+.container {
+  background-image: linear-gradient(to bottom, rgb(80,80,80) 20%, rgb(70,70,70) 90%, gray);
+  height: 373px;
+  width: 942px;
+  padding: 10px;
+  border-left: 10px solid rgb(40,40,40);
+  border-right: 10px solid rgb(40,40,40);
+  border-bottom: 15px solid rgb(35,30,35)
+}
+
+#keyboard {
+  position: absolute;
+  top: 222px;
+}
+
+.waveContainer {
+  display: flex;
+  width: 180px;
+  height: 207px;
+  padding: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: black;
+  margin-top: 10px;
+  position: absolute;
+  top: 0; left: 16.5px;
+}
+
+.waveContainerTwo {
+  display: flex;
+  width: 180px;
+  height: 207px;
+  padding: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: black;
+  margin-top: 10px;
+  position: absolute;
+  top: 0; left: 198.5px;
+}
+
+.waveContainerThree {
+  display: flex;
+  width: 180px;
+  height: 207px;
+  padding: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: black;
+  margin-top: 10px;
+  position: absolute;
+  top: 0; left: 380px;
+}
+
+.wave {
+  width: 85px;
+  height: 85px;
+  line-height: 80px;
+  background-image: linear-gradient(to bottom, rgb(200,200,200), gray, gray, gray, rgb(70,70,70));
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.waveLit {
+  color: rgb(230,230,230);
+  height: 84.5px;
+  width: 85px;
+}
+
+.osc {
+  width: 170px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+}
+
+.filler {
+  background-color: rgb(38,38,38);
+  width: 45px;
+  height: 202px;
+  position: absolute;
+  margin-top: 11.5px;
+  top: 0; left: 562.5px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.params {
+  width: 345px;
+  height: 370.5px;
+  border: 2px solid black;
+  border-radius: 4px;
+  position: absolute;
+  margin-top: 11.5px;
+  top: 0;
+  left: 616px;
+  overflow: hidden;
+}
+
+.cv {
+  font-family: 'Audiowide';
+  font-size: 45px;
+  width: 190px;
+  border-bottom: 4px solid black;
+  text-align: center;
+  float: right;
+  border-radius: 0 2px 0 12px;
+  background-image: linear-gradient(to bottom, white, darkgray);
+}
+
+.sgk {
+  font-size: 13px;
+}
+
+.topParamFiller {
+  width: 190px;
+  height: 61.9px;
+  background-color: rgb(30,30,30);
+  font-size: 45px;
+  border-radius: 1px 0 0 0;
+}
+
+.reverb {
+  background-color: white;
+  height: 16px;
+  width: 32px;
+  border: 4px solid rgb(140,140,140);
+  border-radius: 5.6px;
+  position: absolute;
+  top: 11px; left: 18px;
+}
+
+.reverbLit {
+  height: 16px;
+  width: 32px;
+  box-shadow: 0 0 0 3px rgb(140,140,140);
+  border-radius: 7px;
+  background-color: rgb(60,60,60);
+}
+
+.panic {
+  background-color: white;
+  height: 16px;
+  width: 32px;
+  border: 4px solid rgb(140,140,140);
+  border-radius: 5.6px;
+  position: absolute;
+  top: 11px; left: 90px;
+}
+
+.panicLit {
+  height: 16px;
+  width: 32px;
+  box-shadow: 0 0 0 3px rgb(140,140,140);
+  border-radius: 7px;
+  background-color: rgb(60,60,60);
+}
+
+.panicLit:active {
+  background-color: springGreen
+}
+
+.lit {
+  background-color: springGreen;
+}
+
+.effectText {
+  color: rgb(220,220,220);
+  position: relative;
+  top: -4px;
+  font-size: 10px;
+  text-align: center
+  
+}
+
+.lowerParams {
+  display: flex;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.det {
+  -webkit-appearance: slider-vertical;
+  width: 25px;
+  height: 100px;
+}
+
+.paramText{
+  width: 113px;
+  text-align: center;
+  font-size: 11px;
+  margin-bottom: -2px;
+}
+
+.paramContainer {
+  background-image: linear-gradient(to bottom, rgb(145,145,145) 80%, rgb(115,115,115));
+}
+
+.ampContainer {
+  width: 115px;
+  height: 140px;
+  border: 1px solid black;
+  border-left: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.octContainer {
+  width: 115px;
+  height: 140px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.semiContainer {
+  width: 115px;
+  height: 140px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detContainer {
+  width: 115px;
+  height: 140px;
+  border: 1px solid black;
+  border-right: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bottomContainer {
+  background-color: rgb(30,30,30);
+  width: 348px;
+  height: 169px;
+  position: absolute;
+  top: 204px; 
+  display: flex;
+}
+
+.adsrContainer {
+  width: 118px;
+  height: 167px;
+  border: 1px solid black;
+  border-left: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.adsr {
+  -webkit-appearance: slider-vertical;
+  width: 22.5px;
+  height: 122px;
+}
+
+.noShow {
+  display: none;
+}
+
+.adsrText{
+  width: 113px;
+  text-align: center;
+  font-size: 11px;
+  margin-bottom: -2px;
+}
+
+.filterText{
+  width: 240px;
+  height: 9px;
+  text-align: center;
+  font-size: 11px;
+  margin-bottom: -2px;
+}
+
+.filterContainer {
+  width: 240px;
+  height: 167px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filterEnvContainer {
+  width: 240px;
+  height: 167px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filterContThird {
+  height: 37px;
+  width: 240px;
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.filtTypeSelect {
+  -webkit-appearance: none;
+  height: 20px;
+  font-family: 'Audiowide';
+  text-align: center;
+  background-color: rgb(210,210,210);
+}
+
+.filtadsr {
+  -webkit-appearance: slider-vertical;
+  width: 49px;
+  height: 122px;
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+  width: 49px;
+  background-color: rgb(210,210,210);
+  font-family: 'Audiowide';
+}
+
+#presetCont {
+  width: 115px;
+  height: 70px;
+  background-color: rgb(90,90,90);
+  position: absolute;
+  top: 408px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid rgb(35,30,35)
+}
