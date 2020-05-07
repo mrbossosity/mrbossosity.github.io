@@ -518,7 +518,7 @@ $(".panic").click(function() {
   nodes = [];
   nodesOsc = [];
   saveOscs();
-  location.removedByCodePen();
+  location.reload();
 })
 
 $(document).keydown(function(e) {
