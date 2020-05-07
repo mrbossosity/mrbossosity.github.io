@@ -1,0 +1,173 @@
+body {
+  font-family: 'Audiowide';
+  font-size: 14px;
+  height: 100vh;
+  background-color: rgb(30,30,30);
+}
+
+.nav {
+  font-size: 15px;
+  background-color: dodgerblue;
+  height: 20px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 7px; right: 2px;
+  z-index: 5;
+}
+.container {
+  background-color: dodgerblue;
+  width: 504px;
+  border: 2px solid rgb(240,240,240);
+  padding: 5px 15px;
+  padding-top: 0;
+  border-radius: 13px;
+  margin-bottom: 10px;
+}
+
+#instContainer {
+  background-color: dodgerblue;
+  display: flex;
+  width: 615px;
+  justify-content: space-between;
+  padding: 10px;
+  border: 2px solid rgb(240,240,240);
+  border-radius: 13px;
+  position: absolute;
+  top: 8px; left: 559px;
+}
+
+#kick {
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 1px;
+  border: 1px solid black;
+  background-color: rgb(200,200,220);
+  cursor: pointer;
+  transition-duration: 0.05s;
+}
+
+#snare {
+  -webkit-appearance: none;
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 1px;
+  border: 1px solid black;
+  background-color: rgb(200,200,220);
+  cursor: pointer;
+  transition-duration: 0.05s;
+}
+
+#hat {
+  -webkit-appearance: none;
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 1px;
+  border: 1px solid black;
+  background-color: rgb(200,200,220);
+  cursor: pointer;
+  transition-duration: 0.05s;
+}
+
+#start:active{
+  -webkit-appearance: none;
+  background-color: mediumblue;
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.oscType {
+  font-family: 'Audiowide';
+}
+
+select {
+ -webkit-appearance: none; 
+  width: 70px;
+  height: 20px;
+  font-size: 12px;
+  background-color: rgb(200,200,200)
+}
+input[type=range] {
+  width: 300px;
+  display: inline;
+  vertical-align: middle
+}
+
+.noShow {
+  display: none;
+}
+
+.sequencer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  padding: 10px;
+  border: 2px solid rgb(240,240,240);
+  border-radius: 13px;
+  justify-content: center;
+  align-items: center;
+  background-color: dodgerblue;
+}
+
+.track {
+  width: 1200px;
+  height: 100px;
+  border: 2px solid rgb(240,240,240);
+  border-radius: 13px;
+  background-color: rgb(50,50,50);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 6px; padding-right: 6px; 
+  padding-top: 4px; padding-bottom: 4px;
+}
+
+.step {
+  width: 65px;
+  height: 88px;
+  border: 2px solid rgb(240,240,240);
+  border-radius: 10px;
+  background-color: rgb(200,200,200);
+}
+
+.step2 {
+  width: 65px;
+  height: 88px;
+  border: 2px solid rgb(240,240,240);
+  border-radius: 10px;
+  background-color: rgb(170,170,170);
+}
+
+.stepLit {
+  background-color: dodgerblue;
+}
+
+.stepPlay {
+  background-color: none;
+  background-color: rgb(245,245,245);
+}
+
+.seqBut {
+  font-family: 'Audiowide';
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  background-color: dodgerblue;
+  color: white;
+  margin-top: 10px;
+}
+
+#bpm {
+  height: 30px;
+  width: 50px;
+  vertical-align: baseline;
+  font-size: 20px;
+  background-color: rgb(240,240,240);
+  font-family: 'Audiowide'
+}
