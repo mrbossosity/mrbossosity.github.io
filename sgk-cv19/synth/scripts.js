@@ -103,18 +103,16 @@ function globalR(context, source, release) {
   var now = context.currentTime;
   source.gain.cancelScheduledValues(now);
   source.gain.setValueAtTime(source.gain.value, now);
-  var releaseTime = now + release;
-  source.gain.linearRampToValueAtTime(0, releaseTime);
+  source.gain.linearRampToValueAtTime(0, now + release);
   var timer = setTimeout(function() {
     source.disconnect();
-  }, (releaseTime * 1000))
+  }, (release * 1000))
 }
 //osc R
 function oscR(context, source, release) {
   var now = context.currentTime;
-  var releaseTime = now + release;
-  source.stop(now + releaseTime);
-  var timer = setTimeout(function() {source.disconnect()}, releaseTime * 1000)
+  source.stop(now + release);
+  var timer = setTimeout(function() {source.disconnect()}, release * 1000)
 }
 
 //filter
