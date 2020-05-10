@@ -1,0 +1,244 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  font-family: 'Helvetica';
+  font-size: 30px;
+  line-height: 47px;
+  letter-spacing: 0.065em;
+}
+#key {
+  font-size: 19px;
+}
+#text {
+  padding: 10px
+}
+</style>
+</head>
+<body>
+  <div>
+    <select id="key">
+      <option value="C">C Major</option>
+      <option value="G">G Major</option>
+      <option value="D">D Major</option>
+      <option value="A">A Major</option>
+      <option value="E">E Major</option>
+      <option value="B">B Major</option>
+      <option value="Gb">Gb Major</option>
+      <option value="Db">Db Major</option>
+      <option value="Ab">Ab Major</option>
+      <option value="Eb">Eb Major</option>
+      <option value="Bb">Bb Major</option>
+      <option value="F">F Major</option>
+      <option disabled>–––––––––</option>
+      <option value="Am">A Minor</option>
+      <option value="Em">E Minor</option>
+      <option value="Bm">B Minor</option>
+      <option value="F#m">F# Minor</option>
+      <option value="C#m">C# Minor</option>
+      <option value="G#m">G# Minor</option>
+      <option value="Ebm">Eb Minor</option>
+      <option value="Bbm">Bb Minor</option>
+      <option value="Fm">F Minor</option>
+      <option value="Cm">C Minor</option>
+      <option value="Gm">G Minor</option>
+      <option value="Dm">D Minor</option>
+    </select>
+  </div>
+  <hr>
+  <div id="text"></div>
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function createKeyObject(key,i,ii,iii,iv,v,vi,vii) {
+  this.name = key;
+  this.i = i;
+  this.ii = ii + 'm';
+  this.iii = iii + 'm';
+  this.iv = iv;
+  this.v = v;
+  this.vi = vi + 'm';
+  this.vii = vii + 'dim';
+  this.iNotes = i + ", " + iii + ", " + v;
+  this.iiNotes = ii + ", " + iv + ", " + vi;
+  this.iiiNotes = iii + ", " + v + ", " + vii;
+  this.ivNotes = iv + ", " + vi + ", " + i;
+  this.vNotes = v + ", " + vii + ", " + ii + ", (" + iv + ")";
+  this.viNotes = vi + ", " + i + ", " + iii;
+  function determine7() {
+    let seven = vi;
+    if (vi.includes('b')) {
+      seven += 'b'
+    }
+    if (vi.includes('#')) {
+      seven = seven.replace('#', '&#9838;')
+    }
+    if (!vi.includes('b') && !vi.includes('#')) {
+      seven += 'b'
+    }
+    return seven;
+  }
+  this.viiNotes = vii + ", " + ii + ", " + iv + ", (" + determine7() + ")";
+}
+
+function createMinorObject(key,i,ii,iii,iv,v,vi,vii) {
+  this.name = key;
+  this.i = vi + 'm';
+  this.ii = vii + 'dim';
+  this.iii = i;
+  this.iv = ii + 'm';
+  this.v = iii;
+  this.vi = iv;
+  function determine3() {
+    let three = v;
+    if (v.includes('b')) {
+      three = three.replace('b', '&#9838;')
+    }
+    if (v.includes('#')) {
+      three = three.replace('#', 'x')
+    }
+    if (!v.includes('b') && !v.includes('#')) {
+      three += '#'
+    }
+    return three;
+  }
+  this.vii = determine3() + 'dim';
+  this.iNotes = vi + ", " + i + ", " + iii;
+  function determineDim() {
+    var dim = vi;
+    if (vi.includes('b')) {
+      dim += 'b'
+    }
+    if (vi.includes('#')) {
+      dim = dim.replace('#', '&#9838;')
+    }
+    if (!vi.includes('b') && !vi.includes('#')) {
+      dim += 'b'
+    }
+    return dim;
+  }
+  this.iiNotes = vii + ", " + ii + ", " + iv + ", (" + vi + " half/" + determineDim() + " fully)";
+  this.iiiNotes = i + ", " + iii + ", " + v;
+  this.ivNotes = ii + ", " + iv + ", " + vi;
+  this.vNotes = iii + ", " + determine3() + ", " + vii + ", (" + ii +")";
+  this.viNotes = iv + ", " + vi + ", " + i;
+  this.viiNotes = determine3() + ", " + vii + ", " + ii + ", ("+ iv + ")";
+}
+
+const Cmaj = new createKeyObject('Cmaj','C','D','E','F','G','A','B'),
+      Gmaj = new createKeyObject('Gmaj','G','A','B','C','D','E','F#'),
+      Dmaj = new createKeyObject('Dmaj','D','E','F#','G','A','B','C#'),
+      Amaj = new createKeyObject('Amaj','A','B','C#','D','E','F#','G#'),
+      Emaj = new createKeyObject('Emaj','E','F#','G#','A','B','C#','D#'),
+      Bmaj = new createKeyObject('Bmaj','B','C#','D#','E','F#','G#','A#'),
+      Gbmaj = new createKeyObject('Gbmaj','Gb','Ab','Bb','Cb','Db','Eb','F'),
+      Dbmaj = new createKeyObject('Dbmaj','Db','Eb','F','Gb','Ab','Bb','C'),
+      Abmaj = new createKeyObject('Abmaj','Ab','Bb','C','Db','Eb','F','G'),
+      Ebmaj = new createKeyObject('Ebmaj','Eb','F','G','Ab','Bb','C','D'),
+      Bbmaj = new createKeyObject('Bbmaj','Bb','C','D','Eb','F','G','A'),
+      Fmaj = new createKeyObject('Fmaj','F','G','A','Bb','C','D','E'),
+      
+      Amin = new createMinorObject('Amin','C','D','E','F','G','A','B'),
+      Emin = new createMinorObject('Emin','G','A','B','C','D','E','F#'),
+      Bmin = new createMinorObject('Bmin','D','E','F#','G','A','B','C#'),
+      FSmin = new createMinorObject('F#min','A','B','C#','D','E','F#','G#'),
+      CSmin = new createMinorObject('C#min','E','F#','G#','A','B','C#','D#'),
+      GSmin = new createMinorObject('G#min','B','C#','D#','E','F#','G#','A#'),
+      Ebmin = new createMinorObject('Ebmin','Gb','Ab','Bb','Cb','Db','Eb','F'),
+      Bbmin = new createMinorObject('Bbmin','Db','Eb','F','Gb','Ab','Bb','C'),
+      Fmin = new createMinorObject('Fmin','Ab','Bb','C','Db','Eb','F','G'),
+      Cmin = new createMinorObject('Cmin','Eb','F','G','Ab','Bb','C','D'),
+      Gmin = new createMinorObject('Gmin','Bb','C','D','Eb','F','G','A'),
+      Dmin = new createMinorObject('Dmin','F','G','A','Bb','C','D','E');
+
+function textMaker(key) {
+  var text = "<b>" + key.name + ":</b> " + key.i + " " + key.ii + " " + key.iii + " " + key.iv + " " + key.v + " " + key.vi + " " + key.vii + " " + "<br><br>" + "<b>I: " + key.iNotes + "</b><br>" + "ii: " + key.iiNotes + "<br>" + "iii: " + key.iiiNotes + "<br>" + "<b>IV: " + key.ivNotes + "</b><br>" + "<b>V<sup>(7)</sup>: " + key.vNotes + "</b><br>" + "vi: " + key.viNotes + "<br>" + "<b>viiº<sup>(7)</sup>: " + key.viiNotes + "</b><br>";
+  $("#text").html(text)
+}
+
+function textMakerMinor(key) {
+  var text = "<b>" + key.name + ":</b> " + key.i + " " + key.ii + " " + key.iii + " " + key.iv + " " + key.v + " " + key.vi + " " + key.vii + " " + "<br><br>" + "<b>i: " + key.iNotes + "</b><br>" + "iiº: " + key.iiNotes + "<br>" + "III: " + key.iiiNotes + "<br>" + "<b>iv: " + key.ivNotes + "</b><br>" + "<b>V<sup>(7)</sup>: " + key.vNotes + "</b><br>" + "VII: " + key.viNotes + "<br>" + "<b>viiº<sup>(7)</sup>: " + key.viiNotes + "</b><br>";
+  $("#text").html(text)
+}
+
+$("#key").on('input', function() {
+  if ($(this).val() == "C") {
+    textMaker(Cmaj)
+  }
+  if ($(this).val() == "G") {
+    textMaker(Gmaj)
+  }
+  if ($(this).val() == "D") {
+    textMaker(Dmaj)
+  }
+  if ($(this).val() == "A") {
+    textMaker(Amaj)
+  }
+  if ($(this).val() == "E") {
+    textMaker(Emaj)
+  }
+  if ($(this).val() == "B") {
+    textMaker(Bmaj)
+  }
+  if ($(this).val() == "Gb") {
+    textMaker(Gbmaj)
+  }
+  if ($(this).val() == "Db") {
+    textMaker(Dbmaj)
+  }
+  if ($(this).val() == "Ab") {
+    textMaker(Abmaj)
+  }
+  if ($(this).val() == "Eb") {
+    textMaker(Ebmaj)
+  }
+  if ($(this).val() == "Bb") {
+    textMaker(Bbmaj)
+  }
+  if ($(this).val() == "F") {
+    textMaker(Fmaj)
+  }
+  if ($(this).val() == "Am") {
+    textMakerMinor(Amin)
+  }
+  if ($(this).val() == "Em") {
+    textMakerMinor(Emin)
+  }
+  if ($(this).val() == "Bm") {
+    textMakerMinor(Bmin)
+  }
+  if ($(this).val() == "F#m") {
+    textMakerMinor(FSmin)
+  }
+  if ($(this).val() == "C#m") {
+    textMakerMinor(CSmin)
+  }
+  if ($(this).val() == "G#m") {
+    textMakerMinor(GSmin)
+  }
+  if ($(this).val() == "Ebm") {
+    textMakerMinor(Ebmin)
+  }
+  if ($(this).val() == "Bbm") {
+    textMakerMinor(Bbmin)
+  }
+  if ($(this).val() == "Fm") {
+    textMakerMinor(Fmin)
+  }
+  if ($(this).val() == "Cm") {
+    textMakerMinor(Cmin)
+  }
+  if ($(this).val() == "Gm") {
+    textMakerMinor(Gmin)
+  }
+  if ($(this).val() == "Dm") {
+    textMakerMinor(Dmin)
+  }
+})
+
+textMaker(Cmaj)
+
+</script>
+</body>
+</html>
