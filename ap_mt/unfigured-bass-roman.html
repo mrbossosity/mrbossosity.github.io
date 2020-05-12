@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+      background-image: linear-gradient(to bottom,rgba(0, 255, 255, 0.6),rgba(30, 144, 255, 0.6));
+      font-family: 'Noto Sans JP';
+      font-size: 25px;
+      line-height: 42px;
+      letter-spacing: 0.018em;
+      margin: 15px;
+      height: 100vh;
+    }
+
+    select {
+      font-size: 19px;
+    }
+
+    #romanNumeral {
+      font-size: 19px;
+      width: 50px;
+    }
+
+    button {
+      font-size: 19px;
+    }
+
+    .hint {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    #text {
+      font-family: "Garamond";
+      font-size: 35px;
+    }
+
+    #after{
+      font-size: 15px;
+      line-height: 22px
+    }
+
+    .bold {
+      font-size: 38px;
+      font-weight: bold;
+    }
+    </style>
+  </head>
+  <body>
+    <div><h1>Unfigured Bass</h1><span>from Roman Numeral Analysis</div><hr>
+    <div>
+      <select id="key">
+        <option value="Cmaj">C Major</option>
+        <option value="Gmaj">G Major</option>
+        <option value="Dmaj">D Major</option>
+        <option value="Amaj">A Major</option>
+        <option value="Emaj">E Major</option>
+        <option value="Bmaj">B Major</option>
+        <option value="Gbmaj">Gb Major</option>
+        <option value="Dbmaj">Db Major</option>
+        <option value="Abmaj">Ab Major</option>
+        <option value="Ebmaj">Eb Major</option>
+        <option value="Bbmaj">Bb Major</option>
+        <option value="Fmaj">F Major</option>
+        <option disabled>–––––––––</option>
+        <option value="Amin">A Minor</option>
+        <option value="Emin">E Minor</option>
+        <option value="Bmin">B Minor</option>
+        <option value="F#min">F# Minor</option>
+        <option value="C#min">C# Minor</option>
+        <option value="G#min">G# Minor</option>
+        <option value="Ebmin">Eb Minor</option>
+        <option value="Bbmin">Bb Minor</option>
+        <option value="Fmin">F Minor</option>
+        <option value="Cmin">C Minor</option>
+        <option value="Gmin">G Minor</option>
+        <option value="Dmin">D Minor</option>
+      </select>
+      <input type="text" id="romanNumeral" value="I">
+      <button onclick="dim()">º</button>
+      <button onclick="halfDim()">ø</button>
+      <select id="inversion">
+        <option value="root">Root</option>
+        <option value="6">6</option>
+        <option value="6/4">6/4</option>
+        <option disabled>––––</option>
+        <option value="7">7</option>
+        <option value="6/5">6/5</option>
+        <option value="4/3">4/3</option>
+        <option value="4/2">4/2</option>
+      </select>
+      <button onclick="search()" id="search">Search</button>
+      <p class="hint" id="hint">Input a key signature, Roman numeral, and figured bass, then hit "search" to see chordal members and doubling rules!<br><br><i>P.S. This program will only return results for seventh chords with dominant function (V7/viiº7 and their inversions) and those built on scale degree 2 (ii7/ii<sup>ø</sup>7/iiº7) since they are typically the only ones found on the AP Music Theory exam.</i></p>
+    </div>
+    <hr>
+    <div id="text"></div><br><div id="after"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://mrbossosity.github.io/ap_mt/javascript/unfigured-bass-roman.js"></script>
+  </body>
+</html>
