@@ -1,6 +1,6 @@
 # mrbossosity.github.io
 ### Welcome to my repo!
-Here are a couple of my favorite projects hosted here:
+A couple of my favorite projects hosted here:
 
 [protoHISTORYbowl](https://mrbossosity.github.io/2.0/2.1.html) Inspired by neotenic's [Protobowl](https://protobowl.com). Play through NHBB tossups read word-by-word!
 
