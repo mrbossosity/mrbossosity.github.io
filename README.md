@@ -1,8 +1,15 @@
 # mrbossosity.github.io
-This is an experiment in coding for the first time. I'm trying to make a program like Protobowl to read NHBB sets and allow users to buzz in real time. Currently, the app can't host multiple players--I'm looking into how to create servers and such.
+Welcome to my repo!
+Here are a couple of my favorite projects hosted here and pushed to Github Pages:
 
-To start the question, press "Next" (N on the keyboard after interacting with the window). A random question will be chosen and typed character by character on the page. At anytime, you can pause and resume the question with the corresponding buttons (p and r). Press "Buzz" (spacebar) when you think you know the answer to pause the question and bring up a text box to type it in. Pressing "answer" (enter) will display your answer at the bottom and reveal the rest of the question. Press "next" at  to move on to another question. 
+[ProtoHISTORYbowl](https://mrbossosity.github.io/2.0/2.1.html) Inspired by neotenic's [Protobowl](https://protobowl.com). Play through NHBB tossups read word-by-word!
 
-Selecting "allow players to skip question" enables "next" permanently and allows you to move on to a different question at any time. Sliding the "speed" range slider changes the speed of the typing animation (taking effect on the next question). Left=faster, right=slower.
+[pHb-DB](https://mrbossosity.github.io/2.0/phb-db.html) Search the entire 2016-2019 NHBB and US History Bee question database.
 
-We're working on adding more questions over time. I'll try to get up multiplayer functionality soon!
+[SGK-19](https://mrbossosity.github.io/sgk-cv19/synth.html) A 3-osc subtractive synthesizer.
+
+[SGK-19-Drum](https://mrbossosity.github.io/sgk-cv19/drum.html)  A nifty 2-in-1 drum synthesizer and two-measure sequencer.
+
+[Unfigured Bass](https://mrbossosity.github.io/ap_mt/unfigured-bass.html) A tool to aid composers and AP Music Theory students in identifying chordal members given the key signature, bassnote, and figured bass, with an emphasis on 18th-century common practice part-writing rules. 
+
+[Unfigured Bass (from Roman Numerals)](https://mrbossosity.github.io/ap_mt/unfigured-bass-roman.html) See above.
