@@ -1,8 +1,8 @@
 # mrbossosity.github.io
 ### Welcome to my repo!
-Here are a couple of my favorite projects hosted here and pushed to Github Pages:
+Here are a couple of my favorite projects hosted here:
 
-[ProtoHISTORYbowl](https://mrbossosity.github.io/2.0/2.1.html) Inspired by neotenic's [Protobowl](https://protobowl.com). Play through NHBB tossups read word-by-word!
+[protoHISTORYbowl](https://mrbossosity.github.io/2.0/2.1.html) Inspired by neotenic's [Protobowl](https://protobowl.com). Play through NHBB tossups read word-by-word!
 
 [pHb-DB](https://mrbossosity.github.io/2.0/phb-db.html) Search the entire 2016-2019 NHBB and US History Bee question database.
 
