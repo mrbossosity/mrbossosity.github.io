@@ -1,8 +1,10 @@
 function createKeyObject(name,i,ii,iii,iv,v,vi,vii) {
+  this.name = name;
   this.scale = Array(i,ii,iii,iv,v,vi,vii)
 }
 
 function createMinorObject(name,i,ii,iii,iv,v,vi,vii) {
+  this.name = name;
   this.scale = Array(vi,vii,i,ii,iii,iv,v)
   function determineV() {
     var result;
