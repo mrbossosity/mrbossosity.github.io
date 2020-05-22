@@ -1,0 +1,46 @@
+body {
+  font-size: 20px;
+  font-family: 'Nanum Gothic';
+  height: 100%;
+  margin: 0;
+}
+
+#container {
+  background-color: rgba(200,40,150,0.3);
+  background-repeat: no-repeat;
+  height: 100%
+}
+
+html {
+  height: 100%
+}
+
+#query {
+  width: 90vw;
+}
+
+input[type=text]{
+  font-size: 19px;
+  margin: 10px;
+  font-family: 'Nanum Gothic';
+  background-color: rgb(255,250,250)
+}
+
+#interval, #detune {
+  width: 6vw;
+}
+
+button {
+  font-size: 20px;
+  margin: 10px;
+  font-family: 'Nanum Gothic';
+  border: 2px solid rgba(255,255,255,0.6); border-radius: 8px;
+  color: white;
+  background-image: linear-gradient(to bottom, rgba(215,50,80,0.16), rgba(160,30,90,0.6));
+  padding: 3.5px 9px;
+}
+
+p {
+  font-size: 20px;
+  padding: 10px;
+}
