@@ -1,25 +1,32 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="https://mrbossosity.github.io/text-to-music/css/final-project-stylesheet.css">
+<link rel="stylesheet" type="text/css" href="https://mrbossosity.github.io/text-to-music/css/stylesheet2.css">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <input type="text" id="query" value="The left hand derivative equals the right hand derivative">
-    <button id="mvt">MVT</button><button id="ivt">IVT</button>
-    <button id="continuity">Limits</button><br>
-  </div>
-  <div>
-    <input type="text" value="500" id="interval"> ms
-    <input type="text" value="0" id="detune"> Detune (cents)<br>
-    <button id="search" onclick="execute()">Go!</button>
-    <button id="stop" onclick="updateVariablesAndReset()">Stop</button>
-  </div>
-  <div>
-    <p id="result"></p>
+  <div id="container">
+    <div>
+      <input type="text" id="query" value="The left hand derivative equals the right hand derivative">
+    </div>
+    <div>
+      <button id="mvt">MVT</button>
+      <button id="ivt">IVT</button>
+      <button id="continuity">Limits</button><br>
+    </div>
+    <div>
+      <input type="text" value="500" id="interval"> ms
+      <input type="text" value="0" id="detune"> Detune (cents)<br>
+      <button id="search" onclick="execute()">Go!</button>
+      <button id="stop" onclick="updateVariablesAndReset()">Stop</button>
+    </div>
+    <div>
+      <p id="result"></p>
+    </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://mrbossosity.github.io/text-to-music/javascript/allkeys.js"></script>
-  <script src="https://mrbossosity.github.io/text-to-music/javascript/functions.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+  <script src="https://mrbossosity.github.io/text-to-music/javascript/functions2.js"></script>
 </body>
 </html>
