@@ -130,9 +130,9 @@ function playOsc(x) {//iterate through the scale degree sequence and play a new 
     Amp.gain.cancelScheduledValues(now);
     Amp.gain.setValueAtTime(Amp.gain.value, now);
     Amp.gain.linearRampToValueAtTime(0, now + (x / 1000)) //fade the gain unit to make the note "pluck"
-    if (noteNo == reducedIndeces.length - 1) {//if at end of sequence, return to beginning iteration
+    if (noteNo == reducedIndeces.length - 1) {//if at end of sequence, return to beginning of loop
       noteNo = 0;
-    } else { //else advance the iteration
+    } else {//else advance the iteration
       noteNo++ 
     }
   }, x + 1)
@@ -141,15 +141,15 @@ function playOsc(x) {//iterate through the scale degree sequence and play a new 
 function updateVariablesAndReset() {
   interval = parseFloat($("#interval").val()); //update variables based on user input
   detune = parseFloat($("#detune").val());
-  cancelAnimationFrame(colorChangeTimer)
-  clearInterval(playTimer); //stops anything currently playing
+  cancelAnimationFrame(colorChangeTimer);
+  clearInterval(playTimer) //stops anything currently playing
 }
 
 //this is the master music function triggered at the end of execute() to call the update and play functions declared above
 function music() {
   updateVariablesAndReset(); 
-  requestAnimationFrame(colorChange);
-  playOsc(interval)
+  requestAnimationFrame(colorChange);//start the color animation
+  playOsc(interval)//begin looping through sequence and playing notes
 }
 
 /*below are small details which improve page functionality*/
